@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="app/src/main/res/drawable/ic_janssen_logo.xml" value="0.26711271230056616" />
+        <entry key="app/src/main/res/drawable/pin_background.xml" value="0.24259259259259258" />
+        <entry key="app/src/main/res/drawable/top_right_cornet.xml" value="0.2351851851851852" />
+        <entry key="app/src/main/res/layout/activity_Splash.xml" value="0.24479166666666666" />
+        <entry key="app/src/main/res/layout/activity_auth.xml" value="0.25677083333333334" />
+        <entry key="app/src/main/res/layout/fragment_choose_language.xml" value="0.16" />
+        <entry key="app/src/main/res/layout/fragment_confirm_number.xml" value="0.25677083333333334" />
+        <entry key="app/src/main/res/layout/fragment_login.xml" value="0.24479166666666666" />
+        <entry key="app/src/main/res/layout/fragment_register.xml" value="0.21333333333333335" />
+        <entry key="app/src/main/res/layout/fragment_splash.xml" value="0.10666666666666667" />
+        <entry key="app/src/main/res/layout/fragment_terms.xml" value="0.29333333333333333" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.14739583333333334" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

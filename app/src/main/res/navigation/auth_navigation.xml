@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/auth_navigation.xml"
+    app:startDestination="@id/authFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.developnetwork.meshlwahdk.ui.auth.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_confirmNumberFragment"
+            app:destination="@id/confirmNumberFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_registerFirstStepFragment"
+            app:destination="@id/registerFirstStepFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.developnetwork.meshlwahdk.ui.auth.RegisterFragment"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register" >
+        <action
+            android:id="@+id/action_registerFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_registerFragment_to_confirmNumberFragment"
+            app:destination="@id/confirmNumberFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/confirmNumberFragment"
+        android:name="com.developnetwork.meshlwahdk.ui.auth.ConfirmNumberFragment"
+        android:label="ConfirmNumberFragment" />
+    <fragment
+        android:id="@+id/authFragment"
+        android:name="com.developnetwork.meshlwahdk.ui.auth.AuthFragment"
+        android:label="fragment_auth"
+        tools:layout="@layout/fragment_auth" >
+        <action
+            android:id="@+id/action_authFragment_to_registerFirstStepFragment"
+            app:destination="@id/registerFirstStepFragment" />
+        <action
+            android:id="@+id/action_authFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFirstStepFragment"
+        android:name="com.developnetwork.meshlwahdk.ui.auth.register.RegisterFirstStepFragment"
+        android:label="fragment_register_first_step"
+        tools:layout="@layout/fragment_register_first_step" />
+</navigation>

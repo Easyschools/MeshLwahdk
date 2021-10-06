@@ -1,0 +1,187 @@
+<resources>
+    <string name="app_name">مش لوحدك</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="decline">decline</string>
+    <string name="terms_and_conditions">Terms and Conditions</string>
+    <string name="agree">agree</string>
+
+    <string name="title_reservations">Reservations</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="login_now">Login Now</string>
+    <string name="please_login_to_continue_using_our_app">Please login to continue using our app.</string>
+    <string name="login">Login</string>
+    <string name="don_t_have_an_account">Don’t have an account ?</string>
+    <string name="register">Register</string>
+    <string name="please_sign_up_to_enter_in_a_app">Please sign up to enter in a app.</string>
+    <string name="already_have_an_acoount">Already have an acoount ?</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="forget_password">Forget Password?</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="name">Name</string>
+    <string name="confirm_password">Confirm password</string>
+    <string name="title_doctors">Doctors</string>
+    <string name="title_booking_list">New Booking</string>
+    <string name="please_enter_your_email">Please enter your email.</string>
+    <string name="please_enter_your_password">Please enter your password.</string>
+    <string name="continue0">Continue</string>
+    <string name="please_enter_your_name">Please enter your name.</string>
+    <string name="please_enter_your_password_confirmation">Please enter password confirmation.</string>
+    <string name="passwords_do_not_match">Passwords don\'t match.</string>
+    <string name="phone">Phone</string>
+    <string name="national_id">National Id</string>
+    <string name="please_enter_your_phone">Please enter your phone.</string>
+    <string name="please_enter_your_age">Please enter your date of birth.</string>
+    <string name="please_enter_your_nationalId">Please enter your national id.</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="please_select_the_gender">Please select the gender.</string>
+    <string name="date_of_birth">Date Of Birth</string>
+    <string name="this_day_is_not_working_day">This Day is not a working day!</string>
+    <string name="you_choose_a_reservation">You choose a reservation</string>
+    <string name="confirmation">Confirmation</string>
+    <string name="on_date">On Date : </string>
+    <string name="at">At : </string>
+    <string name="clock"> o\'clock"</string>
+    <string name="msg_token_fmt" translatable="false">InstanceID Token: %s</string>
+    <string name="default_notification_channel_id" translatable="false">fcm_default_channel</string>
+    <string name="start_meeting">Start Meeting</string>
+    <string name="waiting_for_a_doctor">Waiting for a doctor</string>
+    <string name="waiting_to_start_meeting">Waiting To Start Meeting …</string>
+    <string name="notification">Notification</string>
+    <string name="identity_card">Identity Card</string>
+    <string name="choose_a_picture">Choose a picture</string>
+    <string name="insurance_card">Insurance Card</string>
+    <string name="booking">Booking</string>
+    <string name="choose_date">Choose date</string>
+    <string name="choose_available_time">Choose available time</string>
+    <string name="confirm">Confirm</string>
+    <string name="invalid_email_address">Invalid email address.</string>
+    <string name="your_password_is_too_small">Your password is too weak.</string>
+    <string name="health_insurance">Your Health Insurance Number</string>
+    <string name="please_enter_your_health_insurance">Please enter your health insurance.</string>
+    <string name="please_enter_a_valid_national_id">Please enter a valid national id</string>
+    <string name="loading">Loading …</string>
+    <string name="no_notifications">No Notifications!</string>
+    <string name="no_reservations">No Reservations!</string>
+    <string name="rays">X-Rays</string>
+    <string name="analyses">Analysis</string>
+    <string name="the_national_id_numbers_must_be_digits">The national id numbers must be 14 digits.</string>
+    <string name="mobile_number">Mobile Number</string>
+    <string name="mobile_numbers_must_be_digits">Mobile number must be 11 digits.</string>
+    <string name="government">Governorate</string>
+    <string name="pending">Pending</string>
+    <string name="check_up">Check up</string>
+    <string name="image_selected">Image selected</string>
+    <string name="city">City</string>
+    <string name="area">Area</string>
+    <string name="lab_results">Lab Results</string>
+    <string name="the_latest_scans">The Latest Scans</string>
+    <string name="you_can_upload_photo_until_4_images">you can upload photo until 4 images</string>
+    <string name="upload_image">Upload Images</string>
+    <string name="the_latest_lab_results">The Latest Lab Results</string>
+    <string name="skip">Skip</string>
+    <string name="confirm_number">Confirm Number</string>
+    <string name="resend">Resend</string>
+    <string name="arabic">Arabic</string>
+    <string name="english">English</string>
+    <string name="welcome_to">welcome to</string>
+    <string name="before_we_start_please_choose_your_prefered_language">Before we start please, choose your prefered language</string>
+    <string name="error">Error</string>
+    <string name="server_error">Server Error</string>
+    <string name="no_internet">No Internet</string>
+    <string name="no_data">No Data</string>
+    <string name="continue_">Continue</string>
+    <string name="next">Next</string>
+    <string name="old_password">Old Password</string>
+    <string name="new_password">New Password</string>
+    <string name="new_confirm_password">Confirm Password</string>
+    <string name="done">Done</string>
+    <string name="password_field_validation">Password field  is required</string>
+    <string name="invalid_password">Invalid Password</string>
+    <string name="password_leanth">password must be at least 8 and max 20 character</string>
+    <string name="not_empty_msg">This field is required</string>
+    <string name="email_field_validation">Invalid email</string>
+    <string name="confirm_pass_validation">Must match password</string>
+    <string name="name_length_valdation">Name must be more than 3 characters and less than 15 characters</string>
+    <string name="user_name_valdation">Invalid UserName</string>
+    <string name="phone_must_be_numbers_msg">Phone must be Numbers only</string>
+    <string name="phone_length_msg">phone must be at least 9 digits and maximum 15 digit</string>
+    <string name="text_length_msg">This text doesn\'t achieve the length requirement</string>
+    <string name="characters_only">Characters Only</string>
+    <string name="must_select_an_item">Must Select An Item</string>
+    <string name="forgot_password">Forgot Password</string>
+    <string name="home">Home</string>
+    <string name="app_terms"><![CDATA[<h1><strong>Msh Lwahdak Program Enrollment</strong></h1>
+
+<h1><br />
+I am enrolling in the Msh Lwahdak Patient Support Program, from here on referred to as the &ldquo;Mesh<br />
+Lwahdak program&rdquo; and authorize Accsight, and their agents, to provide me services under the Program as<br />
+described and those that may be added in the future.<br />
+Such services include:<br />
+    &bull; Medication dispensing support.<br />
+    &bull; Medication and adherence communications.<br />
+    &bull; Savings offer/s/FOC (if eligible).<br />
+If confirmed as eligible, understanding that my information might be sent to my designated specialty/ies<br />
+and other healthcare service/s providers in-the service network with my prescription and lab results (if<br />
+any) for Janssen products will be made in accordance with the Program terms and conditions.<br />
+Information Sharing: I further authorize Accsight to identify my health information and use it in<br />
+performing market research and disease-related surveys. I understand and agree that the Accsight may use<br />
+my health information for these purposes and may share my health information with my doctors, specialty<br />
+pharmacies.<br />
+I understand that I do not have to enroll in the Program or receive the Communications, and that I can still<br />
+receive Janssen products, as prescribed by my physician. I may withdraw out of the Program entirely at<br />
+any time by notifying a Program representative via hotline at 15148. I also understand that the Services<br />
+may be revised, changed, or terminated at any time without any prior notification.<br />
+Communications: I authorize Msh Lwahdak program to contact me by mail, telephone or email, if I<br />
+indicate my agreement and consent below, with information about the Program and products; services,<br />
+and research studies; and to ask my opinion about such information and topics, including market research<br />
+and disease-related surveys.<br />
+I expressly consent to receive phone calls from or on behalf of the Program at the mobile telephone<br />
+number(s) that I provide. I confirm that I am the subscriber for the mobile telephone number(s) provided,<br />
+and I agree to notify Accsight if any of my number(s) change in the future.</h1>
+
+<h1><br />
+<strong>Patient Authorization to Use and Disclose Health Information</strong></h1>
+
+<h1><br />
+I authorize my healthcare providers and staff, health plan or programs that provide me healthcare benefits,<br />
+and any specialty pharmacies that dispense my medication related to Mesh Lwahdak program to disclose<br />
+to Accsight and their agents, health information about me including information related to my medical<br />
+condition and treatment, prescription (including fill/refill information), and referral to information about<br />
+me described as &ldquo;My Information&rdquo; for the purposes of enrolling me in and providing certain services,<br />
+including:&bull; To determine if I am eligible to participate in Msh Lwahdak Patient Support Program coverage<br />
+determination or other support programs<br />
+    &bull; For the operation and administration of the Program<br />
+I understand that Accsight agrees to protect My Information by using and disclosing it only for the<br />
+purposes allowed by me in this Authorization, or as otherwise allowed by law. I understand that I do not<br />
+have to agree this Authorization. However, if I do not agree this Authorization, I understand that I will not<br />
+be able to participate in Msh Lwahdak Patient Support Program. I understand that this Authorization shall<br />
+remain in effect until my participation in Msh Lwahdak Patient Support Program ends unless and until I<br />
+withdraw (take back) this Authorization before then. Further, I understand that I may withdraw this<br />
+Authorization at any time by calling a Program representative by hotline at 15148. Withdrawal of this<br />
+Authorization will end my participation in Msh Lwahdak Patient Support Program and will not affect any<br />
+disclosure of My Information based on this Authorization made before my request is received and<br />
+processed by my healthcare providers and staff and specialty pharmacies.<br />
+I authorize Msh Lwahdak Patient Support Program, Accsight, their agents to:<br />
+1- Use the information that I provided on this form to determine my eligibility for, and assist with my<br />
+continued participation in Msh Lwahdak Patient Support Program.<br />
+2- Use my I.D. for purposes of verifying my identity only.<br />
+3- Contact me to seek feedback on Msh Lwahdak Patient Support Program services.<br />
+I have read and understand the information provided above regarding Msh Lwahdak, I have discussed it<br />
+with my physician and all of my questions have been answered to my satisfaction.<br />
+I hear by authorize Msh-Lwahdak application services to use the platform for telecommunication for<br />
+following up my medical condition with any third party related to Msh Lwahdak program.<br />
+I hear by give my informed consent for the use of Msh Lwahdak in my case.</h1>]]>
+</string>
+    <string name="back">Back</string>
+    <string name="before_we_start_we_are_kindly_ask_you_to_read_and_agree_the_terms_and_conditions_of_the_program">Before we start we are kindly ask you to read and agree the terms and conditions of the program</string>
+    <string name="disagree">Disagree</string>
+    <string name="let_s_go">Let\'s Go</string>
+    <string name="you_can_join_us_login_or_create_a_new_account_to_get_benifits_of_our_app">you can join us , login or create a new account to get benifits of our app .</string>
+    <string name="get_started_by">Get Started by</string>
+    <string name="creating_your_account">Creating Your Account</string>
+    <string name="enter_your_mobile_number_to_recieve_a_verification_code">Enter Your mobile number to recieve a verification code</string>
+    <string name="get_code">Get Code</string>
+</resources>
