@@ -1,9 +1,9 @@
-package com.ivestment.doctorna.data.repository
+package com.developnetwork.meshlwahdk.data.repository
 
 import com.ivestment.doctorna.data.model.InsuranceCard
 import com.ivestment.doctorna.data.model.PatientCategory
 import com.ivestment.doctorna.data.model.Region
-import com.ivestment.doctorna.data.network.Service
+import com.developnetwork.meshlwahdk.data.network.Service
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import okhttp3.MultipartBody
 import okhttp3.RequestBody.Companion.asRequestBody

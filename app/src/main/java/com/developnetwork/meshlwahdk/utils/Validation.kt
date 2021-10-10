@@ -132,6 +132,13 @@ fun lengthValidator(view: TextInputLayout, minLength: Int, context: Context): Bo
 
     return true
 }
+fun lengthValidator(view: EditText, minLength: Int, context: Context): Boolean {
+    if (view.text.length < minLength) {
+        return setTextInoutLayoutError(view, R.string.text_length_msg, context)
+    }
+
+    return true
+}
 
 private fun setTextInoutLayoutError(
     view: TextInputLayout,

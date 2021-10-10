@@ -1,15 +1,7 @@
-package com.ivestment.doctorna.data.network
+package com.developnetwork.meshlwahdk.data.network
 
+import com.developnetwork.meshlwahdk.data.model.User
 import com.ivestment.doctorna.data.model.*
-import com.ivestment.doctorna.data.model.PatientAppointment.PatientAppointmentDBResponse
-import com.ivestment.doctorna.data.model.addImage.AddImageDBResponse
-import com.ivestment.doctorna.data.model.booking.BookingDBResponse
-import com.ivestment.doctorna.data.model.createControllerPatient.CreateControllerPatientDBResponse
-import com.ivestment.doctorna.data.model.notification.NotificationDBResponse
-import com.ivestment.doctorna.data.model.patientsProducts.PatientsProductsDBResponse
-import com.ivestment.doctorna.data.model.register.RegisterDBResponse
-import com.ivestment.doctorna.data.model.reservation.ReservationDBResponse
-import com.ivestment.doctorna.data.model.token.TokenDBResponse
 import okhttp3.MultipartBody
 import okhttp3.RequestBody
 import retrofit2.http.*
@@ -27,8 +19,8 @@ interface Service {
     @FormUrlEncoded
     suspend fun phoneRegister(@Field("phone") phone: String): BaseResponse<User>
 
-    @GET("patient-register/create")
-    suspend fun createControllerPatient(): CreateControllerPatientDBResponse
+//    @GET("patient-register/create")
+//    suspend fun createControllerPatient(): CreateControllerPatientDBResponse
 
     @POST("checkPhone")
     @FormUrlEncoded
@@ -91,28 +83,28 @@ interface Service {
     @POST("My-Insurance")
     suspend fun getUserInsuranceStat():BaseResponse<InsuranceCard>
 
-    @POST("completeRegister")
-    @Multipart
-    suspend fun userRegister(
-            @Part("displayName") name: RequestBody?,
-            @Part("phone") phone: RequestBody?,
-            @Part("email") email: RequestBody?,
-            @Part("password") password: RequestBody?,
-            @Part("national_id") nationalId: RequestBody?,
-            @Part("gender") gender: RequestBody?,
-            @Part("region_id") region_id: RequestBody?,
-            @Part("districts_id") subRegion_id: RequestBody?,
-            @Part("subRegion_id") subSubRegion_id: RequestBody?,
-            @Part("company_id") company_id: RequestBody?,
-            @Part("product_id") product_id: RequestBody?,
-            @Part("age") address: RequestBody?,
-            @Part("health_insurance") health_insurance: RequestBody?,
-            @Part identityCardImage: MultipartBody.Part?,
-            @Part insuranceCardImage: MultipartBody.Part?,
-            @Part raysCardImage: MultipartBody.Part?,
-            @Part analyseCardImage: MultipartBody.Part?,
-            @Part("lang") lang: RequestBody?
-    ): RegisterDBResponse
+//    @POST("completeRegister")
+//    @Multipart
+//    suspend fun userRegister(
+//            @Part("displayName") name: RequestBody?,
+//            @Part("phone") phone: RequestBody?,
+//            @Part("email") email: RequestBody?,
+//            @Part("password") password: RequestBody?,
+//            @Part("national_id") nationalId: RequestBody?,
+//            @Part("gender") gender: RequestBody?,
+//            @Part("region_id") region_id: RequestBody?,
+//            @Part("districts_id") subRegion_id: RequestBody?,
+//            @Part("subRegion_id") subSubRegion_id: RequestBody?,
+//            @Part("company_id") company_id: RequestBody?,
+//            @Part("product_id") product_id: RequestBody?,
+//            @Part("age") address: RequestBody?,
+//            @Part("health_insurance") health_insurance: RequestBody?,
+//            @Part identityCardImage: MultipartBody.Part?,
+//            @Part insuranceCardImage: MultipartBody.Part?,
+//            @Part raysCardImage: MultipartBody.Part?,
+//            @Part analyseCardImage: MultipartBody.Part?,
+//            @Part("lang") lang: RequestBody?
+//    ): RegisterDBResponse
 
 
     @POST("getAllReg")
@@ -126,45 +118,45 @@ interface Service {
     @FormUrlEncoded
     suspend fun getAllSubRegion(@Field("district_id") district_id: Int): BaseResponse<List<Region>>
 
-    @GET("patients_data/{user_id}")
-    suspend fun getPatientsProducts(
-            @Path("user_id") user_id: Int
-    ): PatientsProductsDBResponse
+//    @GET("patients_data/{user_id}")
+//    suspend fun getPatientsProducts(
+//            @Path("user_id") user_id: Int
+//    ): PatientsProductsDBResponse
+//
+//    @POST("send-token")
+//    @FormUrlEncoded
+//    suspend fun sendToken(
+//            @Field("fcm_token") device_token: String?
+//    ): TokenDBResponse
+//
+//    @GET("patient-notification-get/{user_id}")
+//    suspend fun getPatientsNotifications(
+//            @Path("user_id") user_id: Int
+//    ): NotificationDBResponse
+//
+//    @POST("add-image")
+//    @Multipart
+//    suspend fun addImage(
+//            @Part("type") type: RequestBody?,
+//            @Part image: MultipartBody.Part?
+//    ): AddImageDBResponse
 
-    @POST("send-token")
-    @FormUrlEncoded
-    suspend fun sendToken(
-            @Field("fcm_token") device_token: String?
-    ): TokenDBResponse
 
-    @GET("patient-notification-get/{user_id}")
-    suspend fun getPatientsNotifications(
-            @Path("user_id") user_id: Int
-    ): NotificationDBResponse
-
-    @POST("add-image")
-    @Multipart
-    suspend fun addImage(
-            @Part("type") type: RequestBody?,
-            @Part image: MultipartBody.Part?
-    ): AddImageDBResponse
-
-
-    @POST("hub-appointment-create")
-    @FormUrlEncoded
-    suspend fun bookingDoctor(@Field("appointment_date") appointment_date: String?, @Field("hub_id") hub_id: Int, @Field("patient_id") patient_id: Int): BookingDBResponse
-
-    @POST("hub-appointment")
-    @FormUrlEncoded
-    suspend fun reservationDoctor(
-            @Field("appointment_date") appointment_date: String?,
-            @Field("patient_id") patient_id: Int,
-            @Field("appointment_slote_id") appointment_slote_id: Int
-    ): ReservationDBResponse
-
-    @GET("patient-appointment-get/{hub_id}")
-    suspend fun getPatientsAppointment(
-            @Path("hub_id") hub_id: Int
-    ): PatientAppointmentDBResponse
+//    @POST("hub-appointment-create")
+//    @FormUrlEncoded
+//    suspend fun bookingDoctor(@Field("appointment_date") appointment_date: String?, @Field("hub_id") hub_id: Int, @Field("patient_id") patient_id: Int): BookingDBResponse
+//
+//    @POST("hub-appointment")
+//    @FormUrlEncoded
+//    suspend fun reservationDoctor(
+//            @Field("appointment_date") appointment_date: String?,
+//            @Field("patient_id") patient_id: Int,
+//            @Field("appointment_slote_id") appointment_slote_id: Int
+//    ): ReservationDBResponse
+//
+//    @GET("patient-appointment-get/{hub_id}")
+//    suspend fun getPatientsAppointment(
+//            @Path("hub_id") hub_id: Int
+//    ): PatientAppointmentDBResponse
 
 }
