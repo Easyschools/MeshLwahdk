@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".ui.auth.RegisterFragment">
+    tools:context=".ui.auth.register.RegisterFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -56,7 +56,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/et_register_name"
+                android:id="@+id/nameInput"
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
                 android:layout_marginStart="16dp"
@@ -76,7 +76,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/et_register_email"
+                android:id="@+id/emailInput"
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
                 android:layout_marginStart="16dp"
@@ -93,11 +93,11 @@
                 android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/et_register_name" />
+                app:layout_constraintTop_toBottomOf="@+id/nameInput" />
 
 
             <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/tv_register_dateOfBirth"
+                android:id="@+id/dateOfBirthInput"
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
                 android:layout_marginStart="16dp"
@@ -116,11 +116,11 @@
                 android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/et_register_email"
+                app:layout_constraintTop_toBottomOf="@+id/emailInput"
                 android:focusable="true" />
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/et_register_nationalId"
+                android:id="@+id/nationalIdInput"
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
                 android:layout_marginStart="16dp"
@@ -139,11 +139,11 @@
                 android:maxLength="14"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tv_register_dateOfBirth"
+                app:layout_constraintTop_toBottomOf="@+id/dateOfBirthInput"
                 android:focusable="true" />
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/et_register_password"
+                android:id="@+id/passwordInput"
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
                 android:layout_marginStart="16dp"
@@ -161,22 +161,22 @@
                 android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/et_register_nationalId" />
+                app:layout_constraintTop_toBottomOf="@+id/nationalIdInput" />
 
 
             <RadioGroup
-                android:id="@+id/rg_register_gender"
+                android:id="@+id/genderRadioGroup"
                 android:layout_width="0dp"
                 android:layout_height="56dp"
                 android:layout_marginTop="16dp"
                 android:orientation="horizontal"
                 android:background="@drawable/et_rounded_corner_bg_with_stork"
-                app:layout_constraintEnd_toEndOf="@+id/et_register_password"
-                app:layout_constraintStart_toStartOf="@+id/et_register_password"
-                app:layout_constraintTop_toBottomOf="@+id/et_register_password">
+                app:layout_constraintEnd_toEndOf="@+id/passwordInput"
+                app:layout_constraintStart_toStartOf="@+id/passwordInput"
+                app:layout_constraintTop_toBottomOf="@+id/passwordInput">
 
                 <RadioButton
-                    android:id="@+id/rb_register_male"
+                    android:id="@+id/maleRadio"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -184,7 +184,7 @@
                     android:textColor="@color/colorText1"
                     android:textSize="16sp" />
                 <RadioButton
-                    android:id="@+id/rb_register_female"
+                    android:id="@+id/femaleRadio"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -211,7 +211,7 @@
                 android:textSize="19sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/rg_register_gender" />
+                app:layout_constraintTop_toBottomOf="@+id/genderRadioGroup" />
 
             <LinearLayout
                 android:id="@+id/linearLayout"

@@ -2,6 +2,7 @@ package com.developnetwork.meshlwahdk.utils.managers
 
 import android.content.Context
 import android.content.SharedPreferences
+import com.developnetwork.meshlwahdk.data.model.User
 
 interface SharedPreferencesManager {
     var userToken: String
@@ -24,11 +25,11 @@ interface SharedPreferencesManager {
 
     var termsAgreed: Boolean
 
-//    var userData: User
+    var userData: User
 
     var slug: String
 
-//    fun saveUserData(user: User)
+    fun saveUserData(user: User)
     fun clearData()
 
 }
@@ -107,13 +108,13 @@ class SharedPreferencesManagerImpl(context: Context) : SharedPreferencesManager 
             editor.putBoolean(termsAgreedKey, b).apply()
         }
 
-//    override var userData: User
-//        get() {
-//            return User().create(getString(userDataKey))
-//        }
-//        set(user: User) {
-//            editor.putString(userDataKey, user.serialize()).apply()
-//        }
+    override var userData: User
+        get() {
+            return User().create(getString(userDataKey))
+        }
+        set(user: User) {
+            editor.putString(userDataKey, user.serialize()).apply()
+        }
 
 
     override fun clearData() {
@@ -137,23 +138,23 @@ class SharedPreferencesManagerImpl(context: Context) : SharedPreferencesManager 
                 s
         }
     }
-//
-//    override fun saveUserData(user: User) {
-//        if (!user.token.isNullOrBlank())
-//            userToken = user.token
-//        if (!user.email.isNullOrBlank())
-//            userEmail = user.email
-//        if (!user.name.isNullOrBlank())
-//            userName = user.name
-//        if (!user.basicInfo.image.isNullOrBlank())
-//            userImage = user.basicInfo.image
+
+    override fun saveUserData(user: User) {
+        if (!user.token.isNullOrBlank())
+            userToken = user.token
+        if (!user.email.isNullOrBlank())
+            userEmail = user.email!!
+        if (!user.name.isNullOrBlank())
+            userName = user.name!!
+        if (!user.img.isNullOrBlank())
+            userImage = user.img
 //        if (!user.slug.isNullOrBlank())
 //            slug = user.slug
-//
-//        userID = user.id
-//        userData = user
-//        isLoggedIn = true
-//    }
+
+        userID = user.id
+        userData = user
+        isLoggedIn = true
+    }
 
     companion object {
         private const val sharedPreferencesKey = "USERDATA"

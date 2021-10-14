@@ -2,7 +2,7 @@ package com.ivestment.doctorna.data.model.login;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
-import com.ivestment.doctorna.data.model.User;
+import com.developnetwork.meshlwahdk.data.model.User;
 
 public class LoginDBResponse {
 

@@ -3,18 +3,21 @@
     package="com.developnetwork.meshlwahdk">
 
     <application
+        android:name=".app.MeshLwahdkApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:name=".app.MeshLwahdkApplication"
         android:theme="@style/Theme.MeshLwahdk">
         <activity
-            android:name="com.developnetwork.meshlwahdk.ui.auth.AuthActivity"
+            android:name=".ui.main.MainActivity"
             android:exported="true" />
         <activity
-            android:name="com.developnetwork.meshlwahdk.ui.splash.SplashActivity"
+            android:name=".ui.auth.AuthActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ui.splash.SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

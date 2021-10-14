@@ -184,4 +184,6 @@ I hear by give my informed consent for the use of Msh Lwahdak in my case.</h1>]]
     <string name="creating_your_account">Creating Your Account</string>
     <string name="enter_your_mobile_number_to_recieve_a_verification_code">Enter Your mobile number to recieve a verification code</string>
     <string name="get_code">Get Code</string>
+    <string name="sms_has_been_sent_to">sms has been sent to</string>
+    <string name="welcome">Welcome</string>
 </resources>

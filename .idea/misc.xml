@@ -3,6 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/MeshLwahdk/app/src/main/res/layout/activity_main.xml" value="0.3265625" />
+        <entry key="..\:/MeshLwahdk/app/src/main/res/layout/fragment_auth.xml" value="0.340625" />
+        <entry key="..\:/MeshLwahdk/app/src/main/res/layout/fragment_register.xml" value="0.340625" />
+        <entry key="..\:/MeshLwahdk/app/src/main/res/layout/fragment_register_first_step.xml" value="0.22407407407407406" />
         <entry key="app/src/main/res/drawable/ic_janssen_logo.xml" value="0.26711271230056616" />
         <entry key="app/src/main/res/drawable/pin_background.xml" value="0.24259259259259258" />
         <entry key="app/src/main/res/drawable/top_right_cornet.xml" value="0.2351851851851852" />

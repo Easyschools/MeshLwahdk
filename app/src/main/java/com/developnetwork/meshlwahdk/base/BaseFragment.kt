@@ -40,26 +40,26 @@ abstract class BaseFragment : Fragment() {
 //        (context as BaseActivity).showErrorToast(message)
     }
 
-//    fun handleProgress(viewModel: BaseViewModel, swipeRefreshLayout: SwipeRefreshLayout? = null) {
-//        viewModel.showLoading.observe(viewLifecycleOwner, {
-//
-//            swipeRefreshLayout?.let { swipeRefreshLayout ->
-//                swipeRefreshLayout.isRefreshing = it
-//            }
-//
-//            if (it)
-//                showLoading()
-//            else
-//                hideLoading()
-//        })
-//    }
-//
-//    fun handleError(viewModel: BaseViewModel) {
-//        viewModel.errorLiveData.observe(viewLifecycleOwner, {
-//            view?.let { it1 -> Snackbar.make(it1, it, Snackbar.LENGTH_SHORT).show() }
-//        })
-//    }
-//
+    fun handleProgress(viewModel: BaseViewModel, swipeRefreshLayout: SwipeRefreshLayout? = null) {
+        viewModel.showLoading.observe(viewLifecycleOwner, {
+
+            swipeRefreshLayout?.let { swipeRefreshLayout ->
+                swipeRefreshLayout.isRefreshing = it
+            }
+
+            if (it)
+                showLoading()
+            else
+                hideLoading()
+        })
+    }
+
+    fun handleError(viewModel: BaseViewModel) {
+        viewModel.errorLiveData.observe(viewLifecycleOwner, {
+            view?.let { it1 -> Snackbar.make(it1, it, Snackbar.LENGTH_SHORT).show() }
+        })
+    }
+
 //    fun handleNoData(viewModel: BaseViewModel, noData: NoData) {
 //        viewModel.showNoData.observe(viewLifecycleOwner, {
 //            if (it)
