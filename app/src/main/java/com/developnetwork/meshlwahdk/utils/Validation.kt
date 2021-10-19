@@ -3,7 +3,6 @@ package com.developnetwork.meshlwahdk.utils
 
 
 import android.content.Context
-import android.util.Patterns
 import android.widget.EditText
 import android.widget.TextView
 import androidx.appcompat.widget.AppCompatSpinner

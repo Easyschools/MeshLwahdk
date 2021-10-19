@@ -2,7 +2,6 @@ package com.developnetwork.meshlwahdk.utils
 
 import com.developnetwork.meshlwahdk.R
 import com.developnetwork.meshlwahdk.app.MeshLwahdkApplication
-import com.developnetwork.meshlwahdk.utils.managers.SharedPreferencesManagerImpl
 import org.json.JSONObject
 import retrofit2.HttpException
 import timber.log.Timber

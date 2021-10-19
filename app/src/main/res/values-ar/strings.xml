@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">مش لوحدك</string>
+    <string name="decline">رفض</string>
+    <string name="terms_and_conditions">الأحكام والشروط</string>
+    <string name="agree">موافق</string>
+    <string name="title_reservations">حجز</string>
+    <string name="title_notifications">إشعارات</string>
+    <string name="login_now">تسجيل الدخول الآن</string>
+    <string name="please_login_to_continue_using_our_app">الرجاء تسجيل الدخول لمواصلة استخدام التطبيق لدينا.</string>
+    <string name="login">تسجيل الدخول</string>
+    <string name="don_t_have_an_account">ليس لديك حساب؟</string>
+    <string name="register">يسجل</string>
+    <string name="please_sign_up_to_enter_in_a_app">يرجى التسجيل للدخول في التطبيق.</string>
+    <string name="already_have_an_acoount">هل لديك حساب؟</string>
+    <string name="email">بريد الالكتروني</string>
+    <string name="password">كلمه السر</string>
+    <string name="forget_password">هل نسيت كلمة السر؟</string>
+    <string name="name">اسم</string>
+    <string name="confirm_password">تأكيد كلمة المرور</string>
+    <string name="title_doctors">الأطباء</string>
+    <string name="title_booking_list">حجز جديد</string>
+    <string name="please_enter_your_email">رجاءا أدخل بريدك الإلكتروني.</string>
+    <string name="please_enter_your_password">من فضلك أدخل رقمك السري.</string>
+    <string name="continue0">استمر</string>
+    <string name="please_enter_your_name">يرجى إدخال اسمك.</string>
+    <string name="please_enter_your_password_confirmation">الرجاء إدخال تأكيد كلمة المرور.</string>
+    <string name="passwords_do_not_match">كلمات المرور غير متطابقة.</string>
+    <string name="phone">هاتف</string>
+    <string name="national_id">الرقم القومي</string>
+    <string name="please_enter_your_phone">الرجاء إدخال رقم هاتفك.</string>
+    <string name="please_enter_your_age">الرجاء ادخال تاريخ ميلادك.</string>
+    <string name="please_enter_your_nationalId">الرجاء ادخال رقم بطاقتك.</string>
+    <string name="male">ذكر</string>
+    <string name="female">انثي</string>
+    <string name="please_select_the_gender">الرجاء تحديد النوع.</string>
+    <string name="date_of_birth">تاريخ الميلاد</string>
+    <string name="this_day_is_not_working_day">هذا اليوم ليس يوم عمل!</string>
+    <string name="booking">الحجز</string>
+    <string name="you_choose_a_reservation">اخترت الحجز</string>
+    <string name="confirmation">التأكيد</string>
+    <string name="on_date">في تاريخ :</string>
+    <string name="at">في :</string>
+    <string name="clock">الساعة</string>
+    <string name="start_meeting">ابدأ الاجتماع</string>
+    <string name="waiting_to_start_meeting">في انتظار بدء الاجتماع …</string>
+    <string name="notification">إشعار</string>
+    <string name="identity_card">البطاقة الشخصية</string>
+    <string name="choose_a_picture">اختيار صورة</string>
+    <string name="insurance_card">بطاقة التأمين</string>
+    <string name="choose_date">اختر موعدا</string>
+    <string name="choose_available_time">اختر الوقت المتاح</string>
+    <string name="confirm">تأكيد</string>
+    <string name="invalid_email_address">عنوان البريد الإلكتروني غير صالح.</string>
+    <string name="your_password_is_too_small">كلمة المرور الخاصة بك ضعيفه جدًا.</string>
+    <string name="please_enter_a_valid_national_id">من فضلك ادخل رقم قومي صحيح.</string>
+    <string name="please_enter_your_health_insurance">الرجاء إدخال رقم تأمينك الصحي.</string>
+    <string name="health_insurance">رقم التأمين الصحي الخاص بك</string>
+    <string name="loading">جار التحميل …</string>
+    <string name="no_notifications">لا إشعارات!</string>
+    <string name="no_reservations">لا يوجد حجوزات!</string>
+    <string name="rays">أشعة</string>
+    <string name="analyses">تحاليل</string>
+    <string name="the_national_id_numbers_must_be_digits">يجب أن يتكون الرقم القومي من 14 رقمًا.</string>
+    <string name="mobile_number">رقم الموبايل</string>
+    <string name="mobile_numbers_must_be_digits">يجب أن يتكون رقم الموبايل من 11 رقمًا.</string>
+    <string name="government">المحافظة</string>
+    <string name="city">المدينة</string>
+    <string name="waiting_for_a_doctor">في انتظار الدكتور</string>
+    <string name="pending">قيد الانتظار</string>
+    <string name="check_up">تم الفحص</string>
+    <string name="image_selected">تم تحديد الصورة</string>
+    <string name="area">المنطقة</string>
+    <string name="lab_results">نتائج التحاليل</string>
+    <string name="sign_up">سجل</string>
+    <string name="the_latest_scans">أحدث الفحوصات</string>
+    <string name="you_can_upload_photo_until_4_images">يمكنك تحميل الصور حتى 4 صور</string>
+    <string name="upload_image">تحميل الصور</string>
+    <string name="the_latest_lab_results">أحدث نتائج المعمل</string>
+    <string name="skip">يتخطى</string>
+    <string name="confirm_number">تأكيد الرقم</string>
+    <string name="resend">إعادة إرسال</string>
+    <string name="arabic">عربي</string>
+    <string name="english">إنجليزي</string>
+    <string name="welcome_to">مرحبا بك في</string>
+    <string name="before_we_start_please_choose_your_prefered_language">قبل أن نبدأ من فضلك ، اختر لغتك المفضلة</string>
+    <string name="error">خطأ</string>
+    <string name="server_error">خطأ في الخادم</string>
+    <string name="no_internet">لا انترنت</string>
+    <string name="no_data">لايوجد بيانات</string>
+    <string name="continue_">استمر</string>
+    <string name="next">التالى</string>
+    <string name="old_password">كلمة سر قديمة</string>
+    <string name="new_password">كلمة مرور جديدة</string>
+    <string name="new_confirm_password">تأكيد كلمة المرور</string>
+    <string name="done">تم</string>
+    <string name="password_field_validation">حقل كلمة المرور مطلوب</string>
+    <string name="invalid_password">رمز مرور خاطئ</string>
+    <string name="password_leanth">يجب ألا تقل كلمة المرور عن 8 أحرف ولا تزيد عن 20 حرفًا</string>
+    <string name="not_empty_msg">هذه الخانة مطلوبه</string>
+    <string name="email_field_validation">بريد إلكتروني خاطئ</string>
+    <string name="confirm_pass_validation">يجب أن تتطابق مع كلمة المرور</string>
+    <string name="name_length_valdation">يجب أن يكون الاسم أكثر من 3 أحرف وأقل من 15 حرفًا</string>
+    <string name="phone_must_be_numbers_msg">يجب أن يكون الهاتف أرقامًا فقط</string>
+    <string name="phone_length_msg">يجب أن يتكون الهاتف من 9 أرقام على الأقل ولا يزيد عن 15 رقمًا</string>
+    <string name="characters_only">الشخصيات فقط</string>
+    <string name="must_select_an_item">يجب تحديد عنصر</string>
+    <string name="forgot_password">نسيت كلمة المرور</string>
+    <string name="user_name_valdation">اسم المستخدم غير صالح</string>
+    <string name="text_length_msg">هذا النص لا يحقق متطلبات الطول</string>
+    <string name="home">الصفحة الرئيسية</string>
+    <string name="back">عودة</string>
+    <string name="before_we_start_we_are_kindly_ask_you_to_read_and_agree_the_terms_and_conditions_of_the_program">قبل أن نبدأ ، نرجو منك قراءة بنود وشروط البرنامج والموافقة عليها</string>
+    <string name="disagree">لا أوافق</string>
+    <string name="let_s_go">هيا بنا</string>
+    <string name="you_can_join_us_login_or_create_a_new_account_to_get_benifits_of_our_app">يمكنك الانضمام إلينا أو تسجيل الدخول أو إنشاء حساب جديد للاستفادة من تطبيقنا.</string>
+    <string name="get_started_by">ابدأ بـ</string>
+    <string name="creating_your_account">إنشاء حسابك</string>
+    <string name="enter_your_mobile_number_to_recieve_a_verification_code">أدخل رقم هاتفك المحمول لتلقي رمز التحقق</string>
+    <string name="get_code">الحصول على رمز</string>
+    <string name="sms_has_been_sent_to">تم إرسال الرسائل القصيرة إلى</string>
+    <string name="welcome">أهلا بك</string>
+    <string name="medication_info">معلومات الدواء</string>
+    <string name="please_chooce_the_prescribed_product">الرجاء اختيار المنتج الموصوف.</string>
+    <string name="profile_info">معلومات الشخصي</string>
+    <string name="upload_your_id">قم بتحميل المعرف الخاص بك</string>
+    <string name="gender">نوع</string>
+    <string name="your_new_password_must_be_different_from_the_previous_used_password">يجب أن تكون كلمة مرورك الجديدة مختلفة عن كلمة المرور المستخدمة سابقًا.</string>
+    <string name="create_a_new_password">أنشئ كلمة مرور جديدة</string>
+    <string name="reset_password">إعادة تعيين كلمة المرور</string>
+    <string name="verification">تحقق</string>
+    <string name="resend_code_in">إعادة إرسال الرمز بتنسيق</string>
+    <string name="welcome_back">مرحبا بعودتك،</string>
+    <string name="let_s_sign_yo_in">دعنا نسجل دخولك.</string>
+    <string name="profile_for">الملف الشخصي لـ</string>
+    <string name="every_patient">كل مريض</string>
+    <string name="got_lost_we_can_help_you">ضاعت يمكننا مساعدتك!</string>
+    <string name="call_us_now">اتصل بنا الآن</string>
+    <string name="programs">البرامج</string>
+    <string name="reminders">تنبيهات</string>
+    <string name="pharmacies">صيدليات</string>
+    <string name="history">تاريخ</string>
+    <string name="profile">الملف الشخصي</string>
+    <string name="edit_profile">تعديل الملف الشخصي</string>
+    <string name="edit_mobile_number">تحرير رقم الهاتف المحمول</string>
+    <string name="language">لغة</string>
+    <string name="sign_out">تسجيل الخروج</string>
+    <string name="please_enter_your_profile_information_name_password"><![CDATA[الرجاء إدخال اسم معلومات ملف التعريف وكلمة المرور]]></string>
+    <string name="app_terms"><![CDATA[<h2 style="text-align: center;"><strong>‫لوحدك‬ ‫مش‬ ‫لبرنامج‬ ‫موافقة‬ ‫إذن‬</strong></h2>
+
+<h3 style="text-align: right;"><strong>‫لوحدك‬ ‫مش‬ ‫برنامج‬ ‫تسجيل</strong></h3>
+
+<h3 style="text-align: right;"><strong>‬</strong>‫ألكسايت‬ ‫وأسمح‬ ‫لوحدك&quot;‪،‬‬ ‫مش‬ ‫&quot;برنامج‬ ‫إسم‬ ‫ب‬ ‫إليه‬ ‫يشار‬ ‫فصاعدا‬ ‫اآلن‬ ‫من‬ ‫حدك&quot;‪،‬‬ ‫لو‬ ‫&quot;مش‬ ‫المرضى‬ ‫دعم‬ ‫برنامج‬ ‫في‬ ‫أسجل‬ ‫أن‬ ‫أوافق‬<br />
+‫المستقبل‪.‬‬ ‫في‬ ‫إضافته‬ ‫يمكن‬ ‫وما‬ ‫الموضح‬ ‫النحو‬ ‫على‬ ‫البرنامج‬ ‫إطار‬ ‫في‬ ‫الخدمات‬ ‫لي‬ ‫يقدموا‬ ‫بأن‬ ‫ووكالئهم‬<br />
+‫يلي‪:‬‬ ‫ما‬ ‫الخدمات‬ ‫هذه‬ ‫وتشمل‬<br />
+‫‪.‬‬ ‫الدواء‬ ‫صرف‬ ‫تسهيل‬<br />
+‫‪.‬‬ ‫للعالج‬ ‫اإلمتثال‬ ‫من‬ ‫للتأكد‬ ‫اإلتصال‬<br />
+‫‪.‬‬ ‫مؤهال)‬ ‫كان‬ ‫(إذا‬ ‫مجانية‬ ‫علب‬ ‫أو‬ ‫الدواء‬ ‫عروض‬<br />
+‫لوحدك‪،‬‬ ‫مش‬ ‫برنامج‬ ‫داخل‬ ‫اآلخرين‬ ‫الصحية‬ ‫الرعاية‬ ‫خدمات‬ ‫مزودي‬ ‫إلى‬ ‫ترسل‬ ‫قد‬ ‫معلوماتي‬ ‫أن‬ ‫أتفهم‬ ‫إستحقاقى‪،‬‬ ‫من‬ ‫التأكد‬ ‫تم‬ ‫إذا‬<br />
+‫البرنامج‪.‬‬ ‫وشروط‬ ‫ألحكام‬ ‫وفقا‬ ‫وجدت)‬ ‫(إن‬ ‫المختبر‬ ‫ونتائج‬ ‫الطبية‬ ‫لوصفاتي‬ ‫باإلضافة‬<br />
+‫والدراسات‬ ‫السوق‬ ‫أبحاث‬ ‫إجراء‬ ‫في‬ ‫واستخدامها‬ ‫الصحية‬ ‫معلوماتي‬ ‫على‬ ‫بالتعرف‬ ‫&quot;‬ ‫&quot;أكسايت‬ ‫لشركة‬ ‫ً‬ ‫أيضا‬ ‫أسمح‬ ‫المعلومات‪:‬‬ ‫مشاركة‬<br />
+‫باألمراض‪.‬‬ ‫المتعلقة‬<br />
+‫أطبائي‪،‬‬ ‫مع‬ ‫الصحية‬ ‫معلوماتي‬ ‫تشارك‬ ‫وقد‬ ‫األغراض‪،‬‬ ‫لهذه‬ ‫الصحية‬ ‫معلوماتي‬ ‫تستخدم‬ ‫قد‬ ‫&quot;‬ ‫&quot;أكسايت‬ ‫أن‬ ‫على‬ ‫وأوافق‬ ‫أفهم‬ ‫وأنا‬<br />
+‫المتخصصة‪.‬‬ ‫والصيدليات‬<br />
+‫حالة‬ ‫في‬ ‫جانسن‬ ‫شركة‬ ‫أدوية‬ ‫على‬ ‫الحصول‬ ‫بإمكاني‬ ‫اليزال‬ ‫وأنه‬ ‫االتصاالت‬ ‫أتلقى‬ ‫أو‬ ‫بالبرنامج‬ ‫ألتحق‬ ‫أن‬ ‫الضروري‬ ‫من‬ ‫ليس‬ ‫أنه‬ ‫وأتفهم‬<br />
+‫‪.‬‬ ‫‪15148‬‬ ‫الساخن‬ ‫بالخط‬ ‫اإلتصال‬ ‫طريق‬ ‫عن‬ ‫وقت‬ ‫أي‬ ‫في‬ ‫بالكامل‬ ‫البرنامج‬ ‫من‬ ‫االنسحاب‬ ‫ويمكنني‬ ‫المختص‪.‬‬ ‫طبيبي‬ ‫قبل‬ ‫من‬ ‫وصفه‬ ‫تم‬<br />
+‫مسبق‪.‬‬ ‫إخطار‬ ‫دون‬ ‫وقت‬ ‫أي‬ ‫في‬ ‫ها‬ ‫إنهائ‬ ‫أو‬ ‫الخدمات‬ ‫تغيير‬ ‫يجوز‬ ‫أنه‬ ‫أيضا‬ ‫‪.‬وأتفهم‬<br />
+‫مع‬ ‫أدناه‪،‬‬ ‫موافقتي‬ ‫أوضحت‬ ‫إذا‬ ‫اإللكتروني‪،‬‬ ‫البريد‬ ‫أو‬ ‫الهاتف‬ ‫أو‬ ‫البريد‬ ‫طريق‬ ‫عن‬ ‫بي‬ ‫باإلتصال‬ ‫لوحدك‬ ‫مش‬ ‫لبرنامج‬ ‫أأذن‬ ‫االتصاالت‪:‬‬<br />
+‫أبحاث‬ ‫ذلك‬ ‫في‬ ‫بما‬ ‫والمواضيع‪،‬‬ ‫المعلومات‬ ‫هذه‬ ‫عن‬ ‫رأيي‬ ‫عن‬ ‫أسأل‬ ‫وأن‬ ‫البحثية؛‬ ‫والدراسات‬ ‫والخدمات‬ ‫واألدوية؛‬ ‫البرنامج‬ ‫عن‬ ‫معلومات‬<br />
+‫باألمراض‪.‬‬ ‫المتعلقة‬ ‫والدراسات‬ ‫السوق‬<br />
+‫إخطار‬ ‫على‬ ‫وأوافق‬ ‫قدمته‬ ‫الذي‬ ‫المحمول‬ ‫الهاتف‬ ‫رقم‬ ‫على‬ ‫عنهم‬ ‫ينوب‬ ‫من‬ ‫أو‬ ‫البرنامج‬ ‫من‬ ‫هاتفية‬ ‫مكالمات‬ ‫تلقي‬ ‫على‬ ‫صراحة‬ ‫وأوافق‬<br />
+‫المستقبل‪.‬‬ ‫في‬ ‫هاتفي‬ ‫رقم‬ ‫غيرت‬ ‫حالة‬ ‫في‬ ‫أكسايت‬</h3>
+
+<h3 style="text-align: right;"><strong>‫عنها‪:‬‬ ‫والكشف‬ ‫الصحية‬ ‫المعلومات‬ ‫باستخدام‬ ‫المريض‬ ‫ذن‬ ‫إ</strong></h3>
+
+<h3 style="text-align: right;">‫أدويتي‬ ‫صرف‬ ‫ت‬ ‫متخصصة‬ ‫صيدليات‬ ‫وأي‬ ‫الصحية‪،‬‬ ‫الرعاية‬ ‫خدمات‬ ‫لي‬ ‫تقدم‬ ‫التي‬ ‫البرامج‬ ‫أو‬ ‫الصحية‬ ‫الرعاية‬ ‫خدمة‬ ‫لمقدمي‬ ‫أسمح‬<br />
+‫(بما‬ ‫الطبية‬ ‫ووصفتي‬ ‫وعالجي‬ ‫الطبية‬ ‫بحالتي‬ ‫تتعلق‬ ‫معلومات‬ ‫ذلك‬ ‫ويشمل‬ ‫الصحية‬ ‫معلوماتي‬ ‫عن‬ ‫تكشف‬ ‫أن‬ ‫لوحدك‪،‬‬ ‫مش‬ ‫ببرنامج‬ ‫المتعلقة‬<br />
+‫معينة‪،‬‬ ‫خدمات‬ ‫وتقديم‬ ‫تسجيلي‬ ‫ألغراض‬ ‫&quot;معلوماتي&quot;‬ ‫مسمى‬ ‫تحت‬ ‫بى‬ ‫خاصه‬ ‫بيانات‬ ‫إلى‬ ‫واإلحالة‬ ‫المعلومات)‪،‬‬ ‫ملء‬ ‫ملء‪/‬إعادة‬ ‫ذلك‬ ‫في‬<br />
+‫‪:‬‬ ‫ذلك‬ ‫في‬ ‫بما‬</h3>
+
+<h3 style="text-align: right;">‫‪.‬‬ ‫األخرى‬ ‫المرضى‬ ‫دعم‬ ‫برامج‬ ‫أو‬ ‫المرضى‬ ‫لدعم‬ ‫لوحدك‬ ‫مش‬ ‫برنامج‬ ‫في‬ ‫للمشاركة‬ ‫مؤهال‬ ‫كنت‬ ‫إذا‬ ‫ما‬ ‫تحديد‬<br />
+‫البرنامج‪.‬‬ ‫وإدارة‬ ‫تشغيل‬<br />
+‫أو‬ ‫اإلذن‪،‬‬ ‫هذا‬ ‫في‬ ‫بها‬ ‫أسمح‬ ‫التي‬ ‫لألغراض‬ ‫فقط‬ ‫عنها‬ ‫والكشف‬ ‫المعلومات‬ ‫هذه‬ ‫باستخدام‬ ‫معلوماتي‬ ‫حماية‬ ‫على‬ ‫توافق‬ ‫&quot;أكسايت&quot;‬ ‫أن‬ ‫فهم‬ ‫وأت‬<br />
+‫القانون‪.‬‬ ‫يسمح‬ ‫كما‬<br />
+‫المرضى‪.‬‬ ‫لدعم‬ ‫لوحدك‬ ‫مش‬ ‫برنامج‬ ‫في‬ ‫المشاركة‬ ‫من‬ ‫أتمكن‬ ‫فلن‬ ‫أوافق‬ ‫لم‬ ‫إذا‬ ‫ولكن‬ ‫اإلذن‬ ‫هذا‬ ‫على‬ ‫للموافقة‬ ‫مجبرا‬ ‫لسن‬ ‫أنى‬ ‫فهم‬ ‫أت‬ ‫أنا‬<br />
+‫الساخن‬ ‫بالرقم‬ ‫الـصال‬ ‫ق‬ ‫طري‬ ‫عن‬ ‫وذلك‬ ‫أخرى‬ ‫مره‬ ‫موافقتي‬ ‫بسحب‬ ‫طلبي‬ ‫أو‬ ‫البرنامج‬ ‫من‬ ‫خروجي‬ ‫حتى‬ ‫سارية‬ ‫موافقتي‬ ‫أن‬ ‫أتفهم‬ ‫أنا‬<br />
+‫‪.15148‬‬<br />
+‫وتمكن‬ ‫معلوماتي‬ ‫عن‬ ‫باإلفصاح‬ ‫موافقتي‬ ‫على‬ ‫يؤثر‬ ‫لن‬ ‫ولكن‬ ‫المرضى‬ ‫لدعم‬ ‫لوحدك‬ ‫مش‬ ‫برنامج‬ ‫في‬ ‫مشاركتي‬ ‫سينهى‬ ‫الموافقة‬ ‫سحب‬ ‫طلب‬<br />
+‫البرنامج‪.‬‬ ‫بداخل‬ ‫التي‬ ‫معلوماتي‬ ‫إستخدام‬ ‫من‬ ‫أكسايت‬<br />
+‫يلي‪:‬‬ ‫بما‬ ‫يقوموا‬ ‫أن‬ ‫وعمالئهم‬ ‫أكسايت‬ ‫وشركة‬ ‫المرضى‬ ‫لدعم‬ ‫لوحدك‬ ‫مش‬ ‫لبرنامج‬ ‫أسمح‬ ‫أنا‬<br />
+‫في‬ ‫مشاركتى‬ ‫إستمرار‬ ‫في‬ ‫والمساعدة‬ ‫لوحدك‪،‬‬ ‫مش‬ ‫برنامج‬ ‫لدخول‬ ‫أهليتي‬ ‫لتحديد‬ ‫اإلستمارة‬ ‫هذه‬ ‫في‬ ‫قدمتها‬ ‫التي‬ ‫المعلومات‬ ‫استخدام‬ ‫‪-1‬‬<br />
+‫البرنامج‪.‬‬<br />
+‫‪.‬‬ ‫فقط‬ ‫هويتي‬ ‫من‬ ‫التحقق‬ ‫ألغراض‬ ‫هويتي‬ ‫استخدام‬ ‫‪-2‬‬<br />
+‫لوحدك‪.‬‬ ‫مش‬ ‫برنامج‬ ‫خدمات‬ ‫مستوى‬ ‫عن‬ ‫رضائي‬ ‫مدى‬ ‫في‬ ‫رأيى‬ ‫ألخذ‬ ‫بى‬ ‫اإلتصال‬ ‫‪-3‬‬<br />
+‫يرضيني‬ ‫بما‬ ‫أسئلتي‬ ‫جميع‬ ‫على‬ ‫الرد‬ ‫وتم‬ ‫طبيبي‪،‬‬ ‫مع‬ ‫وناقشتها‬ ‫لوحدك‪،‬‬ ‫مش‬ ‫برنامج‬ ‫ب‬ ‫يتعلق‬ ‫فيما‬ ‫أعاله‬ ‫المقدمة‬ ‫المعلومات‬ ‫وفهمت‬ ‫قرأت‬ ‫لقد‬<br />
+‫مش‬ ‫ببرنامج‬ ‫متصل‬ ‫ثالث‬ ‫طرف‬ ‫أي‬ ‫مع‬ ‫الطبية‬ ‫حالتي‬ ‫لمتابعة‬ ‫والالسلكية‬ ‫السلكية‬ ‫االتصاالت‬ ‫منصة‬ ‫باستخدام‬ ‫لوحدك‬ ‫مش‬ ‫لبرنامج‬ ‫وأسمح‬<br />
+‫لوحدك‪.‬‬</h3>
+
+<ul>
+	<li>
+	<h3 style="text-align: right;"><strong>‬</strong>‫واألحكام‬ ‫الشروط‬ ‫على‬ ‫أوافق‬</h3>
+	</li>
+	<li style="text-align: right;">‫واألحكام‬ ‫الشروط‬ ‫على‬ ‫أوافق‬ ‫ال‬</li>
+</ul>]]>
+</string>
+    <string name="change_language">تغيير اللغة</string>
+
+</resources>

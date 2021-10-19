@@ -17,7 +17,7 @@ class ConfirmNumberFragment : BaseConfirmPhoneFragment() {
 
     override fun confirmed() {
         findNavController().navigate(
-            ConfirmNumberFragmentDirections.actionConfirmNumberFragmentToRegisterFragment(
+            ConfirmNumberFragmentDirections.actionConfirmNumberFragmentToRegisterFirstStepFragment(
                 phone
             )
         )

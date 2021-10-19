@@ -7,6 +7,18 @@
     tools:context=".ui.auth.AuthFragment">
 
     <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/callBTN"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="@id/logo"
+        app:layout_constraintDimensionRatio="3:2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/logo"
+        app:layout_constraintWidth_percent="0.2"
+        app:srcCompat="@drawable/ic_call_button" />
+
+    <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/logo"
         android:layout_width="0dp"
         android:layout_height="0dp"

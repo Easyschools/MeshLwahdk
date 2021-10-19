@@ -4,26 +4,76 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/backgroundColor"
     tools:context=".ui.main.MainActivity">
 
-    <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/welcome"
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/backBTN"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/welcome"
-        android:textSize="@dimen/_20ssp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="@dimen/_5sdp"
+        android:text="@string/back"
+        android:textColor="@color/colorAccent"
+        app:icon="@drawable/ic_arrow_back"
+        app:iconTint="@color/colorAccent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/name"
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/settingsBTN"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/_10sdp"
-        app:layout_constraintEnd_toEndOf="@id/welcome"
-        app:layout_constraintStart_toStartOf="@id/welcome"
-        app:layout_constraintTop_toBottomOf="@id/welcome" />
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/ic_settings"
+        android:tint="@color/colorAccent"
+        android:padding="@dimen/_5sdp"
+        app:layout_constraintBottom_toBottomOf="@id/backBTN"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/backBTN" />
 
+    <fragment
+        android:id="@+id/main_host_fragment"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:defaultNavHost="false"
+        app:layout_constraintBottom_toTopOf="@id/callBTN"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/backBTN"
+        app:navGraph="@navigation/main_navigation" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/callBTN"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:clickable="false"
+            android:text="@string/got_lost_we_can_help_you"
+            android:textColor="@color/white" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/_10sdp"
+            android:drawableEnd="@drawable/ic_call"
+            android:drawablePadding="@dimen/_5sdp"
+            android:drawableTint="@color/white"
+            android:clickable="false"
+            android:text="@string/call_us_now"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_20ssp"
+            android:textStyle="bold" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -2,6 +2,7 @@ package com.developnetwork.meshlwahdk.ui.auth.register
 
 import com.developnetwork.meshlwahdk.BuildConfig
 import com.developnetwork.meshlwahdk.base.BaseViewModel
+import com.developnetwork.meshlwahdk.data.model.User
 import com.developnetwork.meshlwahdk.data.repository.AuthRepo
 import com.developnetwork.meshlwahdk.data.repository.OtherRepo
 import com.developnetwork.meshlwahdk.utils.managers.SharedPreferencesManager
@@ -26,6 +27,8 @@ class RegisterViewModel(
     var nationalId: String = ""
     var password: String = ""
     var gender: Int = 0
+    var region_id: Int = 1
+    var subRegion_id: Int = 1
 
     var profilePicPath: String? = null
     var categoryDocumentPath: String? = null
@@ -68,27 +71,11 @@ class RegisterViewModel(
         emit(list)
     }
 
-    fun getSubRegions(districtsID: Int, name: String) = handleRequestLiveData<List<Region>> {
-        val result = withContext(Dispatchers.IO) {
-            otherRepo.getAllSubRegion(districtsID)
-        }
-
-        val list = ArrayList<Region>()
-        list.add(Region(name = name))
-        list.addAll(result)
-
-        emit(list)
-    }
-
 
     fun completeRegister(
-        region_id: Int=1,
-        subRegion_id: Int=1,
-        subSubRegion_id: Int=1,
-        healthInsurance: String="4564646",
-        categoryID: Int=0
-    ) = callRequestLiveData {
-        authRepo.completeRegister(
+        productID: Int
+    ) = handleRequestLiveData<User> {
+        val result= withContext(Dispatchers.IO){authRepo.completeRegister(
             name,
             phone,
             email,
@@ -97,18 +84,22 @@ class RegisterViewModel(
             gender.toString(),
             region_id,
             subRegion_id,
-            subSubRegion_id,
             BuildConfig.company_id,
-            BuildConfig.product_id,
+            productID,
             age,
-            healthInsurance,
-            categoryID,
+            "xxxx",
+            1,
             profilePicPath,
             categoryDocumentPath,
             identityCardImagePath,
             insuranceCardImagePath
-        )
+        )}
+
+        sharedPreferencesManager.saveUserData(result)
+
+        emit(result)
     }
+
     fun getAge(dateString: String): String {
         val sdf = SimpleDateFormat("yyyy-MM-dd", Locale.getDefault())
         val date = sdf.parse(dateString)
@@ -122,4 +113,7 @@ class RegisterViewModel(
         }
         return age.toString()
     }
+
+    fun getProducts() = callRequestLiveData { otherRepo.getProducts(BuildConfig.company_id) }
+
 }

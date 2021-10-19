@@ -1,7 +1,11 @@
 package com.developnetwork.meshlwahdk.data.network
 
+import com.developnetwork.meshlwahdk.data.model.Product
 import com.developnetwork.meshlwahdk.data.model.User
-import com.ivestment.doctorna.data.model.*
+import com.ivestment.doctorna.data.model.BaseResponse
+import com.ivestment.doctorna.data.model.InsuranceCard
+import com.ivestment.doctorna.data.model.PatientCategory
+import com.ivestment.doctorna.data.model.Region
 import okhttp3.MultipartBody
 import okhttp3.RequestBody
 import retrofit2.http.*
@@ -11,8 +15,8 @@ interface Service {
     @POST("patients-login")
     @FormUrlEncoded
     suspend fun userLogin(
-            @Field("phone") email: String,
-            @Field("password") password: String
+        @Field("phone") email: String,
+        @Field("password") password: String
     ): BaseResponse<User>
 
     @POST("phoneRegister")
@@ -36,36 +40,42 @@ interface Service {
 
     @POST("confirmAccount")
     @FormUrlEncoded
-    suspend fun confirmPhone(@Field("phone") phone: String, @Field("confirmation_code") code: String): BaseResponse<String>
+    suspend fun confirmPhone(
+        @Field("phone") phone: String,
+        @Field("confirmation_code") code: String
+    ): BaseResponse<String>
 
     @POST("checkCode")
     @FormUrlEncoded
-    suspend fun confirmForgotPasswordPhone(@Field("phone") phone: String, @Field("token") code: String): BaseResponse<String>
+    suspend fun confirmForgotPasswordPhone(
+        @Field("phone") phone: String,
+        @Field("token") code: String
+    ): BaseResponse<String>
 
     @POST("patient-category")
-    suspend fun getPatientCategories():BaseResponse<List<PatientCategory>>
+    suspend fun getPatientCategories(): BaseResponse<List<PatientCategory>>
 
     @POST("completeRegister")
     @Multipart
     suspend fun completeRegister(
-            @Part("displayName") name: RequestBody,
-            @Part("phone") phone: RequestBody,
-            @Part("email") email: RequestBody,
-            @Part("password") password: RequestBody,
-            @Part("national_id") nationalId: RequestBody,
-            @Part("gender") gender: RequestBody,
-            @Part("region_id") region_id: RequestBody,
-            @Part("districts_id") subRegion_id: RequestBody,
-            @Part("subRegion_id") subSubRegion_id: RequestBody,
-            @Part("company_id") company_id: RequestBody,
-            @Part("product_id") product_id: RequestBody,
-            @Part("Age") age: RequestBody,
-            @Part("health_insurance") health_insurance: RequestBody,
-            @Part("category_id") Category_id: RequestBody,
-            @Part profilePic: MultipartBody.Part?,
-            @Part categoryDocumentImage: MultipartBody.Part?,
-            @Part identityCardImage: MultipartBody.Part?,
-            @Part insuranceCardImage: MultipartBody.Part?
+        @Part("displayName") name: RequestBody,
+        @Part("phone") phone: RequestBody,
+        @Part("email") email: RequestBody,
+        @Part("password") password: RequestBody,
+        @Part("national_id") nationalId: RequestBody,
+        @Part("gender") gender: RequestBody,
+        @Part("region_id") region_id: RequestBody,
+        @Part("districts_id") subRegion_id: RequestBody,
+        @Part("subRegion_id") subSubRegion_id: RequestBody,
+        @Part("company_id") company_id: RequestBody,
+        @Part("product_id") product_id: RequestBody,
+        @Part("Age") age: RequestBody,
+        @Part("health_insurance") health_insurance: RequestBody,
+        @Part("category_id") Category_id: RequestBody,
+        @Part profilePic: MultipartBody.Part?,
+        @Part categoryDocumentImage: MultipartBody.Part?,
+        @Part identityCardImage: MultipartBody.Part?,
+        @Part insuranceCardImage: MultipartBody.Part?
     ): BaseResponse<User>
 
     @POST("forgetPassword")
@@ -74,14 +84,21 @@ interface Service {
 
     @POST("resetPassword")
     @FormUrlEncoded
-    suspend fun resetPassword(@Field("phone") phone: String,@Field("new_password") newPassword: String,@Field("confirm_password") confirmPassword: String): BaseResponse<Any>
+    suspend fun resetPassword(
+        @Field("phone") phone: String,
+        @Field("new_password") newPassword: String,
+        @Field("confirm_password") confirmPassword: String
+    ): BaseResponse<Any>
 
     @POST("insurance-create")
     @Multipart
-    suspend fun addInsuranceCard(@Part insuranceCardImage: MultipartBody.Part):BaseResponse<Any>
+    suspend fun addInsuranceCard(@Part insuranceCardImage: MultipartBody.Part): BaseResponse<Any>
 
     @POST("My-Insurance")
-    suspend fun getUserInsuranceStat():BaseResponse<InsuranceCard>
+    suspend fun getUserInsuranceStat(): BaseResponse<InsuranceCard>
+
+    @POST("getByCompany")
+    suspend fun getProducts(@Query("company_id")company_id:Int): BaseResponse<List<Product>>
 
 //    @POST("completeRegister")
 //    @Multipart

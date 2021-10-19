@@ -80,6 +80,7 @@ dependencies { configuration ->
     retrofit(configuration)
     coroutines(configuration)
     koin(configuration)
+    imageLoader(configuration)
     progressBar(configuration)
     toasty(configuration)
     pinInput(configuration)

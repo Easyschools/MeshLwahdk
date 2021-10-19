@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundColor"
+    android:orientation="vertical"
+    tools:context=".ui.main.profile.ProfileFragment">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_20sdp"
+        android:text="@string/profile"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_25ssp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_20sdp">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/profileImage"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_margin="@dimen/_5sdp"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_percent="0.2" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/userCard"
+                app:layout_constraintTop_toBottomOf="@id/profileImage"
+                app:layout_constraintBottom_toBottomOf="@id/profileImage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="@dimen/_15sdp">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_30sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:gravity="center"
+                    android:text="test user"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/_20ssp"
+                    android:textStyle="bold" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.developnetwork.meshlwahdk.utils.view.ProfileButton
+                android:id="@+id/editProfileBTN"
+                android:layout_width="match_parent"
+                app:cardElevation="@dimen/_5sdp"
+                android:layout_height="wrap_content"
+                app:buttonIcon="@drawable/ic_person"
+                app:buttonIconTint="@color/black"
+                android:layout_margin="@dimen/_10sdp"
+                app:layout_constraintTop_toBottomOf="@id/userCard"
+                app:buttonName="@string/edit_profile" />
+
+            <com.developnetwork.meshlwahdk.utils.view.ProfileButton
+                android:id="@+id/resetPasswordBTN"
+                android:layout_width="match_parent"
+                app:cardElevation="@dimen/_5sdp"
+                android:layout_height="wrap_content"
+                app:buttonIcon="@drawable/ic_lock_24px"
+                app:buttonIconTint="@color/black"
+                android:layout_margin="@dimen/_10sdp"
+                app:layout_constraintTop_toBottomOf="@id/editProfileBTN"
+                app:buttonName="@string/reset_password" />
+
+            <com.developnetwork.meshlwahdk.utils.view.ProfileButton
+                android:id="@+id/editPhoneBTN"
+                android:layout_width="match_parent"
+                app:cardElevation="@dimen/_5sdp"
+                android:layout_height="wrap_content"
+                app:buttonIcon="@drawable/ic_phone_setup"
+                app:buttonIconTint="@color/black"
+                android:layout_margin="@dimen/_10sdp"
+                app:layout_constraintTop_toBottomOf="@id/resetPasswordBTN"
+                app:buttonName="@string/edit_mobile_number" />
+
+            <com.developnetwork.meshlwahdk.utils.view.ProfileButton
+                android:id="@+id/languageBTN"
+                android:layout_width="match_parent"
+                app:cardElevation="@dimen/_5sdp"
+                android:layout_height="wrap_content"
+                app:buttonIcon="@drawable/ic_language"
+                app:buttonIconTint="@color/black"
+                android:layout_margin="@dimen/_10sdp"
+                app:layout_constraintTop_toBottomOf="@id/editPhoneBTN"
+                app:buttonName="@string/language" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/logoutBTN"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_20sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="@dimen/_20sdp"
+                android:text="@string/sign_out"
+                android:textAllCaps="false"
+                app:cornerRadius="@dimen/_10sdp"
+                app:backgroundTint="#FFE6CB"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/languageBTN" />
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>

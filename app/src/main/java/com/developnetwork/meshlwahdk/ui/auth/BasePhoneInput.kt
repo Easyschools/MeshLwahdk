@@ -6,14 +6,15 @@ import android.widget.ArrayAdapter
 import androidx.core.widget.doOnTextChanged
 import com.developnetwork.meshlwahdk.R
 import com.developnetwork.meshlwahdk.base.BaseFragment
+import com.developnetwork.meshlwahdk.utils.extensions.callUS
 import com.developnetwork.meshlwahdk.utils.phoneValidator
-import kotlinx.android.synthetic.main.fragment_register_first_step.*
+import kotlinx.android.synthetic.main.fragment_phone_input.*
 
 abstract class BasePhoneInput : BaseFragment() {
     lateinit var phoneNumber: String
 
     override fun getLayout(): Int {
-        return R.layout.fragment_register_first_step
+        return R.layout.fragment_phone_input
     }
 
     abstract val titleID: Int
@@ -33,6 +34,10 @@ abstract class BasePhoneInput : BaseFragment() {
 
         getCodeBTN.setOnClickListener {
             validate()
+        }
+
+        callBTN.setOnClickListener {
+            callUS(requireContext())
         }
     }
 

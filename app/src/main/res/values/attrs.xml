@@ -3,4 +3,10 @@
     <declare-styleable name="meshlWahdkSpinner">
         <attr name="hint" format="string" />
     </declare-styleable>
+
+    <declare-styleable name="profilebuttonview">
+        <attr name="buttonName" format="string" />
+        <attr name="buttonIcon" format="integer" />
+        <attr name="buttonIconTint" format="color" />
+    </declare-styleable>
 </resources>

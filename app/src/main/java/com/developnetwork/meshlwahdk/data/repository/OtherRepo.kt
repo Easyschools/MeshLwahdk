@@ -1,9 +1,10 @@
 package com.developnetwork.meshlwahdk.data.repository
 
+import com.developnetwork.meshlwahdk.data.model.Product
+import com.developnetwork.meshlwahdk.data.network.Service
 import com.ivestment.doctorna.data.model.InsuranceCard
 import com.ivestment.doctorna.data.model.PatientCategory
 import com.ivestment.doctorna.data.model.Region
-import com.developnetwork.meshlwahdk.data.network.Service
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import okhttp3.MultipartBody
 import okhttp3.RequestBody.Companion.asRequestBody
@@ -21,6 +22,9 @@ interface OtherRepo {
     suspend fun getUserInsuranceStat():InsuranceCard
 
     suspend fun getPatientCategories(): List<PatientCategory>
+
+    suspend fun getProducts(company_id:Int): List<Product>
+
 
 }
 
@@ -55,4 +59,7 @@ class OthersRepoImpl(private val service: Service) : OtherRepo {
         return service.getPatientCategories().data
     }
 
+    override suspend fun getProducts(company_id:Int): List<Product> {
+        return service.getProducts(company_id).data
+    }
 }

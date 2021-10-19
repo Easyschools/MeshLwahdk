@@ -14,7 +14,6 @@ import com.developnetwork.meshlwahdk.utils.managers.SharedPreferencesManager
 import kotlinx.android.synthetic.main.fragment_splash.*
 import org.koin.android.ext.android.inject
 
-
 class SplashFragment : Fragment() {
 
     private val sharedPreferencesManager: SharedPreferencesManager by inject()
@@ -35,13 +34,12 @@ class SplashFragment : Fragment() {
 
         motion_layout.setTransitionListener(object : MotionLayout.TransitionListener {
             override fun onTransitionCompleted(p0: MotionLayout?, p1: Int) {
-                if (sharedPreferencesManager.choseLanguage)
-                    findNavController().navigate(R.id.termsFragment)
-                else
-                    if (sharedPreferencesManager.termsAgreed)
-                        findNavController().navigate(TermsFragmentDirections.auth())
-                    else
-                        findNavController().navigate(SplashFragmentDirections.actionSplashFragmentToChooseLanguageFragment())
+                when {
+                    sharedPreferencesManager.isLoggedIn -> findNavController().navigate(SplashFragmentDirections.actionSplashFragmentToMainActivity())
+                    !sharedPreferencesManager.choseLanguage -> findNavController().navigate(SplashFragmentDirections.actionSplashFragmentToChooseLanguageFragment())
+                    sharedPreferencesManager.termsAgreed -> findNavController().navigate(SplashFragmentDirections.splashToAuth())
+                    else -> findNavController().navigate(SplashFragmentDirections.actionSplashFragmentToIntroFragment())
+                }
 
             }
 

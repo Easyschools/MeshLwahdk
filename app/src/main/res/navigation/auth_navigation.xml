@@ -14,23 +14,26 @@
             android:id="@+id/action_loginFragment_to_confirmNumberFragment"
             app:destination="@id/confirmNumberFragment" />
         <action
-            android:id="@+id/action_loginFragment_to_registerFirstStepFragment"
-            app:destination="@id/registerFirstStepFragment" />
+            android:id="@+id/action_loginFragment_to_registerPhoneStepFragment"
+            app:destination="@id/registerPhoneStepFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_mainActivity"
+            app:destination="@id/mainActivity" />
+        <action
+            android:id="@+id/action_loginFragment_to_forgotPasswordFragment"
+            app:destination="@id/forgotPasswordFragment" />
     </fragment>
     <fragment
-        android:id="@+id/registerFragment"
-        android:name="com.developnetwork.meshlwahdk.ui.auth.register.RegisterFragment"
+        android:id="@+id/registerFirstStepFragment"
+        android:name="com.developnetwork.meshlwahdk.ui.auth.register.RegisterFirstStepFragment"
         android:label="fragment_register"
-        tools:layout="@layout/fragment_register" >
-        <action
-            android:id="@+id/action_registerFragment_to_loginFragment"
-            app:destination="@id/loginFragment" />
+        tools:layout="@layout/fragment_register_first_step" >
         <argument
             android:name="phone"
             app:argType="string" />
         <action
-            android:id="@+id/action_registerFragment_to_mainActivity"
-            app:destination="@id/mainActivity" />
+            android:id="@+id/action_registerFirstStepFragment_to_registerSecondStepFragment"
+            app:destination="@id/registerSecondStepFragment" />
     </fragment>
     <fragment
         android:id="@+id/confirmNumberFragment"
@@ -40,8 +43,8 @@
             android:name="phone"
             app:argType="string" />
         <action
-            android:id="@+id/action_confirmNumberFragment_to_registerFragment"
-            app:destination="@id/registerFragment" />
+            android:id="@+id/action_confirmNumberFragment_to_registerFirstStepFragment"
+            app:destination="@id/registerFirstStepFragment" />
     </fragment>
     <fragment
         android:id="@+id/authFragment"
@@ -49,27 +52,72 @@
         android:label="fragment_auth"
         tools:layout="@layout/fragment_auth" >
         <action
-            android:id="@+id/action_authFragment_to_registerFirstStepFragment"
-            app:destination="@id/registerFirstStepFragment" />
+            android:id="@+id/action_authFragment_to_registerPhoneStepFragment"
+            app:destination="@id/registerPhoneStepFragment" />
         <action
             android:id="@+id/action_authFragment_to_loginFragment"
             app:destination="@id/loginFragment" />
     </fragment>
     <fragment
-        android:id="@+id/registerFirstStepFragment"
-        android:name="com.developnetwork.meshlwahdk.ui.auth.register.RegisterFirstStepFragment"
+        android:id="@+id/registerPhoneStepFragment"
+        android:name="com.developnetwork.meshlwahdk.ui.auth.register.RegisterPhoneStepFragment"
         android:label="fragment_register_first_step"
-        tools:layout="@layout/fragment_register_first_step" >
+        tools:layout="@layout/fragment_phone_input" >
         <action
-            android:id="@+id/action_registerFirstStepFragment_to_confirmNumberFragment"
+            android:id="@+id/action_registerPhoneStepFragment_to_confirmNumberFragment"
             app:destination="@id/confirmNumberFragment" />
         <action
-            android:id="@+id/action_registerFirstStepFragment_to_registerFragment"
-            app:destination="@id/registerFragment" />
+            android:id="@+id/action_registerPhoneStepFragment_to_registerFirstStepFragment"
+            app:destination="@id/registerFirstStepFragment" />
     </fragment>
     <activity
         android:id="@+id/mainActivity"
         android:name="com.developnetwork.meshlwahdk.ui.main.MainActivity"
         android:label="activity_main"
         tools:layout="@layout/activity_main" />
+    <fragment
+        android:id="@+id/selectProductFragment"
+        android:name="com.developnetwork.meshlwahdk.ui.auth.selectproduct.SelectProductFragment"
+        android:label="fragment_select_product"
+        tools:layout="@layout/fragment_select_product" >
+        <action
+            android:id="@+id/action_selectProductFragment_to_mainActivity"
+            app:destination="@id/mainActivity" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerSecondStepFragment"
+        android:name="com.developnetwork.meshlwahdk.ui.auth.register.RegisterSecondStepFragment"
+        android:label="fragment_register_second_step"
+        tools:layout="@layout/fragment_register_second_step" >
+        <action
+            android:id="@+id/action_registerSecondStepFragment_to_selectProductFragment"
+            app:destination="@id/selectProductFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/forgotPasswordFragment"
+        android:name="com.developnetwork.meshlwahdk.ui.auth.forgotpassword.ForgotPasswordFragment"
+        android:label="ForgotPasswordFragment" >
+        <action
+            android:id="@+id/action_forgotPasswordFragment_to_forgotPasswordConfirmationFragment"
+            app:destination="@id/forgotPasswordConfirmationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/forgotPasswordConfirmationFragment"
+        android:name="com.developnetwork.meshlwahdk.ui.auth.forgotpassword.confirmphone.ForgotPasswordConfirmationFragment"
+        android:label="ForgotPasswordConfirmationFragment" >
+        <argument
+            android:name="phone"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_forgotPasswordConfirmationFragment_to_resetPasswordFragment"
+            app:destination="@id/resetPasswordFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/resetPasswordFragment"
+        android:name="com.developnetwork.meshlwahdk.ui.auth.forgotpassword.resetpassword.ResetPasswordFragment"
+        android:label="ResetPasswordFragment" >
+        <argument
+            android:name="phone"
+            app:argType="string" />
+    </fragment>
 </navigation>

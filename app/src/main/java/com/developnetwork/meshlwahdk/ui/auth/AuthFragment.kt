@@ -5,6 +5,7 @@ import android.view.View
 import androidx.navigation.fragment.findNavController
 import com.developnetwork.meshlwahdk.R
 import com.developnetwork.meshlwahdk.base.BaseFragment
+import com.developnetwork.meshlwahdk.utils.extensions.callUS
 import kotlinx.android.synthetic.main.fragment_auth.*
 
 
@@ -21,7 +22,13 @@ class AuthFragment : BaseFragment() {
         }
 
         registerBTN.setOnClickListener {
-findNavController().navigate(AuthFragmentDirections.actionAuthFragmentToRegisterFirstStepFragment())
+findNavController().navigate(AuthFragmentDirections.actionAuthFragmentToRegisterPhoneStepFragment())
+        }
+
+
+        callBTN.setOnClickListener {
+            callUS(requireContext())
+
         }
     }
 }

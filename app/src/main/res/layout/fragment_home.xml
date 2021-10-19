@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/backgroundColor"
+    android:layout_height="match_parent"
+    tools:context=".ui.main.home.HomeFragment">
+
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/profileImage"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/_20sdp"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.2"
+        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.squircleImage" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:text="@string/welcome_back"
+        android:textColor="@color/colorAccent"
+        android:textSize="@dimen/_13ssp"
+        app:layout_constraintStart_toEndOf="@id/profileImage"
+        app:layout_constraintTop_toTopOf="@id/profileImage" />
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:textSize="@dimen/_14ssp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/profileImage"
+        app:layout_constraintStart_toEndOf="@id/profileImage"
+        app:layout_constraintTop_toTopOf="@id/profileImage" />
+
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/programsBTN"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/et_rounded_corner_bg_with_stork"
+        android:orientation="vertical"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_5sdp"
+        app:layout_constraintDimensionRatio="1:1"
+        android:gravity="center"
+        android:layout_marginVertical="@dimen/_10sdp"
+        app:layout_constraintEnd_toStartOf="@id/remindersBTN"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/profileImage">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            app:srcCompat="@drawable/ic_doctor__male" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:textStyle="bold"
+            android:layout_margin="@dimen/_10sdp"
+            android:textSize="@dimen/_13ssp"
+            android:text="@string/programs"
+            android:textColor="@color/colorPrimaryDark" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/remindersBTN"
+        android:layout_width="0dp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:layout_height="0dp"
+        android:background="@drawable/colored_card_background"
+        android:orientation="vertical"
+        android:layout_marginVertical="@dimen/_10sdp"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:gravity="center"
+        app:layout_constraintStart_toEndOf="@id/programsBTN"
+        app:layout_constraintTop_toBottomOf="@id/profileImage">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            app:srcCompat="@drawable/ic_medical_calendar" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:textStyle="bold"
+            android:layout_margin="@dimen/_10sdp"
+            android:textSize="@dimen/_13ssp"
+            android:text="@string/reminders"
+            android:textColor="@color/colorPrimaryDark" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/pharmaciesBTN"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/et_rounded_corner_bg_with_stork"
+        android:orientation="vertical"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_5sdp"
+        app:layout_constraintDimensionRatio="1:1"
+        android:gravity="center"
+        android:layout_marginVertical="@dimen/_10sdp"
+        app:layout_constraintEnd_toStartOf="@id/historyBTN"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/programsBTN">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            app:srcCompat="@drawable/ic_pharmacies" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:textStyle="bold"
+            android:layout_margin="@dimen/_10sdp"
+            android:textSize="@dimen/_13ssp"
+            android:text="@string/pharmacies"
+            android:textColor="@color/colorPrimaryDark" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/historyBTN"
+        android:layout_width="0dp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:layout_height="0dp"
+        android:background="@drawable/et_rounded_corner_bg_with_stork"
+        android:orientation="vertical"
+        android:layout_marginVertical="@dimen/_10sdp"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:gravity="center"
+        app:layout_constraintStart_toEndOf="@id/pharmaciesBTN"
+        app:layout_constraintTop_toBottomOf="@id/programsBTN">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            app:srcCompat="@drawable/ic_medical_documents" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:textStyle="bold"
+            android:layout_margin="@dimen/_10sdp"
+            android:textSize="@dimen/_13ssp"
+            android:text="@string/history"
+            android:textColor="@color/colorPrimaryDark" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

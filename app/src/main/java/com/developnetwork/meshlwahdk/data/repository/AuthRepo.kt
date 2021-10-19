@@ -1,7 +1,7 @@
 package com.developnetwork.meshlwahdk.data.repository
 
-import com.developnetwork.meshlwahdk.data.network.Service
 import com.developnetwork.meshlwahdk.data.model.User
+import com.developnetwork.meshlwahdk.data.network.Service
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import okhttp3.MultipartBody
 import okhttp3.RequestBody.Companion.asRequestBody
@@ -31,7 +31,6 @@ interface AuthRepo {
         gender: String,
         region_id: Int,
         subRegion_id: Int,
-        subSubRegion_id: Int,
         company_id: Int,
         product_id: Int,
         age: String,
@@ -114,7 +113,6 @@ class AuthRepoImpl(private val service: Service) : AuthRepo {
         gender: String,
         region_id: Int,
         subRegion_id: Int,
-        subSubRegion_id: Int,
         company_id: Int,
         product_id: Int,
         age: String,
@@ -167,7 +165,7 @@ class AuthRepoImpl(private val service: Service) : AuthRepo {
             gender.toRequestBody("multipart/form-data".toMediaTypeOrNull()),
             region_id.toString().toRequestBody("multipart/form-data".toMediaTypeOrNull()),
             subRegion_id.toString().toRequestBody("multipart/form-data".toMediaTypeOrNull()),
-            subSubRegion_id.toString().toRequestBody("multipart/form-data".toMediaTypeOrNull()),
+            "1".toRequestBody("multipart/form-data".toMediaTypeOrNull()),
             company_id.toString().toRequestBody("multipart/form-data".toMediaTypeOrNull()),
             product_id.toString().toRequestBody("multipart/form-data".toMediaTypeOrNull()),
             age.toRequestBody("multipart/form-data".toMediaTypeOrNull()),
