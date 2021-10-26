@@ -9,14 +9,67 @@
         android:id="@+id/homeFragment"
         android:name="com.developnetwork.meshlwahdk.ui.main.home.HomeFragment"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_pharmaciesFragment"
+            app:destination="@id/pharmaciesFragment" />
+    </fragment>
 
 
     <fragment
         android:id="@+id/profileFragment"
         android:name="com.developnetwork.meshlwahdk.ui.main.profile.ProfileFragment"
         android:label="fragment_profile"
-        tools:layout="@layout/fragment_profile" />
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profileFragment_to_editProfileFragment"
+            app:destination="@id/editProfileFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_doseListFragment"
+            app:destination="@id/doseListFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/editProfileFragment"
+        android:name="com.developnetwork.meshlwahdk.ui.main.editprofile.EditProfileFragment"
+        android:label="fragment_edit_profile"
+        tools:layout="@layout/fragment_edit_profile" />
+
+    <fragment
+        android:id="@+id/pharmaciesFragment"
+        android:name="com.developnetwork.meshlwahdk.ui.main.pharmacies.PharmaciesFragment"
+        android:label="fragment_pharmacies"
+        tools:layout="@layout/fragment_pharmacies" />
+    <fragment
+        android:id="@+id/addDoseFragment"
+        android:name="com.developnetwork.meshlwahdk.ui.main.dose.adddose.AddDoseFragment"
+        android:label="fragment_add_dose"
+        tools:layout="@layout/fragment_base_dose_input" >
+        <argument
+            android:name="productID"
+            app:argType="integer"
+            android:defaultValue="0" />
+    </fragment>
+    <fragment
+        android:id="@+id/doseListFragment"
+        android:name="com.developnetwork.meshlwahdk.ui.main.dose.doselist.DoseListFragment"
+        android:label="fragment_dose_list"
+        tools:layout="@layout/fragment_dose_list" >
+        <action
+            android:id="@+id/action_doseListFragment_to_addDoseFragment"
+            app:destination="@id/addDoseFragment" />
+        <action
+            android:id="@+id/action_doseListFragment_to_editDoseFragment"
+            app:destination="@id/editDoseFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editDoseFragment"
+        android:name="com.developnetwork.meshlwahdk.ui.main.dose.editdose.EditDoseFragment"
+        android:label="EditDoseFragment" >
+        <argument
+            android:name="dose"
+            app:argType="com.developnetwork.meshlwahdk.data.model.Dose" />
+    </fragment>
 
 
 </navigation>

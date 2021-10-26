@@ -32,20 +32,27 @@ class RegisterFirstStepFragment : BaseFragment() {
         callBTN.setOnClickListener {
             callUS(requireContext())
         }
+        backBTN.setOnClickListener {
+            findNavController().navigateUp()
+        }
     }
 
 
     private fun validate() {
         if (nameValidator(nameLayout, requireContext()) &&
-            emailValidator(emailLayout, requireContext()) &&
             passwordValidator(passwordLayout, requireContext()) &&
             confirmPasswordValidator(
                 conPasswordLayout,
                 passwordInput.text.toString(),
                 requireContext()
             )
-        )
+        ) {
+            if (!emailInput.text.isNullOrBlank())
+                emailValidator(emailLayout, requireContext())
+
             handleRegister()
+        }
+
     }
 
     private fun handleRegister() {

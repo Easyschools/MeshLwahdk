@@ -33,7 +33,7 @@ fun openDatePicker(textview: MaterialTextView, context: Context) {
     dpd.datePicker.maxDate = c.timeInMillis
     dpd.show()
 }
-fun openDatePicker(input: EditText, context: Context) {
+fun openDatePicker(input: EditText, context: Context,future:Int=-1) {
     val c = Calendar.getInstance()
     c.add(Calendar.DAY_OF_YEAR, 1)
     val cyear = c.get(Calendar.YEAR)
@@ -54,6 +54,9 @@ fun openDatePicker(input: EditText, context: Context) {
         day
     )
 
-    dpd.datePicker.maxDate = c.timeInMillis
+    when(future){
+        0->    dpd.datePicker.maxDate = c.timeInMillis
+        1->    dpd.datePicker.minDate = c.timeInMillis
+    }
     dpd.show()
 }

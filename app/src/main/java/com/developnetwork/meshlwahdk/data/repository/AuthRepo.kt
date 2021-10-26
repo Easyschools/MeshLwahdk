@@ -1,5 +1,6 @@
 package com.developnetwork.meshlwahdk.data.repository
 
+import com.developnetwork.meshlwahdk.BuildConfig
 import com.developnetwork.meshlwahdk.data.model.User
 import com.developnetwork.meshlwahdk.data.network.Service
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
@@ -25,7 +26,7 @@ interface AuthRepo {
     suspend fun completeRegister(
         name: String,
         phone: String,
-        email: String,
+        email: String?,
         password: String,
         nationalId: String,
         gender: String,
@@ -72,12 +73,11 @@ interface AuthRepo {
         confirmPassword: String
     ): Any
 
-
 }
 
 class AuthRepoImpl(private val service: Service) : AuthRepo {
     override suspend fun login(email: String, password: String): User {
-        return service.userLogin(email, password).data
+        return service.userLogin(email, password, BuildConfig.company_id).data
     }
 
 //    override suspend fun createControllerPatient(): CreateControllerPatientDBResponse {
@@ -85,7 +85,7 @@ class AuthRepoImpl(private val service: Service) : AuthRepo {
 //    }
 
     override suspend fun checkPhone(phone: String): Boolean {
-        return service.checkPhone(phone).data
+        return service.checkPhone(phone, BuildConfig.company_id).data
     }
 
     override suspend fun getPhoneUser(phone: String): User {
@@ -97,7 +97,7 @@ class AuthRepoImpl(private val service: Service) : AuthRepo {
     }
 
     override suspend fun registerPhone(phone: String): User {
-        return service.phoneRegister(phone).data
+        return service.phoneRegister(phone, BuildConfig.company_id).data
     }
 
     override suspend fun confirmPhone(code: String, phone: String): String {
@@ -107,7 +107,7 @@ class AuthRepoImpl(private val service: Service) : AuthRepo {
     override suspend fun completeRegister(
         name: String,
         phone: String,
-        email: String,
+        email: String?,
         password: String,
         nationalId: String,
         gender: String,
@@ -159,7 +159,7 @@ class AuthRepoImpl(private val service: Service) : AuthRepo {
         return service.completeRegister(
             name.toRequestBody("multipart/form-data".toMediaTypeOrNull()),
             phone.toRequestBody("multipart/form-data".toMediaTypeOrNull()),
-            email.toRequestBody("multipart/form-data".toMediaTypeOrNull()),
+            email?.toRequestBody("multipart/form-data".toMediaTypeOrNull()),
             password.toRequestBody("multipart/form-data".toMediaTypeOrNull()),
             nationalId.toRequestBody("multipart/form-data".toMediaTypeOrNull()),
             gender.toRequestBody("multipart/form-data".toMediaTypeOrNull()),

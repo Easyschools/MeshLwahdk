@@ -32,8 +32,11 @@ class MainActivity : BaseActivity() {
                     backBTN.visibility = View.INVISIBLE
                     settingsBTN.visibility = View.VISIBLE
                 }
-
                 R.id.profileFragment -> {
+                    backBTN.visibility = View.VISIBLE
+                    settingsBTN.visibility = View.INVISIBLE
+                }
+                R.id.editProfileFragment -> {
                     backBTN.visibility = View.VISIBLE
                     settingsBTN.visibility = View.INVISIBLE
                 }

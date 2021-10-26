@@ -7,6 +7,11 @@ import com.developnetwork.meshlwahdk.ui.auth.forgotpassword.resetpassword.ResetP
 import com.developnetwork.meshlwahdk.ui.auth.login.LoginViewModel
 import com.developnetwork.meshlwahdk.ui.auth.register.CheckPhoneViewModel
 import com.developnetwork.meshlwahdk.ui.auth.register.RegisterViewModel
+import com.developnetwork.meshlwahdk.ui.main.dose.BaseDoseInputViewModel
+import com.developnetwork.meshlwahdk.ui.main.dose.adddose.AddDoseViewModel
+import com.developnetwork.meshlwahdk.ui.main.dose.doselist.DoseListViewModel
+import com.developnetwork.meshlwahdk.ui.main.dose.editdose.EditDoseViewModel
+import com.developnetwork.meshlwahdk.ui.main.pharmacies.PharmaciesViewModel
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module
 
@@ -18,4 +23,8 @@ val viewModelModule = module {
     viewModel { ForgotPasswordViewModel(get()) }
     viewModel { ForgotPasswordConfirmationViewModel(get()) }
     viewModel { ResetPasswordViewModel(get()) }
+    viewModel { PharmaciesViewModel(get()) }
+    viewModel { DoseListViewModel(get()) }
+    viewModel { AddDoseViewModel(get(),get()) }
+    viewModel { EditDoseViewModel(get(),get()) }
 }

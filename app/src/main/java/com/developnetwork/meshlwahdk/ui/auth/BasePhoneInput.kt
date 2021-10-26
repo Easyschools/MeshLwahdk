@@ -39,6 +39,7 @@ abstract class BasePhoneInput : BaseFragment() {
         callBTN.setOnClickListener {
             callUS(requireContext())
         }
+
     }
 
     private fun validate() {

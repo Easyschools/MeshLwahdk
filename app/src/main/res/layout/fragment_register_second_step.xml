@@ -61,12 +61,27 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/_30sdp"
-                android:text="@string/please_enter_your_profile_information_name_password"
+                android:text="@string/please_enter_your_account_information_date_of_birth_region"
                 android:textSize="@dimen/_18ssp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/uploadPhotoBTN"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:backgroundTint="@color/colorAccentLight"
+                android:padding="@dimen/_10sdp"
+                android:text="@string/upload_profile_photo"
+                android:textColor="@color/black"
+                app:icon="@drawable/ic_photo_camera"
+                app:iconGravity="textEnd"
+                app:iconTint="@color/black"
+                app:layout_constraintTop_toBottomOf="@id/msg" />
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/birthdateLayout"
@@ -80,7 +95,7 @@
                 app:boxCornerRadiusBottomStart="@dimen/_10sdp"
                 app:boxCornerRadiusTopEnd="@dimen/_10sdp"
                 app:boxCornerRadiusTopStart="@dimen/_10sdp"
-                app:layout_constraintTop_toBottomOf="@id/msg">
+                app:layout_constraintTop_toBottomOf="@id/uploadPhotoBTN">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/birthdateInput"
@@ -124,7 +139,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="@dimen/_20sdp"
-                android:backgroundTint="@color/colorAccent"
+                android:backgroundTint="@color/colorAccentLight"
                 android:padding="@dimen/_10sdp"
                 android:text="@string/upload_your_id"
                 android:textColor="@color/black"

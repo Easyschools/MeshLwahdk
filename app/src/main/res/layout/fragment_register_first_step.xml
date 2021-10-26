@@ -27,7 +27,7 @@
         android:layout_marginHorizontal="@dimen/_20sdp"
         android:layout_marginVertical="@dimen/_5sdp"
         android:text="@string/profile_info"
-        android:textColor="@color/colorPrimary"
+        android:textColor="@color/titleColor"
         android:textSize="@dimen/_22ssp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"

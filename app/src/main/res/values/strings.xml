@@ -115,7 +115,7 @@
     <string name="home">Home</string>
     <string name="app_terms"><![CDATA[<h1><strong>Msh Lwahdak Program Enrollment</strong></h1>
 
-<h1><br />
+<p><br />
 I am enrolling in the Msh Lwahdak Patient Support Program, from here on referred to as the &ldquo;Mesh<br />
 Lwahdak program&rdquo; and authorize Accsight, and their agents, to provide me services under the Program as<br />
 described and those that may be added in the future.<br />
@@ -140,12 +140,12 @@ and research studies; and to ask my opinion about such information and topics, i
 and disease-related surveys.<br />
 I expressly consent to receive phone calls from or on behalf of the Program at the mobile telephone<br />
 number(s) that I provide. I confirm that I am the subscriber for the mobile telephone number(s) provided,<br />
-and I agree to notify Accsight if any of my number(s) change in the future.</h1>
+and I agree to notify Accsight if any of my number(s) change in the future.</p>
 
 <h1><br />
 <strong>Patient Authorization to Use and Disclose Health Information</strong></h1>
 
-<h1><br />
+<p><br />
 I authorize my healthcare providers and staff, health plan or programs that provide me healthcare benefits,<br />
 and any specialty pharmacies that dispense my medication related to Mesh Lwahdak program to disclose<br />
 to Accsight and their agents, health information about me including information related to my medical<br />
@@ -173,7 +173,7 @@ I have read and understand the information provided above regarding Msh Lwahdak,
 with my physician and all of my questions have been answered to my satisfaction.<br />
 I hear by authorize Msh-Lwahdak application services to use the platform for telecommunication for<br />
 following up my medical condition with any third party related to Msh Lwahdak program.<br />
-I hear by give my informed consent for the use of Msh Lwahdak in my case.</h1>]]>
+I hear by give my informed consent for the use of Msh Lwahdak in my case.</p>]]>
 </string>
     <string name="back">Back</string>
     <string name="before_we_start_we_are_kindly_ask_you_to_read_and_agree_the_terms_and_conditions_of_the_program">Before we start we are kindly asking you to read and agree on the terms and conditions of the program</string>
@@ -213,4 +213,16 @@ I hear by give my informed consent for the use of Msh Lwahdak in my case.</h1>]]
     <string name="language">Language</string>
     <string name="sign_out">Sign Out</string>
     <string name="change_language">Change Language</string>
+    <string name="upload_profile_photo">upload Profile Photo</string>
+    <string name="doses">Doses</string>
+    <string name="select_your_country">Select your Country</string>
+    <string name="your_drugs">Your Drugs</string>
+    <string name="please_enter_your_account_information_date_of_birth_region">Please enter your account information date of birth, gender, region</string>
+    <string name="until">Until</string>
+    <string name="frequency">Frequency</string>
+    <string name="times">Times</string>
+    <string name="product">Product</string>
+    <string name="patient_profile">Patient Profile</string>
+    <string name="add">Add</string>
+    <string name="duration">Duration</string>
 </resources>

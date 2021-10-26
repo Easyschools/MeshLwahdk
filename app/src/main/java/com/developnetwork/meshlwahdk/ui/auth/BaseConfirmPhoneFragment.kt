@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.os.CountDownTimer
 import android.view.View
+import androidx.navigation.fragment.findNavController
 import com.developnetwork.meshlwahdk.R
 import com.developnetwork.meshlwahdk.base.BaseAutoVerify
 import com.developnetwork.meshlwahdk.base.BaseFragment
@@ -42,6 +43,9 @@ abstract class BaseConfirmPhoneFragment : BaseFragment() {
         }
         callBTN.setOnClickListener {
             callUS(requireContext())
+        }
+        backBTN.setOnClickListener {
+            findNavController().navigateUp()
         }
         initTimer()
         timer.start()

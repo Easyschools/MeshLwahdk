@@ -39,6 +39,9 @@ class SelectProductFragment : BaseFragment() {
         callBTN.setOnClickListener {
             callUS(requireContext())
         }
+        backBTN.setOnClickListener {
+            findNavController().navigateUp()
+        }
     }
 
     private fun initList(list: List<Product>) {

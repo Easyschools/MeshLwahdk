@@ -1,6 +1,7 @@
 package com.developnetwork.meshlwahdk.data.repository
 
 import com.developnetwork.meshlwahdk.data.model.Product
+import com.developnetwork.meshlwahdk.data.model.RedemptionCenter
 import com.developnetwork.meshlwahdk.data.network.Service
 import com.ivestment.doctorna.data.model.InsuranceCard
 import com.ivestment.doctorna.data.model.PatientCategory
@@ -19,12 +20,13 @@ interface OtherRepo {
 
     suspend fun addInsuranceCard(insuranceCardImagePath: String): Any
 
-    suspend fun getUserInsuranceStat():InsuranceCard
+    suspend fun getUserInsuranceStat(): InsuranceCard
 
     suspend fun getPatientCategories(): List<PatientCategory>
 
-    suspend fun getProducts(company_id:Int): List<Product>
+    suspend fun getProducts(company_id: Int): List<Product>
 
+    suspend fun getRedemptionCenters(): List<RedemptionCenter>
 
 }
 
@@ -59,7 +61,11 @@ class OthersRepoImpl(private val service: Service) : OtherRepo {
         return service.getPatientCategories().data
     }
 
-    override suspend fun getProducts(company_id:Int): List<Product> {
+    override suspend fun getProducts(company_id: Int): List<Product> {
         return service.getProducts(company_id).data
+    }
+
+    override suspend fun getRedemptionCenters(): List<RedemptionCenter> {
+        return service.getRedemptionCenters("pharmacy").data
     }
 }

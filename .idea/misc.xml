@@ -22,22 +22,29 @@
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.16526986255447537" />
         <entry key="app/src/main/res/layout/activity_splash.xml" value="0.16655405405405405" />
         <entry key="app/src/main/res/layout/dialog_fragment_change_lang.xml" value="0.16655405405405405" />
+        <entry key="app/src/main/res/layout/dose_item.xml" value="0.16655405405405405" />
+        <entry key="app/src/main/res/layout/fragment_add_dose.xml" value="0.16655405405405405" />
         <entry key="app/src/main/res/layout/fragment_auth.xml" value="0.16655405405405405" />
         <entry key="app/src/main/res/layout/fragment_choose_language.xml" value="0.16" />
         <entry key="app/src/main/res/layout/fragment_confirm_number.xml" value="0.27999999999999997" />
+        <entry key="app/src/main/res/layout/fragment_dose_list.xml" value="0.16655405405405405" />
+        <entry key="app/src/main/res/layout/fragment_edit_profile.xml" value="0.15878378378378377" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.16" />
         <entry key="app/src/main/res/layout/fragment_intro.xml" value="0.16655405405405405" />
         <entry key="app/src/main/res/layout/fragment_login.xml" value="0.13333333333333333" />
+        <entry key="app/src/main/res/layout/fragment_pharmacies.xml" value="0.16655405405405405" />
         <entry key="app/src/main/res/layout/fragment_phone_input.xml" value="0.16655405405405405" />
-        <entry key="app/src/main/res/layout/fragment_profile.xml" value="0.16655405405405405" />
+        <entry key="app/src/main/res/layout/fragment_profile.xml" value="0.21333333333333335" />
         <entry key="app/src/main/res/layout/fragment_register.xml" value="0.19999999999999998" />
         <entry key="app/src/main/res/layout/fragment_register_first_step.xml" value="0.18666666666666668" />
-        <entry key="app/src/main/res/layout/fragment_register_second_step.xml" value="0.16655405405405405" />
+        <entry key="app/src/main/res/layout/fragment_register_second_step.xml" value="0.24" />
         <entry key="app/src/main/res/layout/fragment_reset_password.xml" value="0.16655405405405405" />
         <entry key="app/src/main/res/layout/fragment_select_product.xml" value="0.16655405405405405" />
         <entry key="app/src/main/res/layout/fragment_splash.xml" value="0.10666666666666667" />
         <entry key="app/src/main/res/layout/fragment_terms.xml" value="0.16" />
         <entry key="app/src/main/res/layout/meshlwahdk_spinner.xml" value="0.16655405405405405" />
+        <entry key="app/src/main/res/layout/pharmacies_item.xml" value="0.16655405405405405" />
+        <entry key="app/src/main/res/layout/product_item.xml" value="0.16655405405405405" />
         <entry key="app/src/main/res/layout/profile_button.xml" value="0.16655405405405405" />
         <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.14739583333333334" />
       </map>

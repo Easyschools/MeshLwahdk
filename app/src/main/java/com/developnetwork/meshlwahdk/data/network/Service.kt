@@ -1,6 +1,8 @@
 package com.developnetwork.meshlwahdk.data.network
 
+import com.developnetwork.meshlwahdk.data.model.Dose
 import com.developnetwork.meshlwahdk.data.model.Product
+import com.developnetwork.meshlwahdk.data.model.RedemptionCenter
 import com.developnetwork.meshlwahdk.data.model.User
 import com.ivestment.doctorna.data.model.BaseResponse
 import com.ivestment.doctorna.data.model.InsuranceCard
@@ -16,19 +18,19 @@ interface Service {
     @FormUrlEncoded
     suspend fun userLogin(
         @Field("phone") email: String,
-        @Field("password") password: String
+        @Field("password") password: String,
+        @Field("company_id") company_id:Int
     ): BaseResponse<User>
 
     @POST("phoneRegister")
     @FormUrlEncoded
-    suspend fun phoneRegister(@Field("phone") phone: String): BaseResponse<User>
+    suspend fun phoneRegister(@Field("phone") phone: String,
+                              @Field("company_id") company_id:Int): BaseResponse<User>
 
-//    @GET("patient-register/create")
-//    suspend fun createControllerPatient(): CreateControllerPatientDBResponse
 
     @POST("checkPhone")
     @FormUrlEncoded
-    suspend fun checkPhone(@Field("phone") phone: String): BaseResponse<Boolean>
+    suspend fun checkPhone(@Field("phone") phone: String, @Field("company_id") company_id:Int): BaseResponse<Boolean>
 
     @POST("getPhoneUser")
     @FormUrlEncoded
@@ -60,7 +62,7 @@ interface Service {
     suspend fun completeRegister(
         @Part("displayName") name: RequestBody,
         @Part("phone") phone: RequestBody,
-        @Part("email") email: RequestBody,
+        @Part("email") email: RequestBody?,
         @Part("password") password: RequestBody,
         @Part("national_id") nationalId: RequestBody,
         @Part("gender") gender: RequestBody,
@@ -98,30 +100,7 @@ interface Service {
     suspend fun getUserInsuranceStat(): BaseResponse<InsuranceCard>
 
     @POST("getByCompany")
-    suspend fun getProducts(@Query("company_id")company_id:Int): BaseResponse<List<Product>>
-
-//    @POST("completeRegister")
-//    @Multipart
-//    suspend fun userRegister(
-//            @Part("displayName") name: RequestBody?,
-//            @Part("phone") phone: RequestBody?,
-//            @Part("email") email: RequestBody?,
-//            @Part("password") password: RequestBody?,
-//            @Part("national_id") nationalId: RequestBody?,
-//            @Part("gender") gender: RequestBody?,
-//            @Part("region_id") region_id: RequestBody?,
-//            @Part("districts_id") subRegion_id: RequestBody?,
-//            @Part("subRegion_id") subSubRegion_id: RequestBody?,
-//            @Part("company_id") company_id: RequestBody?,
-//            @Part("product_id") product_id: RequestBody?,
-//            @Part("age") address: RequestBody?,
-//            @Part("health_insurance") health_insurance: RequestBody?,
-//            @Part identityCardImage: MultipartBody.Part?,
-//            @Part insuranceCardImage: MultipartBody.Part?,
-//            @Part raysCardImage: MultipartBody.Part?,
-//            @Part analyseCardImage: MultipartBody.Part?,
-//            @Part("lang") lang: RequestBody?
-//    ): RegisterDBResponse
+    suspend fun getProducts(@Query("company_id") company_id: Int): BaseResponse<List<Product>>
 
 
     @POST("getAllReg")
@@ -135,45 +114,31 @@ interface Service {
     @FormUrlEncoded
     suspend fun getAllSubRegion(@Field("district_id") district_id: Int): BaseResponse<List<Region>>
 
-//    @GET("patients_data/{user_id}")
-//    suspend fun getPatientsProducts(
-//            @Path("user_id") user_id: Int
-//    ): PatientsProductsDBResponse
-//
-//    @POST("send-token")
-//    @FormUrlEncoded
-//    suspend fun sendToken(
-//            @Field("fcm_token") device_token: String?
-//    ): TokenDBResponse
-//
-//    @GET("patient-notification-get/{user_id}")
-//    suspend fun getPatientsNotifications(
-//            @Path("user_id") user_id: Int
-//    ): NotificationDBResponse
-//
-//    @POST("add-image")
-//    @Multipart
-//    suspend fun addImage(
-//            @Part("type") type: RequestBody?,
-//            @Part image: MultipartBody.Part?
-//    ): AddImageDBResponse
+    @GET("redemption")
+    suspend fun getRedemptionCenters(@Query("type") type: String? = null): BaseResponse<List<RedemptionCenter>>
 
 
-//    @POST("hub-appointment-create")
-//    @FormUrlEncoded
-//    suspend fun bookingDoctor(@Field("appointment_date") appointment_date: String?, @Field("hub_id") hub_id: Int, @Field("patient_id") patient_id: Int): BookingDBResponse
-//
-//    @POST("hub-appointment")
-//    @FormUrlEncoded
-//    suspend fun reservationDoctor(
-//            @Field("appointment_date") appointment_date: String?,
-//            @Field("patient_id") patient_id: Int,
-//            @Field("appointment_slote_id") appointment_slote_id: Int
-//    ): ReservationDBResponse
-//
-//    @GET("patient-appointment-get/{hub_id}")
-//    suspend fun getPatientsAppointment(
-//            @Path("hub_id") hub_id: Int
-//    ): PatientAppointmentDBResponse
+    @POST("dose/create")
+    @FormUrlEncoded
+    suspend fun addDose(
+        @Field("product_id") product_id: Int,
+        @Field("frequency") frequency: String,
+        @Field("duration") duration: String
+    ): BaseResponse<Dose>
 
+    @POST("dose/update")
+    @FormUrlEncoded
+    suspend fun editDose(
+        @Field("id") id: Int,
+        @Field("product_id") product_id: Int,
+        @Field("frequency") frequency: String,
+        @Field("duration") duration: String
+    ): BaseResponse<Dose>
+
+
+    @POST("dose/get")
+    suspend fun getDose(@Query("id") id: Int): BaseResponse<Dose>
+
+    @POST("dose/getAll")
+    suspend fun getDoses(): BaseResponse<List<Dose>>
 }

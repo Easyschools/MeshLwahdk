@@ -75,7 +75,7 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="@dimen/_20sdp"
         android:layout_marginVertical="@dimen/_10sdp"
-        app:hint="Select your Country"
+        app:hint="@string/select_your_country"
         app:layout_constraintBottom_toTopOf="@id/phoneLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

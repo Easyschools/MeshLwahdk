@@ -4,6 +4,7 @@
     <color name="colorPrimaryDark">#00366a</color>
     <color name="colorPrimaryLight">#568cca</color>
     <color name="colorAccent">#F2692C</color>
+    <color name="colorAccentLight">#FFCD96</color>
 
     <color name="purple_200">#FFBB86FC</color>
     <color name="purple_500">#FF6200EE</color>
@@ -12,6 +13,7 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="red">#DC4C44</color>
 
     <color name="colorTextHint">#979797</color>
     <color name="colorText1">#333333</color>
@@ -21,4 +23,6 @@
     <color name="grayVeryLight">#F0F0F0</color>
     <color name="gray">#C8C8CB</color>
     <color name="grayDark">#79797A</color>
+
+    <color name="titleColor">#0D3D59</color>
 </resources>

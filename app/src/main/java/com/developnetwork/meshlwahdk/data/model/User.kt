@@ -9,7 +9,7 @@ data class User(
     @Expose
     var productId: String? = null,
 
-    @SerializedName("displayName")
+    @SerializedName(value="displayName", alternate=["name"])
     @Expose
     var name: String? = null,
 

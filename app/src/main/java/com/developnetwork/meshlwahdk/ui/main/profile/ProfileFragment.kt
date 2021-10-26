@@ -3,15 +3,16 @@ package com.developnetwork.meshlwahdk.ui.main.profile
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import androidx.navigation.fragment.findNavController
 import com.developnetwork.meshlwahdk.R
 import com.developnetwork.meshlwahdk.base.BaseFragment
 import com.developnetwork.meshlwahdk.ui.auth.AuthActivity
 import com.developnetwork.meshlwahdk.ui.dialogs.ChangeLanguageDialog
 import com.developnetwork.meshlwahdk.utils.extensions.setImageURL
 import com.developnetwork.meshlwahdk.utils.managers.SharedPreferencesManager
+import es.dmoral.toasty.Toasty
 import kotlinx.android.synthetic.main.fragment_profile.*
 import org.koin.android.ext.android.inject
-
 
 class ProfileFragment : BaseFragment() {
     private val sharedPreferencesManager: SharedPreferencesManager by inject()
@@ -35,8 +36,20 @@ class ProfileFragment : BaseFragment() {
     }
 
     private fun handleButtons() {
+        editProfileBTN.setOnClickListener {
+            findNavController().navigate(ProfileFragmentDirections.actionProfileFragmentToEditProfileFragment())
+        }
+        dosesBTN.setOnClickListener {
+            findNavController().navigate(ProfileFragmentDirections.actionProfileFragmentToDoseListFragment())
+        }
+        resetPasswordBTN.setOnClickListener {
+            Toasty.info(requireContext(), "under development", 0).show()
+        }
+        editPhoneBTN.setOnClickListener {
+            Toasty.info(requireContext(), "under development", 0).show()
+        }
         languageBTN.setOnClickListener {
-            ChangeLanguageDialog().show(childFragmentManager,"change_language")
+            ChangeLanguageDialog().show(childFragmentManager, "change_language")
         }
         logoutBTN.setOnClickListener {
             logout()

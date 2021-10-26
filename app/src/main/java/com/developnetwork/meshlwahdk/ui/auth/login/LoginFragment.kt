@@ -38,6 +38,9 @@ class LoginFragment : BaseFragment() {
         callBTN.setOnClickListener {
             callUS(requireContext())
         }
+        backBTN.setOnClickListener {
+            findNavController().navigateUp()
+        }
     }
 
     private fun validate() {

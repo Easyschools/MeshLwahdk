@@ -22,7 +22,7 @@ class RegisterViewModel(
 
     var name: String = ""
     var phone: String = ""
-    var email: String = ""
+    var email: String? = null
     var age: String = ""
     var nationalId: String = ""
     var password: String = ""
