@@ -1,12 +1,10 @@
 package com.developnetwork.meshlwahdk.ui.adapters
 
 import android.content.Context
-import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseAdapter
-import android.widget.TextView
 import androidx.appcompat.widget.AppCompatTextView
 import com.developnetwork.meshlwahdk.R
 import com.developnetwork.meshlwahdk.data.model.Product
@@ -21,7 +19,7 @@ class ProductsSpinnerAdapter(private val context: Context, val list: List<Produc
         val view: View
         if (convertView == null) {
             view = LayoutInflater.from(context)
-                .inflate(R.layout.product_item, parent, false)
+                .inflate(R.layout.selectable_item, parent, false)
             holder = ViewHolder(view)
             view.tag = holder
         } else {

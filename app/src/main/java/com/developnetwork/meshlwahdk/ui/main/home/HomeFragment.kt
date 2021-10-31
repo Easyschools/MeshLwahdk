@@ -23,7 +23,7 @@ class HomeFragment : BaseFragment() {
         handleUserData()
 
         programsBTN.setOnClickListener {
-            Toasty.info(requireContext(), "under development", 0).show()
+            findNavController().navigate(HomeFragmentDirections.actionHomeFragmentToProgramsFragment())
         }
         remindersBTN.setOnClickListener {
             Toasty.info(requireContext(), "under development", 0).show()
@@ -32,7 +32,7 @@ class HomeFragment : BaseFragment() {
             findNavController().navigate(HomeFragmentDirections.actionHomeFragmentToPharmaciesFragment())
         }
         historyBTN.setOnClickListener {
-            Toasty.info(requireContext(), "under development", 0).show()
+            findNavController().navigate(HomeFragmentDirections.actionHomeFragmentToHistoryFragment())
         }
     }
 

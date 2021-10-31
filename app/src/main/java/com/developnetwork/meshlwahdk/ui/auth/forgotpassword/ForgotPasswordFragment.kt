@@ -7,7 +7,7 @@ import com.developnetwork.meshlwahdk.R
 import com.developnetwork.meshlwahdk.ui.auth.BasePhoneInput
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
-class ForgotPasswordFragment: BasePhoneInput() {
+class ForgotPasswordFragment : BasePhoneInput() {
     private val viewModel: ForgotPasswordViewModel by viewModel()
     override val titleID: Int
         get() = R.string.forget_password
@@ -19,8 +19,12 @@ class ForgotPasswordFragment: BasePhoneInput() {
     }
 
     override fun check() {
-        viewModel.forgotPassword(phoneNumber).observe(viewLifecycleOwner,{
-findNavController().navigate(ForgotPasswordFragmentDirections.actionForgotPasswordFragmentToForgotPasswordConfirmationFragment(phoneNumber))
+        viewModel.forgotPassword(phoneNumber).observe(viewLifecycleOwner, {
+            findNavController().navigate(
+                ForgotPasswordFragmentDirections.actionForgotPasswordFragmentToForgotPasswordConfirmationFragment(
+                    phoneNumber
+                )
+            )
         })
     }
 }

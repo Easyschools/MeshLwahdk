@@ -126,13 +126,13 @@
         app:layout_constraintTop_toBottomOf="@id/citySpinner" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/continueBTN"
+        android:id="@+id/saveBTN"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="@dimen/_20sdp"
         android:layout_marginTop="32dp"
         android:padding="@dimen/_10sdp"
-        android:text="@string/continue0"
+        android:text="@string/save"
         android:textAllCaps="false"
         android:textColor="@color/white"
         android:textSize="@dimen/_15ssp"

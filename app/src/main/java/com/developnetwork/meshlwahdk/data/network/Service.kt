@@ -1,9 +1,6 @@
 package com.developnetwork.meshlwahdk.data.network
 
-import com.developnetwork.meshlwahdk.data.model.Dose
-import com.developnetwork.meshlwahdk.data.model.Product
-import com.developnetwork.meshlwahdk.data.model.RedemptionCenter
-import com.developnetwork.meshlwahdk.data.model.User
+import com.developnetwork.meshlwahdk.data.model.*
 import com.ivestment.doctorna.data.model.BaseResponse
 import com.ivestment.doctorna.data.model.InsuranceCard
 import com.ivestment.doctorna.data.model.PatientCategory
@@ -19,18 +16,23 @@ interface Service {
     suspend fun userLogin(
         @Field("phone") email: String,
         @Field("password") password: String,
-        @Field("company_id") company_id:Int
+        @Field("company_id") company_id: Int
     ): BaseResponse<User>
 
     @POST("phoneRegister")
     @FormUrlEncoded
-    suspend fun phoneRegister(@Field("phone") phone: String,
-                              @Field("company_id") company_id:Int): BaseResponse<User>
+    suspend fun phoneRegister(
+        @Field("phone") phone: String,
+        @Field("company_id") company_id: Int
+    ): BaseResponse<User>
 
 
     @POST("checkPhone")
     @FormUrlEncoded
-    suspend fun checkPhone(@Field("phone") phone: String, @Field("company_id") company_id:Int): BaseResponse<Boolean>
+    suspend fun checkPhone(
+        @Field("phone") phone: String,
+        @Field("company_id") company_id: Int
+    ): BaseResponse<Boolean>
 
     @POST("getPhoneUser")
     @FormUrlEncoded
@@ -79,6 +81,7 @@ interface Service {
         @Part identityCardImage: MultipartBody.Part?,
         @Part insuranceCardImage: MultipartBody.Part?
     ): BaseResponse<User>
+
 
     @POST("forgetPassword")
     @FormUrlEncoded
@@ -141,4 +144,40 @@ interface Service {
 
     @POST("dose/getAll")
     suspend fun getDoses(): BaseResponse<List<Dose>>
+
+    @POST("getPharmacy")
+    suspend fun getPharmacy(@Query("id") id: Int): BaseResponse<RedemptionCenter>
+
+    @GET("program/{id}")
+    suspend fun getProgram(@Path("id") id: Int): BaseResponse<Program>
+
+    @GET("program")
+    suspend fun getPrograms(): BaseResponse<List<Program>>
+
+    @POST("redimedProduct/create")
+    @Multipart
+    suspend fun redeemProgram(
+        @Part("program_id") programID: RequestBody,
+        @Part("redmption_id") redmptionID: RequestBody,
+        @Part("BarCode") barCode: RequestBody,
+        @Part rxPhoto: MultipartBody.Part,
+        @Part receiptPhoto: MultipartBody.Part,
+        @Part("status") status: RequestBody
+    ): BaseResponse<Any>
+
+
+    @POST("editProfile")
+    @Multipart
+    suspend fun editProfile(
+        @Part("displayName") name: RequestBody,
+        @Part("gender") gender: RequestBody,
+        @Part("region_id") region_id: RequestBody,
+        @Part("districts_id") subRegion_id: RequestBody,
+        @Part("subRegion_id") subSubRegion_id: RequestBody,
+        @Part("Age") age: RequestBody,
+        @Part profilePic: MultipartBody.Part?
+    ): BaseResponse<User>
+
+    @POST("redimedProduct/getAll")
+    suspend fun getRedeemedPrograms():BaseResponse<List<RedeemedProgram>>
 }

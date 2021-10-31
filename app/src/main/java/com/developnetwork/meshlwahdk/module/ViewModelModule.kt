@@ -7,11 +7,17 @@ import com.developnetwork.meshlwahdk.ui.auth.forgotpassword.resetpassword.ResetP
 import com.developnetwork.meshlwahdk.ui.auth.login.LoginViewModel
 import com.developnetwork.meshlwahdk.ui.auth.register.CheckPhoneViewModel
 import com.developnetwork.meshlwahdk.ui.auth.register.RegisterViewModel
-import com.developnetwork.meshlwahdk.ui.main.dose.BaseDoseInputViewModel
 import com.developnetwork.meshlwahdk.ui.main.dose.adddose.AddDoseViewModel
 import com.developnetwork.meshlwahdk.ui.main.dose.doselist.DoseListViewModel
 import com.developnetwork.meshlwahdk.ui.main.dose.editdose.EditDoseViewModel
+import com.developnetwork.meshlwahdk.ui.main.editprofile.EditProfileViewModel
+import com.developnetwork.meshlwahdk.ui.main.history.HistoryViewModel
+import com.developnetwork.meshlwahdk.ui.main.orderprogram.OrderProgramsViewModel
 import com.developnetwork.meshlwahdk.ui.main.pharmacies.PharmaciesViewModel
+import com.developnetwork.meshlwahdk.ui.main.profile.ProfileViewModel
+import com.developnetwork.meshlwahdk.ui.main.program.ProgramViewModel
+import com.developnetwork.meshlwahdk.ui.main.programs.ProgramsViewModel
+import com.developnetwork.meshlwahdk.ui.main.selectpharmacy.SelectOrderPharmacyViewModel
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module
 
@@ -21,10 +27,17 @@ val viewModelModule = module {
     viewModel { RegisterViewModel(get(),get(),get()) }
     viewModel { LoginViewModel(get(),get()) }
     viewModel { ForgotPasswordViewModel(get()) }
-    viewModel { ForgotPasswordConfirmationViewModel(get()) }
-    viewModel { ResetPasswordViewModel(get()) }
+    viewModel { ForgotPasswordConfirmationViewModel(get(),get()) }
+    viewModel { ResetPasswordViewModel(get(),get()) }
     viewModel { PharmaciesViewModel(get()) }
     viewModel { DoseListViewModel(get()) }
     viewModel { AddDoseViewModel(get(),get()) }
     viewModel { EditDoseViewModel(get(),get()) }
+    viewModel { ProgramViewModel(get()) }
+    viewModel { ProgramsViewModel(get()) }
+    viewModel { OrderProgramsViewModel(get()) }
+    viewModel { EditProfileViewModel(get(),get()) }
+    viewModel { HistoryViewModel(get()) }
+    viewModel { ProfileViewModel(get(),get(),get()) }
+    viewModel { SelectOrderPharmacyViewModel(get()) }
 }

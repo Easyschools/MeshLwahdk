@@ -2,6 +2,7 @@ package com.developnetwork.meshlwahdk.ui.main.pharmacies
 
 import android.os.Bundle
 import android.view.View
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import com.developnetwork.meshlwahdk.R
 import com.developnetwork.meshlwahdk.base.BaseFragment
@@ -26,7 +27,9 @@ class PharmaciesFragment : BaseFragment() {
     }
 
     private fun initList() {
-        adapter = PharmaciesAdapter()
+        adapter = PharmaciesAdapter(){programID,pharmacyId,name->
+            findNavController().navigate(PharmaciesFragmentDirections.actionPharmaciesFragmentToProgramFragment(programID,pharmacyId,name))
+        }
         pharmaciesRV.layoutManager = GridLayoutManager(requireContext(), 2)
         pharmaciesRV.adapter = adapter
     }

@@ -13,6 +13,12 @@
         <action
             android:id="@+id/action_homeFragment_to_pharmaciesFragment"
             app:destination="@id/pharmaciesFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_programsFragment"
+            app:destination="@id/programsFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_historyFragment"
+            app:destination="@id/historyFragment" />
     </fragment>
 
 
@@ -27,6 +33,9 @@
         <action
             android:id="@+id/action_profileFragment_to_doseListFragment"
             app:destination="@id/doseListFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_forgotPasswordConfirmationFragment2"
+            app:destination="@id/forgotPasswordConfirmationFragment2" />
     </fragment>
 
     <fragment
@@ -39,7 +48,11 @@
         android:id="@+id/pharmaciesFragment"
         android:name="com.developnetwork.meshlwahdk.ui.main.pharmacies.PharmaciesFragment"
         android:label="fragment_pharmacies"
-        tools:layout="@layout/fragment_pharmacies" />
+        tools:layout="@layout/fragment_pharmacies" >
+        <action
+            android:id="@+id/action_pharmaciesFragment_to_programFragment"
+            app:destination="@id/programFragment" />
+    </fragment>
     <fragment
         android:id="@+id/addDoseFragment"
         android:name="com.developnetwork.meshlwahdk.ui.main.dose.adddose.AddDoseFragment"
@@ -69,6 +82,100 @@
         <argument
             android:name="dose"
             app:argType="com.developnetwork.meshlwahdk.data.model.Dose" />
+    </fragment>
+    <fragment
+        android:id="@+id/programFragment"
+        android:name="com.developnetwork.meshlwahdk.ui.main.program.ProgramFragment"
+        android:label="fragment_program"
+        tools:layout="@layout/fragment_program" >
+        <argument android:name="id"
+            app:argType="integer"
+            android:defaultValue="0" />
+        <action
+            android:id="@+id/action_programFragment_to_orderProgramFragment"
+            app:destination="@id/orderProgramFragment" />
+        <argument
+            android:name="pharmacyID"
+            app:argType="integer"
+            android:defaultValue="0" />
+        <argument
+            android:name="pharmacyName"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_programFragment_to_selectOrderPharmacyFragment"
+            app:destination="@id/selectOrderPharmacyFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/programsFragment"
+        android:name="com.developnetwork.meshlwahdk.ui.main.programs.ProgramsFragment"
+        android:label="fragment_programs"
+        tools:layout="@layout/fragment_programs" >
+        <action
+            android:id="@+id/action_programsFragment_to_programFragment"
+            app:destination="@id/programFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/orderProgramFragment"
+        android:name="com.developnetwork.meshlwahdk.ui.main.orderprogram.OrderProgramFragment"
+        android:label="fragment_order_program"
+        tools:layout="@layout/fragment_order_program" >
+        <argument
+            android:name="programID"
+            app:argType="integer" />
+        <argument
+            android:name="pharmacyID"
+            app:argType="integer"
+            android:defaultValue="0" />
+        <argument
+            android:name="pharmacyName"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_orderProgramFragment_to_orderSuccessFragment"
+            app:destination="@id/orderSuccessFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/orderSuccessFragment"
+        android:name="com.developnetwork.meshlwahdk.ui.main.ordersuccess.OrderSuccessFragment"
+        android:label="fragment_order_success"
+        tools:layout="@layout/fragment_order_success" >
+        <argument
+            android:name="pharmacyName"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/historyFragment"
+        android:name="com.developnetwork.meshlwahdk.ui.main.history.HistoryFragment"
+        android:label="fragment_history"
+        tools:layout="@layout/fragment_history" />
+    <fragment
+        android:id="@+id/forgotPasswordConfirmationFragment2"
+        android:name="com.developnetwork.meshlwahdk.ui.auth.forgotpassword.confirmphone.ForgotPasswordConfirmationFragment"
+        android:label="ForgotPasswordConfirmationFragment" >
+        <action
+            android:id="@+id/action_forgotPasswordConfirmationFragment2_to_resetPasswordFragment2"
+            app:destination="@id/resetPasswordFragment2" />
+        <argument
+            android:name="phone"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/resetPasswordFragment2"
+        android:name="com.developnetwork.meshlwahdk.ui.auth.forgotpassword.resetpassword.ResetPasswordFragment"
+        android:label="ResetPasswordFragment" >
+        <argument android:name="phone"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/selectOrderPharmacyFragment"
+        android:name="com.developnetwork.meshlwahdk.ui.main.selectpharmacy.SelectOrderPharmacyFragment"
+        android:label="fragment_select_order_pharmacy"
+        tools:layout="@layout/fragment_select_order_pharmacy" >
+        <action
+            android:id="@+id/action_selectOrderPharmacyFragment_to_orderProgramFragment"
+            app:destination="@id/orderProgramFragment" />
+        <argument
+            android:name="programID"
+            app:argType="integer" />
     </fragment>
 
 

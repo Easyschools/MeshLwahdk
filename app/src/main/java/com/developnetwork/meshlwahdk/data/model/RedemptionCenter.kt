@@ -15,5 +15,9 @@ data class RedemptionCenter(
     @SerializedName("type")
     val type: String,
     @SerializedName("user_id")
-    val userId: Int
+    val userId: Int,
+    @SerializedName("program_id")
+    val programID: Int,
+    @SerializedName("program")
+    val program: Program?
 )

@@ -9,13 +9,12 @@ import com.developnetwork.meshlwahdk.base.BaseFragment
 import com.developnetwork.meshlwahdk.ui.auth.AuthActivity
 import com.developnetwork.meshlwahdk.ui.dialogs.ChangeLanguageDialog
 import com.developnetwork.meshlwahdk.utils.extensions.setImageURL
-import com.developnetwork.meshlwahdk.utils.managers.SharedPreferencesManager
 import es.dmoral.toasty.Toasty
 import kotlinx.android.synthetic.main.fragment_profile.*
-import org.koin.android.ext.android.inject
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class ProfileFragment : BaseFragment() {
-    private val sharedPreferencesManager: SharedPreferencesManager by inject()
+    private val viewModel: ProfileViewModel by viewModel()
 
     override fun getLayout(): Int {
         return R.layout.fragment_profile
@@ -28,7 +27,7 @@ class ProfileFragment : BaseFragment() {
     }
 
     private fun handleUserData() {
-        val user = sharedPreferencesManager.userData
+        val user = viewModel.sharedPreferencesManager.userData
         if (!user.img.isNullOrBlank())
             profileImage.setImageURL(user.img)
 
@@ -43,7 +42,7 @@ class ProfileFragment : BaseFragment() {
             findNavController().navigate(ProfileFragmentDirections.actionProfileFragmentToDoseListFragment())
         }
         resetPasswordBTN.setOnClickListener {
-            Toasty.info(requireContext(), "under development", 0).show()
+            resetPassword()
         }
         editPhoneBTN.setOnClickListener {
             Toasty.info(requireContext(), "under development", 0).show()
@@ -58,11 +57,23 @@ class ProfileFragment : BaseFragment() {
 
 
     private fun logout() {
-        sharedPreferencesManager.clearData()
-        sharedPreferencesManager.isLoggedIn = false
+        viewModel.sharedPreferencesManager.clearData()
+        viewModel.sharedPreferencesManager.isLoggedIn = false
 
         val i = Intent(requireContext(), AuthActivity::class.java)
         i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK)
         startActivity(i)
     }
+
+    private fun resetPassword() {
+        viewModel.forgotPassword(viewModel.sharedPreferencesManager.userPhone)
+            .observe(viewLifecycleOwner, {
+                findNavController().navigate(
+                    ProfileFragmentDirections.actionProfileFragmentToForgotPasswordConfirmationFragment2(
+                        viewModel.sharedPreferencesManager.userPhone
+                    )
+                )
+            })
+    }
+
 }

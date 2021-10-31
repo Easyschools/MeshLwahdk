@@ -144,6 +144,8 @@ class SharedPreferencesManagerImpl(context: Context) : SharedPreferencesManager 
             userToken = user.token
         if (!user.email.isNullOrBlank())
             userEmail = user.email!!
+        if (!user.phone.isNullOrBlank())
+            userPhone = user.phone!!
         if (!user.name.isNullOrBlank())
             userName = user.name!!
         if (!user.img.isNullOrBlank())

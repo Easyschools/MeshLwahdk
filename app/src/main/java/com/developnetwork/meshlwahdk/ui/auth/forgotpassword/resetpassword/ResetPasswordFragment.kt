@@ -9,6 +9,7 @@ import com.developnetwork.meshlwahdk.base.BaseFragment
 import com.developnetwork.meshlwahdk.utils.confirmPasswordValidator
 import com.developnetwork.meshlwahdk.utils.extensions.callUS
 import com.developnetwork.meshlwahdk.utils.passwordValidator
+import es.dmoral.toasty.Toasty
 import kotlinx.android.synthetic.main.fragment_reset_password.*
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
@@ -47,7 +48,11 @@ class ResetPasswordFragment : BaseFragment() {
     private fun handleResetPassword() {
         viewModel.resetPassword(args.phone, passwordInput.text.toString())
             .observe(viewLifecycleOwner, {
-                findNavController().popBackStack(R.id.loginFragment, false)
+                Toasty.success(requireContext(), R.string.done, 0).show()
+                val fragmentID =
+                    if (viewModel.sharedPreferencesManager.isLoggedIn) R.id.profileFragment else R.id.loginFragment
+                findNavController().popBackStack(fragmentID, false)
+
             })
     }
 }

@@ -26,7 +26,7 @@ class ProductsAdapter(
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         context = parent.context
         return ViewHolder(
-            LayoutInflater.from(parent.context).inflate(R.layout.product_item, parent, false)
+            LayoutInflater.from(parent.context).inflate(R.layout.selectable_item, parent, false)
         )
     }
 

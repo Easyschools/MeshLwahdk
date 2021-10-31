@@ -7,4 +7,6 @@ val repoModule = module {
     factory<AuthRepo> { AuthRepoImpl(get()) }
     factory<OtherRepo> { OthersRepoImpl(get()) }
     factory<DoseRepo> { DoseRepoImpl(get()) }
+    factory<ProgramsRepo> { ProgramsRepoImpl(get()) }
+    factory<UserRepo> { UserRepoImpl(get(),get()) }
 }

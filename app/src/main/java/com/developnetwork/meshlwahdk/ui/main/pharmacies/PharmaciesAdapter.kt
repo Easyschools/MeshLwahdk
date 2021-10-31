@@ -11,7 +11,7 @@ import com.developnetwork.meshlwahdk.data.model.RedemptionCenter
 import com.developnetwork.meshlwahdk.utils.extensions.setImageURL
 import com.google.android.material.imageview.ShapeableImageView
 
-class PharmaciesAdapter :
+class PharmaciesAdapter(private val click:(programID:Int,pharmacyId:Int,pharmacyname:String) ->Unit) :
     ListAdapter<RedemptionCenter, PharmaciesAdapter.ViewHolder>(RedemptionCenterItemDiffCallback()) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -24,6 +24,10 @@ class PharmaciesAdapter :
         val item = getItem(holder.absoluteAdapterPosition)
         if (!item.logo.isNullOrBlank())
             holder.logo.setImageURL(item.logo)
+
+        holder.itemView.setOnClickListener {
+            click(item.programID,item.id,item.name)
+        }
     }
 
     class RedemptionCenterItemDiffCallback : DiffUtil.ItemCallback<RedemptionCenter>() {
