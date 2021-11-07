@@ -54,7 +54,7 @@ class EditProfileViewModel(private val userRepo: UserRepo ,   private val otherR
 
         emit(list)
     }
-    fun getAge(dateString: String): String {
+    private fun getAge(dateString: String): String {
         val sdf = SimpleDateFormat("yyyy-MM-dd", Locale.getDefault())
         val date = sdf.parse(dateString)
         val dob = Calendar.getInstance()

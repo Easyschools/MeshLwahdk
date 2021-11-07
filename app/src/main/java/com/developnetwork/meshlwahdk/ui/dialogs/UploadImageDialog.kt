@@ -24,8 +24,13 @@ import java.io.File
 import java.io.FileOutputStream
 import java.io.IOException
 
-class UploadImageDialog(private val titleString:String,private val returnPath: (path: String) -> Unit) :
+class UploadImageDialog(
+    private val titleString: String?,
+    private val returnPath: ((path: String) -> Unit)?
+) :
     DialogFragment() {
+    constructor() : this(null, null)
+
     override fun onStart() {
         super.onStart()
         val windowWidth = getWindowWidth()
@@ -63,7 +68,7 @@ class UploadImageDialog(private val titleString:String,private val returnPath: (
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        title.text=titleString
+        title.text = titleString
 
         camBTN.setOnClickListener {
             requestPermissionLauncher.launch(arrayOf(Manifest.permission.CAMERA))
@@ -99,7 +104,7 @@ class UploadImageDialog(private val titleString:String,private val returnPath: (
                             requireContext().getExternalFilesDir(Environment.DIRECTORY_PICTURES),
                             System.currentTimeMillis().toString() + ".jpg"
                         )
-                        saveLabel(data.extras?.get("data") as Bitmap,file)
+                        saveLabel(data.extras?.get("data") as Bitmap, file)
 
                         //Uri of camera image
                         val uri = Uri.fromFile(file)
@@ -109,7 +114,7 @@ class UploadImageDialog(private val titleString:String,private val returnPath: (
 
                     try {
                         selectedImage?.let {
-                            returnPath(PathUtil.getPath(requireContext(), it)!!)
+                            returnPath?.invoke(PathUtil.getPath(requireContext(), it)!!)
                             dismiss()
                         }
                     } catch (e: Exception) {
@@ -131,12 +136,6 @@ class UploadImageDialog(private val titleString:String,private val returnPath: (
     private fun dispatchTakePictureIntent() {
         val takePictureIntent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
         resultLauncher.launch(takePictureIntent)
-//
-//        try {
-//            startActivityForResult(takePictureIntent, REQUEST_IMAGE_CAPTURE)
-//        } catch (e: ActivityNotFoundException) {
-//            // display error state to the user
-//        }
     }
 
     fun saveLabel(bitmap: Bitmap, file: File) {

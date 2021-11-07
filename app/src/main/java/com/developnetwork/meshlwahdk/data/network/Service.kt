@@ -16,7 +16,8 @@ interface Service {
     suspend fun userLogin(
         @Field("phone") email: String,
         @Field("password") password: String,
-        @Field("company_id") company_id: Int
+        @Field("company_id") company_id: Int,
+        @Field("fcm_token") notificationToken: String?
     ): BaseResponse<User>
 
     @POST("phoneRegister")
@@ -79,7 +80,8 @@ interface Service {
         @Part profilePic: MultipartBody.Part?,
         @Part categoryDocumentImage: MultipartBody.Part?,
         @Part identityCardImage: MultipartBody.Part?,
-        @Part insuranceCardImage: MultipartBody.Part?
+        @Part insuranceCardImage: MultipartBody.Part?,
+        @Part("fcm_token") notificationToken: RequestBody?
     ): BaseResponse<User>
 
 
@@ -94,6 +96,9 @@ interface Service {
         @Field("new_password") newPassword: String,
         @Field("confirm_password") confirmPassword: String
     ): BaseResponse<Any>
+
+    @POST("user/patient")
+    suspend fun getPatient(): BaseResponse<User>
 
     @POST("insurance-create")
     @Multipart
@@ -118,7 +123,10 @@ interface Service {
     suspend fun getAllSubRegion(@Field("district_id") district_id: Int): BaseResponse<List<Region>>
 
     @GET("redemption")
-    suspend fun getRedemptionCenters(@Query("type") type: String? = null): BaseResponse<List<RedemptionCenter>>
+    suspend fun getRedemptionCenters(
+        @Query("type") type: String? = null,
+        @Query("program_id") programID: Int? = null
+    ): BaseResponse<List<RedemptionCenter>>
 
 
     @POST("dose/create")
@@ -179,5 +187,12 @@ interface Service {
     ): BaseResponse<User>
 
     @POST("redimedProduct/getAll")
-    suspend fun getRedeemedPrograms():BaseResponse<List<RedeemedProgram>>
+    suspend fun getRedeemedPrograms(): BaseResponse<List<RedeemedProgram>>
+
+
+    @POST("api/user/update/phone")
+    @FormUrlEncoded
+    suspend fun updatePhoneNumber(@Field("phone")phone: String):BaseResponse<Any>
+
+
 }

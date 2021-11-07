@@ -24,8 +24,11 @@ class HistoryAdapter :
 
         holder.date.text = item.created_at
 
-        item.product?.let {
-            holder.name.text = it.name
+        item.program?.let { program ->
+
+            program.product?.let {
+                holder.name.text = it.name
+            }
         }
 
         item.redemptionCenter?.let {

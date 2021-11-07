@@ -8,6 +8,7 @@ import com.developnetwork.meshlwahdk.module.repoModule
 import com.developnetwork.meshlwahdk.module.viewModelModule
 import com.developnetwork.meshlwahdk.utils.managers.LocaleManager
 import com.developnetwork.meshlwahdk.utils.managers.LocaleManagerImpl
+import com.google.firebase.FirebaseApp
 import org.koin.android.ext.koin.androidContext
 import org.koin.core.context.GlobalContext.startKoin
 
@@ -22,7 +23,7 @@ class MeshLwahdkApplication: Application() {
         super.onCreate()
 
         appContext = applicationContext
-
+//        FirebaseApp.initializeApp(appContext)
 //        Stetho.initializeWithDefaults(this)
 
         startKoin {

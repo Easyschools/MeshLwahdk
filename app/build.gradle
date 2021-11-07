@@ -3,16 +3,17 @@ plugins {
     id 'kotlin-android'
     id 'kotlin-android-extensions'
     id "androidx.navigation.safeargs.kotlin"
-
+    id 'com.google.gms.google-services'
+    id 'com.google.firebase.crashlytics'
 }
 
 android {
-    compileSdk 30
+    compileSdk 31
 
     defaultConfig {
         applicationId "com.developnetwork.meshlwahdk"
         minSdk 21
-        targetSdk 30
+        targetSdk 31
         versionCode 1
         versionName "1.0"
 
@@ -29,7 +30,7 @@ android {
 
             buildConfigField "String", "Notification_Topic", '"custom-topic"'
             buildConfigField "int", "company_id", '24'
-            buildConfigField "int", "product_id", '16'
+//            buildConfigField "int", "product_id", '16'
 //            signingConfig signingConfigs.release
         }
 
@@ -44,7 +45,7 @@ android {
 
             buildConfigField "String", "Notification_Topic", '"custom-topic"'
             buildConfigField "int", "company_id", '24'
-            buildConfigField "int", "product_id", '16'
+//            buildConfigField "int", "product_id", '16'
 //            signingConfig signingConfigs.release
         }
 
@@ -66,17 +67,14 @@ android {
 
 dependencies { configuration ->
     
-    implementation platform('com.google.firebase:firebase-bom:28.2.0')
+    implementation platform('com.google.firebase:firebase-bom:29.0.0')
     implementation platform("com.squareup.okhttp3:okhttp-bom:4.9.0")
-    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
-    implementation 'androidx.appcompat:appcompat:1.2.0'
-    implementation 'com.google.android.material:material:1.3.0'
-    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
 
     androidX(configuration)
     navigation(configuration)
     lifecycle(configuration)
     playServices(configuration)
+    fireBase(configuration)
     retrofit(configuration)
     coroutines(configuration)
     koin(configuration)
@@ -87,17 +85,18 @@ dependencies { configuration ->
     dimens(configuration)
     logger(configuration)
 
-    implementation 'androidx.core:core-ktx:1.3.2'
 
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+
+    implementation 'com.budiyev.android:code-scanner:2.1.0'
+
 }
 
 
 private static void androidX(configuration) {
     def version = "1.0.0"
-
 
     configuration.implementation "androidx.legacy:legacy-support-v4:$version"
     configuration.implementation "androidx.cardview:cardview:$version"
@@ -105,9 +104,9 @@ private static void androidX(configuration) {
     configuration.implementation 'androidx.vectordrawable:vectordrawable:1.1.0'
     configuration.implementation 'androidx.appcompat:appcompat:1.3.1'
     configuration.implementation "androidx.preference:preference-ktx:1.1.1"
-    configuration.implementation 'androidx.constraintlayout:constraintlayout:2.1.0'
+    configuration.implementation 'androidx.constraintlayout:constraintlayout:2.1.1'
     configuration.implementation "com.google.android.material:material:1.4.0"
-
+    configuration.implementation 'androidx.core:core-ktx:1.7.0'
 }
 
 private static void navigation(configuration) {
@@ -135,7 +134,11 @@ private static void playServices(configuration) {
     configuration.implementation "com.google.android.gms:play-services-location:18.0.0"
     configuration.implementation 'com.google.android.gms:play-services-auth-api-phone:17.5.0'
 }
-
+private static void fireBase(configuration) {
+    configuration.implementation 'com.google.firebase:firebase-analytics-ktx'
+    configuration.implementation 'com.google.firebase:firebase-crashlytics-ktx'
+    configuration.implementation 'com.google.firebase:firebase-messaging'
+}
 private static void retrofit(configuration) {
     def retrofit_version = "2.9.0"
 
@@ -155,7 +158,6 @@ private static void coroutines(configuration) {
 }
 
 private static void koin(configuration) {
-//    def koin_version = "2.2.1"
     def koin_version = "3.1.2"
     configuration.implementation "io.insert-koin:koin-android:$koin_version"
     configuration.testImplementation "org.koin:koin-test:$koin_version"

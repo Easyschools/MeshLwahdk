@@ -43,7 +43,7 @@ class SelectOrderPharmacyFragment : BaseFragment() {
     }
 
     private fun handlePharmaciesLiveData() {
-        viewModel.getPharmacies().observe(viewLifecycleOwner, {
+        viewModel.getPharmacies(args.programID).observe(viewLifecycleOwner, {
             adapter.submitList(it.toMutableList())
         })
     }

@@ -25,9 +25,12 @@ class RegisterPhoneStepFragment  : BasePhoneInput() {
 
     private fun handleCheckPhone() {
         viewModel.checkPhone(phoneNumber).observe(viewLifecycleOwner, {
-            if (it) {
+            if (it.data) {
                 handlePhoneRegister()
             } else {
+                it.message?.let { msg->
+                    showError(msg)
+                }
                 handleGetUser()
             }
         })
@@ -49,13 +52,11 @@ class RegisterPhoneStepFragment  : BasePhoneInput() {
                     )
                 )
             }
-//            else {
-//                findNavController().navigate(
-//                    CheckPhoneFragmentDirections.actionRegisterStepZeroFragmentToLoginFragment(
-//                        phoneInput.text.toString()
-//                    )
-//                )
-//            }
+            else {
+                findNavController().navigate(
+                    RegisterPhoneStepFragmentDirections.actionRegisterPhoneStepFragmentToLoginFragment()
+                )
+            }
         })
     }
 

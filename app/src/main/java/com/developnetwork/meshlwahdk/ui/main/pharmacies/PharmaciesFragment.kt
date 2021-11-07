@@ -28,7 +28,11 @@ class PharmaciesFragment : BaseFragment() {
 
     private fun initList() {
         adapter = PharmaciesAdapter(){programID,pharmacyId,name->
+          if(programID!=0)
             findNavController().navigate(PharmaciesFragmentDirections.actionPharmaciesFragmentToProgramFragment(programID,pharmacyId,name))
+            else{
+                showError(R.string.this_pharmacy_doesnt_have_programs)
+          }
         }
         pharmaciesRV.layoutManager = GridLayoutManager(requireContext(), 2)
         pharmaciesRV.adapter = adapter

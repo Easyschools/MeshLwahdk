@@ -9,7 +9,6 @@ import com.developnetwork.meshlwahdk.base.BaseFragment
 import com.developnetwork.meshlwahdk.ui.auth.AuthActivity
 import com.developnetwork.meshlwahdk.ui.dialogs.ChangeLanguageDialog
 import com.developnetwork.meshlwahdk.utils.extensions.setImageURL
-import es.dmoral.toasty.Toasty
 import kotlinx.android.synthetic.main.fragment_profile.*
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
@@ -22,17 +21,10 @@ class ProfileFragment : BaseFragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        handleUserData()
+        getUser()
         handleButtons()
     }
 
-    private fun handleUserData() {
-        val user = viewModel.sharedPreferencesManager.userData
-        if (!user.img.isNullOrBlank())
-            profileImage.setImageURL(user.img)
-
-        name.text = user.name
-    }
 
     private fun handleButtons() {
         editProfileBTN.setOnClickListener {
@@ -45,7 +37,7 @@ class ProfileFragment : BaseFragment() {
             resetPassword()
         }
         editPhoneBTN.setOnClickListener {
-            Toasty.info(requireContext(), "under development", 0).show()
+            findNavController().navigate(ProfileFragmentDirections.actionProfileFragmentToChangePhoneNumber())
         }
         languageBTN.setOnClickListener {
             ChangeLanguageDialog().show(childFragmentManager, "change_language")
@@ -55,6 +47,14 @@ class ProfileFragment : BaseFragment() {
         }
     }
 
+    private fun getUser() {
+        viewModel.getUser().observe(viewLifecycleOwner, { user ->
+            if (!user.img.isNullOrBlank())
+                profileImage.setImageURL(user.img)
+
+            name.text = user.name
+        })
+    }
 
     private fun logout() {
         viewModel.sharedPreferencesManager.clearData()

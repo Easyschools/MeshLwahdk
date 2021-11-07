@@ -3,6 +3,7 @@ package com.developnetwork.meshlwahdk.data.repository
 import com.developnetwork.meshlwahdk.BuildConfig
 import com.developnetwork.meshlwahdk.data.model.User
 import com.developnetwork.meshlwahdk.data.network.Service
+import com.ivestment.doctorna.data.model.BaseResponse
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import okhttp3.MultipartBody
 import okhttp3.RequestBody.Companion.asRequestBody
@@ -12,12 +13,13 @@ import java.io.File
 interface AuthRepo {
     suspend fun login(
         email: String,
-        password: String
+        password: String,
+        notificationToken: String?
     ): User
 
 //    suspend fun createControllerPatient(): CreateControllerPatientDBResponse
 
-    suspend fun checkPhone(phone: String): Boolean
+    suspend fun checkPhone(phone: String): BaseResponse<Boolean>
     suspend fun getPhoneUser(phone: String): User
     suspend fun registerPhone(phone: String): User
     suspend fun resendCode(phone: String): Any
@@ -40,7 +42,8 @@ interface AuthRepo {
         profilePicImagePath: String?,
         categoryImagePath: String?,
         identityCardImagePath: String?,
-        insuranceCardImagePath: String?
+        insuranceCardImagePath: String?,
+        notificationToken: String?
     ): User
 
 //    suspend fun userRegister(
@@ -76,16 +79,19 @@ interface AuthRepo {
 }
 
 class AuthRepoImpl(private val service: Service) : AuthRepo {
-    override suspend fun login(email: String, password: String): User {
-        return service.userLogin(email, password, BuildConfig.company_id).data
+    override suspend fun login(
+        email: String, password: String,
+        notificationToken: String?
+    ): User {
+        return service.userLogin(email, password, BuildConfig.company_id, notificationToken).data
     }
 
 //    override suspend fun createControllerPatient(): CreateControllerPatientDBResponse {
 //        return service.createControllerPatient()
 //    }
 
-    override suspend fun checkPhone(phone: String): Boolean {
-        return service.checkPhone(phone, BuildConfig.company_id).data
+    override suspend fun checkPhone(phone: String): BaseResponse<Boolean> {
+        return service.checkPhone(phone, BuildConfig.company_id)
     }
 
     override suspend fun getPhoneUser(phone: String): User {
@@ -121,7 +127,8 @@ class AuthRepoImpl(private val service: Service) : AuthRepo {
         profilePicImagePath: String?,
         categoryImagePath: String?,
         identityCardImagePath: String?,
-        insuranceCardImagePath: String?
+        insuranceCardImagePath: String?,
+        notificationToken: String?
     ): User {
         var profilePicFilePart: MultipartBody.Part? = null
         var categoryFilePart: MultipartBody.Part? = null
@@ -174,7 +181,8 @@ class AuthRepoImpl(private val service: Service) : AuthRepo {
             profilePicFilePart,
             categoryFilePart,
             identityFilePart,
-            insuranceFilePart
+            insuranceFilePart,
+            notificationToken.toString().toRequestBody("multipart/form-data".toMediaTypeOrNull())
         ).data
     }
 

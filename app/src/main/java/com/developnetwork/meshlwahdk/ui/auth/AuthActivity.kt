@@ -2,8 +2,10 @@ package com.developnetwork.meshlwahdk.ui.auth
 
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
+import com.developnetwork.meshlwahdk.BuildConfig
 import com.developnetwork.meshlwahdk.R
 import com.developnetwork.meshlwahdk.base.BaseActivity
+import com.google.firebase.crashlytics.FirebaseCrashlytics
 
 class AuthActivity : BaseActivity() {
     private lateinit var navController: NavController
@@ -18,7 +20,7 @@ class AuthActivity : BaseActivity() {
     }
 
     override fun init() {
-//        FirebaseCrashlytics.getInstance().setCrashlyticsCollectionEnabled(!BuildConfig.DEBUG)
+        FirebaseCrashlytics.getInstance().setCrashlyticsCollectionEnabled(!BuildConfig.DEBUG)
         initNavController()
     }
 

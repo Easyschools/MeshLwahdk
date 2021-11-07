@@ -1,15 +1,18 @@
 package com.developnetwork.meshlwahdk.ui.auth.register
 
+import android.util.Log
 import com.developnetwork.meshlwahdk.BuildConfig
 import com.developnetwork.meshlwahdk.base.BaseViewModel
 import com.developnetwork.meshlwahdk.data.model.User
 import com.developnetwork.meshlwahdk.data.repository.AuthRepo
 import com.developnetwork.meshlwahdk.data.repository.OtherRepo
 import com.developnetwork.meshlwahdk.utils.managers.SharedPreferencesManager
+import com.google.firebase.messaging.FirebaseMessaging
 import com.ivestment.doctorna.data.model.PatientCategory
 import com.ivestment.doctorna.data.model.Region
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
+import timber.log.Timber
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -19,7 +22,9 @@ class RegisterViewModel(
     val sharedPreferencesManager: SharedPreferencesManager
 ) :
     BaseViewModel() {
-
+    init {
+        getNotificationToken()
+    }
     var name: String = ""
     var phone: String = ""
     var email: String? = null
@@ -92,7 +97,8 @@ class RegisterViewModel(
             profilePicPath,
             categoryDocumentPath,
             identityCardImagePath,
-            insuranceCardImagePath
+            insuranceCardImagePath,
+            sharedPreferencesManager.notificationToken
         )}
 
         sharedPreferencesManager.saveUserData(result)
@@ -115,5 +121,22 @@ class RegisterViewModel(
     }
 
     fun getProducts() = callRequestLiveData { otherRepo.getProducts(BuildConfig.company_id) }
+
+    private fun getNotificationToken() {
+        FirebaseMessaging.getInstance().token.addOnCompleteListener { task ->
+            if (!task.isSuccessful) {
+                Timber.tag("NotificationToken")
+                    .d(task.exception, "getInstanceId failed")
+                return@addOnCompleteListener
+            }
+            // Get new Instance ID token
+            val notificationToken = task.result
+            notificationToken?.let {
+                sharedPreferencesManager.notificationToken = it
+                Timber.tag("NotificationToken").d(notificationToken)
+                Log.d("NotificationToken", notificationToken)
+            }
+        }
+    }
 
 }

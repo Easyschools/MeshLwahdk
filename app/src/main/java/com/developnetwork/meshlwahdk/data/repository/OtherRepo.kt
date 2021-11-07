@@ -26,7 +26,7 @@ interface OtherRepo {
 
     suspend fun getProducts(company_id: Int): List<Product>
 
-    suspend fun getRedemptionCenters(): List<RedemptionCenter>
+    suspend fun getRedemptionCenters(programID:Int?=null): List<RedemptionCenter>
 
 }
 
@@ -65,7 +65,7 @@ class OthersRepoImpl(private val service: Service) : OtherRepo {
         return service.getProducts(company_id).data
     }
 
-    override suspend fun getRedemptionCenters(): List<RedemptionCenter> {
-        return service.getRedemptionCenters("pharmacy").data
+    override suspend fun getRedemptionCenters(programID:Int?): List<RedemptionCenter> {
+        return service.getRedemptionCenters("pharmacy",programID).data
     }
 }

@@ -45,6 +45,11 @@ class ProgramFragment : BaseFragment() {
     }
 
     private fun handleProgramData() {
+        if (args.id == 0) {
+            showError(R.string.this_pharmacy_doesnt_have_programs)
+            findNavController().navigateUp()
+            return
+        }
         viewModel.getProgram(args.id).observe(viewLifecycleOwner, {
 
             it?.product?.let { product ->

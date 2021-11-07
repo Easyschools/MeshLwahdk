@@ -4,5 +4,5 @@ import com.developnetwork.meshlwahdk.base.BaseViewModel
 import com.developnetwork.meshlwahdk.data.repository.OtherRepo
 
 class SelectOrderPharmacyViewModel(private val otherRepo: OtherRepo):BaseViewModel() {
-    fun getPharmacies()=callRequestLiveData { otherRepo.getRedemptionCenters() }
+    fun getPharmacies(programID:Int)=callRequestLiveData { otherRepo.getRedemptionCenters(programID) }
 }

@@ -36,6 +36,9 @@
         <action
             android:id="@+id/action_profileFragment_to_forgotPasswordConfirmationFragment2"
             app:destination="@id/forgotPasswordConfirmationFragment2" />
+        <action
+            android:id="@+id/action_profileFragment_to_changePhoneNumber"
+            app:destination="@id/changePhoneNumber" />
     </fragment>
 
     <fragment
@@ -62,6 +65,9 @@
             android:name="productID"
             app:argType="integer"
             android:defaultValue="0" />
+        <action
+            android:id="@+id/action_addDoseFragment_to_programFragment"
+            app:destination="@id/programFragment" />
     </fragment>
     <fragment
         android:id="@+id/doseListFragment"
@@ -82,6 +88,9 @@
         <argument
             android:name="dose"
             app:argType="com.developnetwork.meshlwahdk.data.model.Dose" />
+        <action
+            android:id="@+id/action_editDoseFragment_to_programFragment"
+            app:destination="@id/programFragment" />
     </fragment>
     <fragment
         android:id="@+id/programFragment"
@@ -176,6 +185,22 @@
         <argument
             android:name="programID"
             app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/changePhoneNumber"
+        android:name="com.developnetwork.meshlwahdk.ui.main.changephone.ChangePhoneNumber"
+        android:label="ChangePhoneNumber" >
+        <action
+            android:id="@+id/action_changePhoneNumber_to_confirmUpdatedPhoneFragment"
+            app:destination="@id/confirmUpdatedPhoneFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/confirmUpdatedPhoneFragment"
+        android:name="com.developnetwork.meshlwahdk.ui.main.changephone.confirm.ConfirmUpdatedPhoneFragment"
+        android:label="ConfirmUpdatedPhoneFragment" >
+        <argument
+            android:name="phone"
+            app:argType="string" />
     </fragment>
 
 

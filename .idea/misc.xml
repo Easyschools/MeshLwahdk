@@ -26,6 +26,7 @@
         <entry key="app/src/main/res/layout/dose_item.xml" value="0.16655405405405405" />
         <entry key="app/src/main/res/layout/fragment_add_dose.xml" value="0.16655405405405405" />
         <entry key="app/src/main/res/layout/fragment_auth.xml" value="0.16655405405405405" />
+        <entry key="app/src/main/res/layout/fragment_bar_code_scanner.xml" value="0.16655405405405405" />
         <entry key="app/src/main/res/layout/fragment_base_dose_input.xml" value="0.16655405405405405" />
         <entry key="app/src/main/res/layout/fragment_choose_language.xml" value="0.16" />
         <entry key="app/src/main/res/layout/fragment_confirm_number.xml" value="0.27999999999999997" />

@@ -34,7 +34,7 @@ class DoseListFragment : BaseFragment() {
         adapter = DosesListAdapter(){
             findNavController().navigate(DoseListFragmentDirections.actionDoseListFragmentToEditDoseFragment(it))
         }
-        dosesRV.layoutManager = LinearLayoutManager(requireContext(), )
+        dosesRV.layoutManager = LinearLayoutManager(requireContext() )
         dosesRV.adapter = adapter
     }
 

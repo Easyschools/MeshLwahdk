@@ -8,8 +8,8 @@ data class RedeemedProgram(
     val barCode: String,
     @SerializedName("id")
     val id: Int,
-    @SerializedName("product")
-    val product: Product,
+    @SerializedName("program")
+    val program: Program,
     @SerializedName("redemption_center")
     val redemptionCenter: RedemptionCenter,
     @SerializedName("created_at")

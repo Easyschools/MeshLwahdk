@@ -9,8 +9,6 @@ class SplashActivity : BaseActivity() {
     }
 
     override fun init() {
-
-
     }
 
 }

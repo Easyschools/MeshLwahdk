@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "405338274092",
+    "project_id": "meshlwahdk",
+    "storage_bucket": "meshlwahdk.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:405338274092:android:08e22bab5bf56718ee1489",
+        "android_client_info": {
+          "package_name": "com.developnetwork.meshlwahdk"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "405338274092-8k9sotobg8objq0k9ou8igi55cd6ct44.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.developnetwork.meshlwahdk",
+            "certificate_hash": "b12e245ffeede5195772c420dc7c97617bf32217"
+          }
+        },
+        {
+          "client_id": "405338274092-anf9010dfuur0kh1pki7l4id5194eaol.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA3Ej7kL1uWabjWcGM16onyMi2KWbs0XAE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "405338274092-anf9010dfuur0kh1pki7l4id5194eaol.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

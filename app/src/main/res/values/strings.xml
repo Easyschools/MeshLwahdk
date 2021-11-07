@@ -239,5 +239,8 @@ I hear by give my informed consent for the use of Msh Lwahdak in my case.</p>]]>
     <string name="save">Save</string>
     <string name="please_select_the_pharmacy_you_would_like_to_receive_your_medication_from">Please select the pharmacy you would like to receive your medication from</string>
     <string name="pharmacy_choice">Pharmacy Choice</string>
+    <string name="this_pharmacy_doesnt_have_programs">This Pharmacy doesn\'t have programs</string>
+    <string name="scan_product">Scan Product</string>
+    <string name="cancel">Cancel</string>
 
 </resources>

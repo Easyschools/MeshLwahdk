@@ -34,10 +34,12 @@ abstract class BaseFragment : Fragment() {
 
     open fun showError(@StringRes message: Int) {
 //        (context as BaseActivity).showErrorToast(message)
+        view?.let { it1 -> Snackbar.make(it1, message, Snackbar.LENGTH_SHORT).show() }
     }
 
     open fun showError(message: String) {
 //        (context as BaseActivity).showErrorToast(message)
+        view?.let { it1 -> Snackbar.make(it1, message, Snackbar.LENGTH_SHORT).show() }
     }
 
     fun handleProgress(viewModel: BaseViewModel, swipeRefreshLayout: SwipeRefreshLayout? = null) {

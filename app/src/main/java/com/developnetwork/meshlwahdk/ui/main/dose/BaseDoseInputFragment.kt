@@ -25,20 +25,18 @@ abstract class BaseDoseInputFragment : BaseFragment() {
         handleProductsLiveData()
 
         nextBTN.setOnClickListener {
-            save()
-        }
+            inputViewModel.save(
+                productSpinner.getSelectedItemId(),
+                frequencyInput.text.toString(),
+                endDateInput.text.toString()
+            ).observe(viewLifecycleOwner, {
+                findNavController().navigateUp()
+                Toasty.success(requireContext(), R.string.done, 0).show()
+//                save()
+            })        }
     }
 
-    private fun save() {
-        inputViewModel.save(
-            productSpinner.getSelectedItemId(),
-            frequencyInput.text.toString(),
-            endDateInput.text.toString()
-        ).observe(viewLifecycleOwner, {
-            findNavController().navigateUp()
-            Toasty.success(requireContext(), R.string.done, 0).show()
-        })
-    }
+//    abstract fun save()
 
     private fun handleProductsLiveData() {
         inputViewModel.getProducts().observe(viewLifecycleOwner, {
@@ -48,7 +46,6 @@ abstract class BaseDoseInputFragment : BaseFragment() {
 
     open fun setProducts(list: List<Product>) {
         productSpinner.setAdapter(ProductsSpinnerAdapter(requireContext(), list))
-
     }
 
 

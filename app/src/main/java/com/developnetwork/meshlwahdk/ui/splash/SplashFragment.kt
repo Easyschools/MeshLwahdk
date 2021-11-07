@@ -1,5 +1,6 @@
 package com.developnetwork.meshlwahdk.ui.splash
 
+import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
@@ -10,6 +11,7 @@ import androidx.constraintlayout.motion.widget.MotionLayout
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.developnetwork.meshlwahdk.R
+import com.developnetwork.meshlwahdk.ui.auth.AuthActivity
 import com.developnetwork.meshlwahdk.utils.managers.SharedPreferencesManager
 import kotlinx.android.synthetic.main.fragment_splash.*
 import org.koin.android.ext.android.inject
@@ -37,7 +39,11 @@ class SplashFragment : Fragment() {
                 when {
                     sharedPreferencesManager.isLoggedIn -> findNavController().navigate(SplashFragmentDirections.actionSplashFragmentToMainActivity())
                     !sharedPreferencesManager.choseLanguage -> findNavController().navigate(SplashFragmentDirections.actionSplashFragmentToChooseLanguageFragment())
-                    sharedPreferencesManager.termsAgreed -> findNavController().navigate(SplashFragmentDirections.splashToAuth())
+                    sharedPreferencesManager.termsAgreed -> {
+                        val authIntent= Intent(requireActivity(),AuthActivity::class.java)
+                        startActivity(authIntent)
+                        requireActivity().finishAffinity()
+                    }
                     else -> findNavController().navigate(SplashFragmentDirections.actionSplashFragmentToIntroFragment())
                 }
 
