@@ -28,7 +28,9 @@ class OrderSuccessFragment : BaseFragment() {
 
 
         continueBTN.setOnClickListener {
-            findNavController().popBackStack(R.id.home, false)
+
+            if (!findNavController().popBackStack(R.id.home, false))
+                findNavController().navigate(OrderSuccessFragmentDirections.actionOrderSuccessFragmentToHomeFragment())
         }
     }
 }

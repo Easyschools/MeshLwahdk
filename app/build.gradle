@@ -148,7 +148,7 @@ private static void retrofit(configuration) {
     configuration.implementation "com.squareup.okhttp3:okhttp"
     configuration.debugImplementation "com.squareup.okhttp3:logging-interceptor"
 
-    configuration.debugImplementation 'com.facebook.stetho:stetho-okhttp3:1.5.1'
+    configuration.debugImplementation 'com.facebook.stetho:stetho-okhttp3:1.6.0'
 }
 
 private static void coroutines(configuration) {

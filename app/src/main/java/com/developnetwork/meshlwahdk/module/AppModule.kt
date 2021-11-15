@@ -9,7 +9,6 @@ import com.developnetwork.meshlwahdk.utils.managers.SharedPreferencesManager
 import com.developnetwork.meshlwahdk.utils.managers.SharedPreferencesManagerImpl
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
-
 import org.koin.dsl.module
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
@@ -66,10 +65,17 @@ private val headersInterceptor: Interceptor = Interceptor { chain ->
     val token = sharedPreferencesManager.userToken
 
     var request = chain.request()
+
+//    val requestUrl = request.url
+
+//    val url = requestUrl.newBuilder().addQueryParameter("company_id", BuildConfig.company_id.toString()).build()
+
     request = request.newBuilder()
+//        .url(url)
         .header("Authorization", token)
         .addHeader("Accept", "application/json")
         .addHeader("X-localization", localeManager.language)
         .build()
+
     chain.proceed(request)
 }

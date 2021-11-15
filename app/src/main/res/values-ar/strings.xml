@@ -205,5 +205,33 @@
 </string>
     <string name="change_language">تغيير اللغة</string>
     <string name="upload_profile_photo">تحميل صورة الملف الشخصي</string>
+    <string name="doses">جرعات</string>
+    <string name="select_your_country">اختر بلدك</string>
+    <string name="your_drugs">الأدوية الخاصة بك</string>
+    <string name="please_enter_your_account_information_date_of_birth_region">الرجاء إدخال معلومات حسابك تاريخ الميلاد والجنس والمنطقة</string>
+    <string name="until">حتى</string>
+    <string name="frequency">تكرر</string>
+    <string name="times">مرات</string>
+    <string name="product">المنتج</string>
+    <string name="patient_profile">الملف الشخصي للمريض</string>
+    <string name="add">أضف</string>
+    <string name="duration">مدة</string>
+    <string name="program_intro">مقدمة البرنامج</string>
+    <string name="camera">كاميرا</string>
+    <string name="gallery">الاستوديو</string>
+    <string name="validate_product">تحقق من صحة المنتج</string>
+    <string name="please_add_your_rx_scan_product_barcode_qrcode_and_add_proof_of_purchase">الرجاء إضافة RX الخاص بك ، مسح الرمز الشريطي للمنتج / رمز Qr وإضافة إثبات الشراء</string>
+    <string name="rx">الروشتة</string>
+    <string name="scan_product_code">مسح رمز المنتج</string>
+    <string name="receipt">فاتورة</string>
+    <string name="hi">أهلا</string>
+    <string name="your_order_is_submitted_to">يتم تقديم طلبك إلى</string>
+    <string name="you_will_receive_a_confirmation_within_48_hours">ستتلقى تأكيدًا في غضون 48 ساعة</string>
+    <string name="save">يحفظ</string>
+    <string name="please_select_the_pharmacy_you_would_like_to_receive_your_medication_from">الرجاء تحديد الصيدلية التي ترغب في استلام الأدوية منها</string>
+    <string name="pharmacy_choice">اختيار الصيدلة</string>
+    <string name="this_pharmacy_doesnt_have_programs">هذه الصيدلية ليس لديها برامج</string>
+    <string name="scan_product">فحص المنتج</string>
+    <string name="cancel">إلغاء</string>
 
 </resources>

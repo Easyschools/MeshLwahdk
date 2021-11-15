@@ -109,6 +109,7 @@
             android:defaultValue="0" />
         <argument
             android:name="pharmacyName"
+            android:defaultValue=""
             app:argType="string" />
         <action
             android:id="@+id/action_programFragment_to_selectOrderPharmacyFragment"
@@ -150,6 +151,9 @@
         <argument
             android:name="pharmacyName"
             app:argType="string" />
+        <action
+            android:id="@+id/action_orderSuccessFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
     </fragment>
     <fragment
         android:id="@+id/historyFragment"

@@ -78,7 +78,7 @@
                 android:padding="@dimen/_10sdp"
                 android:text="@string/upload_profile_photo"
                 android:textColor="@color/black"
-                app:icon="@drawable/ic_photo_camera"
+                app:icon="@drawable/ic_profile_pic"
                 app:iconGravity="textEnd"
                 app:iconTint="@color/black"
                 app:layout_constraintTop_toBottomOf="@id/msg" />

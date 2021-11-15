@@ -95,11 +95,11 @@ class AuthRepoImpl(private val service: Service) : AuthRepo {
     }
 
     override suspend fun getPhoneUser(phone: String): User {
-        return service.getPhoneUser(phone).data
+        return service.getPhoneUser(phone, BuildConfig.company_id).data
     }
 
     override suspend fun resendCode(phone: String): Any {
-        return service.resendCode(phone).data
+        return service.resendCode(phone, BuildConfig.company_id).data
     }
 
     override suspend fun registerPhone(phone: String): User {
@@ -107,7 +107,7 @@ class AuthRepoImpl(private val service: Service) : AuthRepo {
     }
 
     override suspend fun confirmPhone(code: String, phone: String): String {
-        return service.confirmPhone(phone, code).data
+        return service.confirmPhone(phone,  BuildConfig.company_id,code).data
     }
 
     override suspend fun completeRegister(
@@ -261,11 +261,11 @@ class AuthRepoImpl(private val service: Service) : AuthRepo {
 //    }
 
     override suspend fun forgetPassword(phone: String): Any {
-        return service.forgetPassword(phone).data
+        return service.forgetPassword(phone, BuildConfig.company_id).data
     }
 
     override suspend fun confirmForgotPasswordPhone(code: String, phone: String): String {
-        return service.confirmForgotPasswordPhone(phone, code).data
+        return service.confirmForgotPasswordPhone(phone, BuildConfig.company_id, code).data
     }
 
     override suspend fun resetPassword(

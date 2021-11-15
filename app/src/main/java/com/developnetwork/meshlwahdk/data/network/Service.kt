@@ -37,16 +37,18 @@ interface Service {
 
     @POST("getPhoneUser")
     @FormUrlEncoded
-    suspend fun getPhoneUser(@Field("phone") phone: String): BaseResponse<User>
+    suspend fun getPhoneUser(@Field("phone") phone: String ,       @Field("company_id") company_id: Int,
+    ): BaseResponse<User>
 
     @POST("resend")
     @FormUrlEncoded
-    suspend fun resendCode(@Field("phone") phone: String): BaseResponse<Any>
+    suspend fun resendCode(@Field("phone") phone: String,        @Field("company_id") company_id: Int): BaseResponse<Any>
 
     @POST("confirmAccount")
     @FormUrlEncoded
     suspend fun confirmPhone(
         @Field("phone") phone: String,
+        @Field("company_id") company_id: Int,
         @Field("confirmation_code") code: String
     ): BaseResponse<String>
 
@@ -54,6 +56,7 @@ interface Service {
     @FormUrlEncoded
     suspend fun confirmForgotPasswordPhone(
         @Field("phone") phone: String,
+        @Field("company_id") company_id: Int,
         @Field("token") code: String
     ): BaseResponse<String>
 
@@ -87,7 +90,8 @@ interface Service {
 
     @POST("forgetPassword")
     @FormUrlEncoded
-    suspend fun forgetPassword(@Field("phone") phone: String): BaseResponse<Any>
+    suspend fun forgetPassword(@Field("phone") phone: String,
+        @Field("company_id") company_id: Int): BaseResponse<Any>
 
     @POST("resetPassword")
     @FormUrlEncoded

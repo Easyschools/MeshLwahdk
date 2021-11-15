@@ -33,9 +33,9 @@ class OrderProgramFragment : BaseFragment() {
     }
 
     private fun handleButtons() {
-        scanBTN.setOnClickListener {
-            requestPermissionLauncher.launch(Manifest.permission.CAMERA)
-        }
+//        scanBTN.setOnClickListener {
+//            requestPermissionLauncher.launch(Manifest.permission.CAMERA)
+//        }
 
         uploadRXBTN.setOnClickListener {
             UploadImageDialog("upload Rx") {

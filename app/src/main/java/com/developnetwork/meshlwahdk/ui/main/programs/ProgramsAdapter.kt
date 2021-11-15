@@ -12,7 +12,7 @@ import com.developnetwork.meshlwahdk.utils.extensions.setImageURL
 import com.google.android.material.imageview.ShapeableImageView
 import com.google.android.material.textview.MaterialTextView
 
-class ProgramsAdapter(private val click: (programID: Int) -> Unit) :
+class ProgramsAdapter(private val click: (programID: Int,productID: Int) -> Unit) :
     ListAdapter<Program, ProgramsAdapter.ViewHolder>(ProgramItemDiffCallback()) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -33,7 +33,7 @@ class ProgramsAdapter(private val click: (programID: Int) -> Unit) :
         holder.fields.text = item.fields
 
         holder.itemView.setOnClickListener {
-            click(item.id)
+            click(item.id,item.productId)
         }
     }
 

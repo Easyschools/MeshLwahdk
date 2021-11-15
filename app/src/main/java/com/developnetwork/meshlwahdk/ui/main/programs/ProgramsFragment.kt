@@ -29,8 +29,8 @@ class ProgramsFragment : BaseFragment() {
     }
 
     private fun initList() {
-        adapter = ProgramsAdapter {
-            findNavController().navigate(ProgramsFragmentDirections.actionProgramsFragmentToProgramFragment(it,0,""))
+        adapter = ProgramsAdapter {programID, productID ->
+            findNavController().navigate(ProgramsFragmentDirections.actionProgramsFragmentToProgramFragment(programID,0,""))
         }
         pharmaciesRV.layoutManager = LinearLayoutManager(requireContext())
         pharmaciesRV.adapter = adapter

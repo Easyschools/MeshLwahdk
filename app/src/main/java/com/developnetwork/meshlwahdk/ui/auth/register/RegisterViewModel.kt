@@ -6,6 +6,7 @@ import com.developnetwork.meshlwahdk.base.BaseViewModel
 import com.developnetwork.meshlwahdk.data.model.User
 import com.developnetwork.meshlwahdk.data.repository.AuthRepo
 import com.developnetwork.meshlwahdk.data.repository.OtherRepo
+import com.developnetwork.meshlwahdk.data.repository.ProgramsRepo
 import com.developnetwork.meshlwahdk.utils.managers.SharedPreferencesManager
 import com.google.firebase.messaging.FirebaseMessaging
 import com.ivestment.doctorna.data.model.PatientCategory
@@ -19,6 +20,7 @@ import java.util.*
 class RegisterViewModel(
     private val authRepo: AuthRepo,
     private val otherRepo: OtherRepo,
+    private val programsRepo: ProgramsRepo,
     val sharedPreferencesManager: SharedPreferencesManager
 ) :
     BaseViewModel() {
@@ -120,7 +122,7 @@ class RegisterViewModel(
         return age.toString()
     }
 
-    fun getProducts() = callRequestLiveData { otherRepo.getProducts(BuildConfig.company_id) }
+    fun getPrograms() = callRequestLiveData { programsRepo.getPrograms() }
 
     private fun getNotificationToken() {
         FirebaseMessaging.getInstance().token.addOnCompleteListener { task ->

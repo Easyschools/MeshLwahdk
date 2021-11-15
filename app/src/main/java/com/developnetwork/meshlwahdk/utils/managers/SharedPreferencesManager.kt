@@ -27,7 +27,8 @@ interface SharedPreferencesManager {
 
     var userData: User
 
-    var slug: String
+    var firstTime: Boolean
+    var selectedProgram: Int
 
     fun saveUserData(user: User)
     fun clearData()
@@ -67,12 +68,6 @@ class SharedPreferencesManagerImpl(context: Context) : SharedPreferencesManager 
             editor.putString(userNameKey, token).apply()
         }
 
-    override var slug: String
-        get() = getString(userSlugKey)
-        set(value) {
-            editor.putString(userSlugKey, value).apply()
-        }
-
     override var userEmail: String
         get() = getString(userEmailKey)
         set(token) {
@@ -106,6 +101,18 @@ class SharedPreferencesManagerImpl(context: Context) : SharedPreferencesManager 
         get() = sharedPreferences.getBoolean(termsAgreedKey, false)
         set(b) {
             editor.putBoolean(termsAgreedKey, b).apply()
+        }
+
+    override var firstTime: Boolean
+        get() = sharedPreferences.getBoolean(FirstTimeKey, false)
+        set(b) {
+            editor.putBoolean(FirstTimeKey, b).apply()
+        }
+
+    override var selectedProgram: Int
+        get() = getInt(selectedProgramIDKEY)
+        set(id) {
+            editor.putInt(selectedProgramIDKEY, id).apply()
         }
 
     override var userData: User
@@ -171,9 +178,10 @@ class SharedPreferencesManagerImpl(context: Context) : SharedPreferencesManager 
         private const val userSlugKey = "USERSlug"
         private const val choseLanguageKey = "CHOSELANGUAGE"
         private const val termsAgreedKey = "TERMSAGREED"
+        private const val FirstTimeKey = "TERMSAGREED"
         private const val notificationTokenKey = "NotificationToken"
 
-        private const val selectedCarIDKEY = "SelectedCarID"
+        private const val selectedProgramIDKEY = "SelectedProgramID"
 
 
         private const val isLoggedInKey = "LOGIN"

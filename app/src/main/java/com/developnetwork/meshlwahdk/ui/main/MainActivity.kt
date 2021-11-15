@@ -1,15 +1,19 @@
 package com.developnetwork.meshlwahdk.ui.main
 
+import android.os.Bundle
 import android.view.View
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
 import com.developnetwork.meshlwahdk.R
 import com.developnetwork.meshlwahdk.base.BaseActivity
 import com.developnetwork.meshlwahdk.utils.extensions.callUS
+import com.developnetwork.meshlwahdk.utils.managers.SharedPreferencesManager
 import kotlinx.android.synthetic.main.activity_main.*
+import org.koin.android.ext.android.inject
 
 class MainActivity : BaseActivity() {
     private lateinit var navController: NavController
+    private val sharedPreferencesManager: SharedPreferencesManager by inject()
 
     override fun getLayout(): Int {
         return R.layout.activity_main
@@ -23,6 +27,15 @@ class MainActivity : BaseActivity() {
         }
         handleToolbar()
 
+
+        if (sharedPreferencesManager.firstTime) {
+
+            navController.navigate(
+                R.id.programFragment,
+                Bundle().apply { putInt("id", sharedPreferencesManager.selectedProgram) })
+            sharedPreferencesManager.firstTime = false
+            
+        }
     }
 
     private fun handleToolbar() {
@@ -54,6 +67,7 @@ class MainActivity : BaseActivity() {
             navController.navigate(R.id.profileFragment)
         }
     }
+
     private fun initNavController() {
         navController = findNavController(R.id.main_host_fragment)
     }
