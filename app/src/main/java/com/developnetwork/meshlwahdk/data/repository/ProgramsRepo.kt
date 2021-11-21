@@ -1,5 +1,6 @@
 package com.developnetwork.meshlwahdk.data.repository
 
+import com.developnetwork.meshlwahdk.BuildConfig
 import com.developnetwork.meshlwahdk.data.model.Program
 import com.developnetwork.meshlwahdk.data.model.RedeemedProgram
 import com.developnetwork.meshlwahdk.data.network.Service
@@ -32,7 +33,7 @@ class ProgramsRepoImpl(private val service: Service) : ProgramsRepo {
     }
 
     override suspend fun getPrograms(): List<Program> {
-        return service.getPrograms().data
+        return service.getPrograms(BuildConfig.company_id).data
     }
 
     override suspend fun redeemProgram(

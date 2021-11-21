@@ -25,11 +25,11 @@ abstract class BaseFragment : Fragment() {
     }
 
     open fun showLoading() {
-//        (context as BaseActivity).showLoading()
+        (context as BaseActivity).showLoading()
     }
 
     open fun hideLoading() {
-//        (context as BaseActivity).hideLoading()
+        (context as BaseActivity).hideLoading()
     }
 
     open fun showError(@StringRes message: Int) {

@@ -69,6 +69,7 @@ private fun failureHandler(t: Throwable): String {
 }
 
 fun errorHandler(throwable: Throwable): String {
+    Timber.e(throwable)
 
     val context = MeshLwahdkApplication.appContext.applicationContext
     try {

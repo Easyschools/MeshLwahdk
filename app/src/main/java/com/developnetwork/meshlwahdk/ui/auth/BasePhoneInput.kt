@@ -21,6 +21,9 @@ abstract class BasePhoneInput : BaseFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+
+        title1.setText(titleID)
+
         countriesSpinner.setAdapter(
             ArrayAdapter(
                 requireContext(), android.R.layout.simple_list_item_1,

@@ -1,14 +1,13 @@
 package com.developnetwork.meshlwahdk.base
 
-
-
-import android.app.ProgressDialog
 import android.content.Context
 import android.os.Bundle
 import androidx.annotation.LayoutRes
 import androidx.annotation.StringRes
 import androidx.appcompat.app.AppCompatActivity
 import com.developnetwork.meshlwahdk.utils.managers.LocaleManager
+import com.developnetwork.meshlwahdk.utils.view.ProgressDialog
+import es.dmoral.toasty.Toasty
 
 import org.koin.android.ext.android.inject
 
@@ -48,11 +47,11 @@ abstract class BaseActivity : AppCompatActivity() {
     }
 
     open fun showErrorToast(@StringRes message: Int) {
-//        Toasty.error(this, message, 0).show()
+        Toasty.error(this, message, 0).show()
     }
 
     open fun showErrorToast(message: String) {
-//        Toasty.error(this, message, 0).show()
+        Toasty.error(this, message, 0).show()
     }
 
     override fun attachBaseContext(base: Context) {

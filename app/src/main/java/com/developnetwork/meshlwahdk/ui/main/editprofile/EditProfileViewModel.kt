@@ -21,7 +21,7 @@ class EditProfileViewModel(private val userRepo: UserRepo ,   private val otherR
         region_id: Int,
         subRegion_id: Int,
         birthDate: String
-    ) = callRequestLiveData {
+    ) = callRequestWaitLiveData {
         userRepo.editProfile(
             name,
             gender,

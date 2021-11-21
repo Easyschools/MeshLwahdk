@@ -3,14 +3,16 @@ package com.developnetwork.meshlwahdk.app
 import android.app.Application
 import android.content.Context
 import android.content.res.Configuration
+import com.developnetwork.meshlwahdk.BuildConfig
 import com.developnetwork.meshlwahdk.module.appModules
 import com.developnetwork.meshlwahdk.module.repoModule
 import com.developnetwork.meshlwahdk.module.viewModelModule
+import com.developnetwork.meshlwahdk.utils.ExceptionReportingTree
 import com.developnetwork.meshlwahdk.utils.managers.LocaleManager
 import com.developnetwork.meshlwahdk.utils.managers.LocaleManagerImpl
-import com.google.firebase.FirebaseApp
 import org.koin.android.ext.koin.androidContext
 import org.koin.core.context.GlobalContext.startKoin
+import timber.log.Timber
 
 class MeshLwahdkApplication: Application() {
     private lateinit var localeManager: LocaleManager
@@ -30,7 +32,8 @@ class MeshLwahdkApplication: Application() {
             androidContext(this@MeshLwahdkApplication)
             modules(listOf(appModules, repoModule, viewModelModule))
         }
-//        Timber.plant(if (BuildConfig.DEBUG) Timber.DebugTree() else ExceptionReportingTree())
+
+        Timber.plant(if (BuildConfig.DEBUG) Timber.DebugTree() else ExceptionReportingTree())
     }
 
     override fun attachBaseContext(base: Context) {

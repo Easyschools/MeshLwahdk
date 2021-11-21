@@ -71,4 +71,11 @@ class MainActivity : BaseActivity() {
     private fun initNavController() {
         navController = findNavController(R.id.main_host_fragment)
     }
+
+    override fun onBackPressed() {
+        if (navController.currentDestination?.id == R.id.homeFragment)
+            super.onBackPressed()
+        else
+            navController.navigateUp()
+    }
 }

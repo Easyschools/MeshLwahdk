@@ -8,7 +8,6 @@ import com.developnetwork.meshlwahdk.base.BaseFragment
 import com.developnetwork.meshlwahdk.utils.extensions.callUS
 import kotlinx.android.synthetic.main.fragment_auth.*
 
-
 class AuthFragment : BaseFragment() {
 
     override fun getLayout(): Int {
@@ -22,7 +21,7 @@ class AuthFragment : BaseFragment() {
         }
 
         registerBTN.setOnClickListener {
-findNavController().navigate(AuthFragmentDirections.actionAuthFragmentToRegisterPhoneStepFragment())
+            findNavController().navigate(AuthFragmentDirections.actionAuthFragmentToRegisterPhoneStepFragment())
         }
 
 

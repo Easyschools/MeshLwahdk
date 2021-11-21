@@ -5,6 +5,7 @@ import android.view.View
 import androidx.navigation.fragment.findNavController
 import com.developnetwork.meshlwahdk.R
 import com.developnetwork.meshlwahdk.ui.auth.BasePhoneInput
+import kotlinx.android.synthetic.main.fragment_phone_input.*
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class ForgotPasswordFragment : BasePhoneInput() {
@@ -14,6 +15,9 @@ class ForgotPasswordFragment : BasePhoneInput() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        title2.visibility=View.INVISIBLE
+
         handleProgress(viewModel)
         handleError(viewModel)
     }

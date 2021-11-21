@@ -1,5 +1,7 @@
 package com.developnetwork.meshlwahdk.data.repository
 
+import com.developnetwork.meshlwahdk.BuildConfig
+import com.developnetwork.meshlwahdk.data.model.Company
 import com.developnetwork.meshlwahdk.data.model.Product
 import com.developnetwork.meshlwahdk.data.model.RedemptionCenter
 import com.developnetwork.meshlwahdk.data.network.Service
@@ -27,6 +29,8 @@ interface OtherRepo {
     suspend fun getProducts(company_id: Int): List<Product>
 
     suspend fun getRedemptionCenters(programID:Int?=null): List<RedemptionCenter>
+
+    suspend fun getCompany(): Company
 
 }
 
@@ -67,5 +71,9 @@ class OthersRepoImpl(private val service: Service) : OtherRepo {
 
     override suspend fun getRedemptionCenters(programID:Int?): List<RedemptionCenter> {
         return service.getRedemptionCenters("pharmacy",programID).data
+    }
+
+    override suspend fun getCompany(): Company {
+        return service.getCompany(BuildConfig.company_id).data
     }
 }

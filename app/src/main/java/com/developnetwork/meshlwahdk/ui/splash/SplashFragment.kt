@@ -17,6 +17,7 @@ import kotlinx.android.synthetic.main.fragment_splash.*
 import org.koin.android.ext.android.inject
 
 class SplashFragment : Fragment() {
+//    private val viewModel: SplashViewModel by viewModel()
 
     private val sharedPreferencesManager: SharedPreferencesManager by inject()
 
@@ -34,19 +35,42 @@ class SplashFragment : Fragment() {
             motion_layout.transitionToEnd()
         }, 500)
 
+//        viewModel.getCompany().observe(viewLifecycleOwner,{
+//            when {
+//                sharedPreferencesManager.isLoggedIn -> {
+//                    findNavController().navigate(SplashFragmentDirections.actionSplashFragmentToMainActivity())
+//                    requireActivity().finishAffinity()
+//                }
+//                !sharedPreferencesManager.choseLanguage -> findNavController().navigate(
+//                    SplashFragmentDirections.actionSplashFragmentToChooseLanguageFragment()
+//                )
+//                sharedPreferencesManager.termsAgreed -> {
+//                    val authIntent = Intent(requireActivity(), AuthActivity::class.java)
+//                    startActivity(authIntent)
+//                    requireActivity().finishAffinity()
+//                }
+//                else -> findNavController().navigate(SplashFragmentDirections.actionSplashFragmentToIntroFragment())
+//            }
+//
+//        })
+
         motion_layout.setTransitionListener(object : MotionLayout.TransitionListener {
             override fun onTransitionCompleted(p0: MotionLayout?, p1: Int) {
-                when {
-                    sharedPreferencesManager.isLoggedIn -> findNavController().navigate(SplashFragmentDirections.actionSplashFragmentToMainActivity())
-                    !sharedPreferencesManager.choseLanguage -> findNavController().navigate(SplashFragmentDirections.actionSplashFragmentToChooseLanguageFragment())
-                    sharedPreferencesManager.termsAgreed -> {
-                        val authIntent= Intent(requireActivity(),AuthActivity::class.java)
-                        startActivity(authIntent)
-                        requireActivity().finishAffinity()
-                    }
-                    else -> findNavController().navigate(SplashFragmentDirections.actionSplashFragmentToIntroFragment())
+            when {
+                sharedPreferencesManager.isLoggedIn -> {
+                    findNavController().navigate(SplashFragmentDirections.actionSplashFragmentToMainActivity())
+                    requireActivity().finishAffinity()
                 }
-
+                !sharedPreferencesManager.choseLanguage -> findNavController().navigate(
+                    SplashFragmentDirections.actionSplashFragmentToChooseLanguageFragment()
+                )
+                sharedPreferencesManager.termsAgreed -> {
+                    val authIntent = Intent(requireActivity(), AuthActivity::class.java)
+                    startActivity(authIntent)
+                    requireActivity().finishAffinity()
+                }
+                else -> findNavController().navigate(SplashFragmentDirections.actionSplashFragmentToIntroFragment())
+            }
             }
 
             override fun onTransitionTrigger(p0: MotionLayout?, p1: Int, p2: Boolean, p3: Float) {

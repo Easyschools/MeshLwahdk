@@ -21,7 +21,7 @@ class ProfileViewModel(
         val result = withContext(Dispatchers.IO) {
             userRepo.getUser()
         }
-
         emit(result)
+        sharedPreferencesManager.saveUserData(result)
     }
 }

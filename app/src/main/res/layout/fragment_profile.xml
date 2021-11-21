@@ -29,13 +29,16 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="@dimen/_20sdp">
 
+
             <com.google.android.material.imageview.ShapeableImageView
                 android:id="@+id/profileImage"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:layout_margin="@dimen/_5sdp"
+                android:layout_marginHorizontal="@dimen/_5sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
                 app:layout_constraintDimensionRatio="1:1"
                 app:layout_constraintEnd_toEndOf="parent"
+                android:elevation="@dimen/_10sdp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintWidth_percent="0.2" />
@@ -52,13 +55,14 @@
                     android:id="@+id/name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/_30sdp"
+                    android:layout_marginTop="@dimen/_50sdp"
                     android:layout_marginBottom="@dimen/_10sdp"
                     android:gravity="center"
                     android:textColor="@color/colorAccent"
                     android:textSize="@dimen/_20ssp"
                     android:textStyle="bold" />
             </com.google.android.material.card.MaterialCardView>
+
 
             <com.developnetwork.meshlwahdk.utils.view.ProfileButton
                 android:id="@+id/editProfileBTN"

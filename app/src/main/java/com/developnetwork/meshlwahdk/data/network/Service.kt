@@ -37,12 +37,16 @@ interface Service {
 
     @POST("getPhoneUser")
     @FormUrlEncoded
-    suspend fun getPhoneUser(@Field("phone") phone: String ,       @Field("company_id") company_id: Int,
+    suspend fun getPhoneUser(
+        @Field("phone") phone: String, @Field("company_id") company_id: Int,
     ): BaseResponse<User>
 
     @POST("resend")
     @FormUrlEncoded
-    suspend fun resendCode(@Field("phone") phone: String,        @Field("company_id") company_id: Int): BaseResponse<Any>
+    suspend fun resendCode(
+        @Field("phone") phone: String,
+        @Field("company_id") company_id: Int
+    ): BaseResponse<Any>
 
     @POST("confirmAccount")
     @FormUrlEncoded
@@ -90,8 +94,10 @@ interface Service {
 
     @POST("forgetPassword")
     @FormUrlEncoded
-    suspend fun forgetPassword(@Field("phone") phone: String,
-        @Field("company_id") company_id: Int): BaseResponse<Any>
+    suspend fun forgetPassword(
+        @Field("phone") phone: String,
+        @Field("company_id") company_id: Int
+    ): BaseResponse<Any>
 
     @POST("resetPassword")
     @FormUrlEncoded
@@ -164,7 +170,7 @@ interface Service {
     suspend fun getProgram(@Path("id") id: Int): BaseResponse<Program>
 
     @GET("program")
-    suspend fun getPrograms(): BaseResponse<List<Program>>
+    suspend fun getPrograms(@Query("company_id") company_id: Int): BaseResponse<List<Program>>
 
     @POST("redimedProduct/create")
     @Multipart
@@ -196,7 +202,8 @@ interface Service {
 
     @POST("api/user/update/phone")
     @FormUrlEncoded
-    suspend fun updatePhoneNumber(@Field("phone")phone: String):BaseResponse<Any>
+    suspend fun updatePhoneNumber(@Field("phone") phone: String): BaseResponse<Any>
 
-
+    @POST("company/getById")
+    suspend fun getCompany(@Query("id") id: Int): BaseResponse<Company>
 }

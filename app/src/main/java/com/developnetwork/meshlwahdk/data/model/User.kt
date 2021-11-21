@@ -69,7 +69,7 @@ data class User(
     var insurance_card: String? = null,
     @SerializedName("token")
     val token: String = "",
-    @SerializedName("img")
+    @SerializedName("profile_photo")
     val img: String = ""
 ) {
     fun serialize(): String {

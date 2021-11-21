@@ -19,7 +19,19 @@ android {
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
-
+    signingConfigs {
+        release {
+            try {
+                storeFile file("../meshlewahdk.jks")
+                storePassword KEYSTORE_PASSWORD
+                keyAlias "key0"
+                keyPassword KEY_PASSWORD
+            }
+            catch (ex) {
+                throw new InvalidUserDataException("You should define KEYSTORE_PASSWORD and KEY_PASSWORD in gradle.properties.",ex)
+            }
+        }
+    }
     buildTypes {
         release {
             def proguard = false
@@ -31,7 +43,7 @@ android {
             buildConfigField "String", "Notification_Topic", '"custom-topic"'
             buildConfigField "int", "company_id", '24'
 //            buildConfigField "int", "product_id", '16'
-//            signingConfig signingConfigs.release
+            signingConfig signingConfigs.release
         }
 
         debug {
@@ -168,7 +180,8 @@ private static void imageLoader(configuration) {
 }
 
 private static void progressBar(configuration) {
-    configuration.implementation 'com.wang.avi:library:2.1.3'
+    configuration.implementation 'com.github.ybq:Android-SpinKit:1.4.0'
+//    configuration.implementation 'com.wang.avi:library:2.1.3'
 }
 
 private static void toasty(configuration) {

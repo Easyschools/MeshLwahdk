@@ -27,6 +27,7 @@ class TermsFragment : BaseFragment() {
         agreeBTN.setOnClickListener {
             sharedPreferencesManager.termsAgreed = true
             findNavController().navigate(TermsFragmentDirections.auth())
+            requireActivity().finishAffinity()
         }
 
         backBTN.setOnClickListener {

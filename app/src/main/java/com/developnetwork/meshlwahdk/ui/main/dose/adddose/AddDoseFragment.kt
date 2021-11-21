@@ -2,7 +2,6 @@ package com.developnetwork.meshlwahdk.ui.main.dose.adddose
 
 import android.os.Bundle
 import android.view.View
-import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.developnetwork.meshlwahdk.data.model.Product
 import com.developnetwork.meshlwahdk.ui.main.dose.BaseDoseInputFragment

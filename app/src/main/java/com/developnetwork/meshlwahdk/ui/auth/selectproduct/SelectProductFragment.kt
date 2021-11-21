@@ -6,8 +6,6 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.developnetwork.meshlwahdk.R
 import com.developnetwork.meshlwahdk.base.BaseFragment
-import com.developnetwork.meshlwahdk.data.model.Product
-import com.developnetwork.meshlwahdk.data.model.Program
 import com.developnetwork.meshlwahdk.ui.auth.register.RegisterViewModel
 import com.developnetwork.meshlwahdk.ui.main.programs.ProgramsAdapter
 import com.developnetwork.meshlwahdk.utils.extensions.callUS

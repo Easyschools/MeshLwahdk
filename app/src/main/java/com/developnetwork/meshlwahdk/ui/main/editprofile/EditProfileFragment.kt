@@ -13,6 +13,7 @@ import androidx.navigation.fragment.findNavController
 import com.developnetwork.meshlwahdk.R
 import com.developnetwork.meshlwahdk.base.BaseFragment
 import com.developnetwork.meshlwahdk.ui.adapters.RegionsAdapter
+import com.developnetwork.meshlwahdk.utils.extensions.setImageURL
 import com.developnetwork.meshlwahdk.utils.nameValidator
 import com.developnetwork.meshlwahdk.utils.openDatePicker
 import com.developnetwork.meshlwahdk.utils.spinnerValidator
@@ -93,16 +94,18 @@ class EditProfileFragment : BaseFragment() {
             selectProfilePic()
         }
     }
+
     private fun handleDate() {
         val sdf = SimpleDateFormat("yyyy-MM-dd", Locale.getDefault())
         val c = Calendar.getInstance()
         c.add(Calendar.DAY_OF_YEAR, 1)
 
         birthdateInput.setOnClickListener {
-            openDatePicker(birthdateInput, requireContext(),0)
+            openDatePicker(birthdateInput, requireContext(), 0)
         }
         birthdateInput.setText(sdf.format(c.time))
     }
+
     private fun handleGender() {
         genderSpinner.setAdapter(
             ArrayAdapter(
@@ -120,12 +123,15 @@ class EditProfileFragment : BaseFragment() {
             handleEditProfile()
     }
 
-fun handleGetUser(){
-    viewModel.getUser().observe(viewLifecycleOwner,{
-        nameInput.setText(it.name)
+    private fun handleGetUser() {
+        viewModel.getUser().observe(viewLifecycleOwner, {
+            nameInput.setText(it.name)
 
-    })
-}
+            if (!it.img.isNullOrBlank())
+                profileImage.setImageURL(it.img)
+        })
+    }
+
     private fun handleEditProfile() {
         viewModel.editProfile(
             nameInput.text.toString(),
@@ -138,6 +144,7 @@ fun handleGetUser(){
             findNavController().navigateUp()
         })
     }
+
     private fun handleCitiesLiveData() {
         viewModel.getRegions(getString(R.string.city)).observe(viewLifecycleOwner, {
             citySpinner.setAdapter(RegionsAdapter(requireContext(), it))
@@ -153,6 +160,7 @@ fun handleGetUser(){
             areaSpinner.setAdapter(RegionsAdapter(requireContext(), it))
         })
     }
+
     private fun selectProfilePic() {
         requestPermissionLauncher.launch(Manifest.permission.READ_EXTERNAL_STORAGE)
     }

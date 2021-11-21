@@ -28,7 +28,10 @@ interface SharedPreferencesManager {
     var userData: User
 
     var firstTime: Boolean
+
     var selectedProgram: Int
+
+    var companyPhone:String
 
     fun saveUserData(user: User)
     fun clearData()
@@ -115,6 +118,12 @@ class SharedPreferencesManagerImpl(context: Context) : SharedPreferencesManager 
             editor.putInt(selectedProgramIDKEY, id).apply()
         }
 
+    override var companyPhone: String
+        get() = getString(companyIDKEY)
+        set(value) {
+            editor.putString(companyIDKEY,value).apply()
+        }
+
     override var userData: User
         get() {
             return User().create(getString(userDataKey))
@@ -182,6 +191,7 @@ class SharedPreferencesManagerImpl(context: Context) : SharedPreferencesManager 
         private const val notificationTokenKey = "NotificationToken"
 
         private const val selectedProgramIDKEY = "SelectedProgramID"
+        private const val companyIDKEY = "CompanyID"
 
 
         private const val isLoggedInKey = "LOGIN"

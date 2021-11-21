@@ -1,6 +1,5 @@
 package com.developnetwork.meshlwahdk.ui.main.orderprogram
 
-import android.Manifest
 import android.os.Bundle
 import android.view.View
 import androidx.activity.result.contract.ActivityResultContracts
@@ -10,7 +9,6 @@ import com.developnetwork.meshlwahdk.R
 import com.developnetwork.meshlwahdk.base.BaseFragment
 import com.developnetwork.meshlwahdk.ui.dialogs.UploadImageDialog
 import com.developnetwork.meshlwahdk.ui.main.barcodescanner.BarCodeScannerFragment
-import kotlinx.android.synthetic.main.fragment_edit_profile.*
 import kotlinx.android.synthetic.main.fragment_order_program.*
 import org.koin.androidx.viewmodel.ext.android.viewModel
 

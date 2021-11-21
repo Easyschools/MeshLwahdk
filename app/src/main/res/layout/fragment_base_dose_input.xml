@@ -55,7 +55,7 @@
     <!--        app:layout_constraintTop_toBottomOf="@id/msg"-->
     <!--        app:layout_constraintWidth_percent="0.6" />-->
 
-    <com.developnetwork.meshlwahdk.utils.MeshLwahdkSpinner
+    <com.developnetwork.meshlwahdk.utils.view.MeshLwahdkSpinner
         android:id="@+id/productSpinner"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
