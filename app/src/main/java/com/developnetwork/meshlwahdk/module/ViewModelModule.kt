@@ -19,6 +19,7 @@ import com.developnetwork.meshlwahdk.ui.main.pharmacies.PharmaciesViewModel
 import com.developnetwork.meshlwahdk.ui.main.profile.ProfileViewModel
 import com.developnetwork.meshlwahdk.ui.main.program.ProgramViewModel
 import com.developnetwork.meshlwahdk.ui.main.programs.ProgramsViewModel
+import com.developnetwork.meshlwahdk.ui.main.reminder.ReminderViewModel
 import com.developnetwork.meshlwahdk.ui.main.selectpharmacy.SelectOrderPharmacyViewModel
 import com.developnetwork.meshlwahdk.ui.splash.SplashViewModel
 import org.koin.androidx.viewmodel.dsl.viewModel
@@ -46,4 +47,5 @@ val viewModelModule = module {
     viewModel { ChangePhoneViewModel(get()) }
     viewModel { ConfirmUpdatedPhoneViewModel(get()) }
     viewModel { SplashViewModel(get(),get()) }
+    viewModel { ReminderViewModel(get()) }
 }

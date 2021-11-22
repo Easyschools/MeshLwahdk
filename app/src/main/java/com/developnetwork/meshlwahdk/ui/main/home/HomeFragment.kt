@@ -26,7 +26,8 @@ class HomeFragment : BaseFragment() {
             findNavController().navigate(HomeFragmentDirections.actionHomeFragmentToProgramsFragment())
         }
         remindersBTN.setOnClickListener {
-            Toasty.info(requireContext(), "under development", 0).show()
+//            Toasty.info(requireContext(), "under development", 0).show()
+            findNavController().navigate(HomeFragmentDirections.actionHomeFragmentToReminderFragment())
         }
         pharmaciesBTN.setOnClickListener {
             findNavController().navigate(HomeFragmentDirections.actionHomeFragmentToPharmaciesFragment())

@@ -28,7 +28,7 @@ class DosesListAdapter(private val click: (dose: Dose) -> Unit) :
             holder.logo.setImageURL(item.product.logo)
 
         holder.name.text = item.product.name
-        holder.frequency.text = item.frequency
+        holder.frequency.text = item.frequency.toString()
         holder.duration.text = item.duration
 
         holder.itemView.setOnClickListener {

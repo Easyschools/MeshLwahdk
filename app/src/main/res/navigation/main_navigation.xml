@@ -19,6 +19,9 @@
         <action
             android:id="@+id/action_homeFragment_to_historyFragment"
             app:destination="@id/historyFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_reminderFragment"
+            app:destination="@id/reminderFragment" />
     </fragment>
 
 
@@ -206,6 +209,11 @@
             android:name="phone"
             app:argType="string" />
     </fragment>
+    <fragment
+        android:id="@+id/reminderFragment"
+        android:name="com.developnetwork.meshlwahdk.ui.main.reminder.ReminderFragment"
+        android:label="fragment_reminder"
+        tools:layout="@layout/fragment_reminder" />
 
 
 </navigation>

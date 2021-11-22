@@ -13,7 +13,7 @@ data class Dose(
     @SerializedName("duration")
     val duration: String,
     @SerializedName("frequency")
-    val frequency: String,
+    val frequency: Int,
     @SerializedName("id")
     val id: Int,
     @SerializedName("product_id")
