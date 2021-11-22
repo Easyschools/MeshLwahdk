@@ -23,7 +23,7 @@ class EditDoseFragment : BaseDoseInputFragment() {
         super.onViewCreated(view, savedInstanceState)
         handleDate()
 
-        frequencyInput.setText(viewModel.dose.frequency)
+        frequencyInput.setText(viewModel.dose.frequency.toString())
     }
 
     override fun setProducts(list: List<Product>) {
@@ -39,6 +39,7 @@ class EditDoseFragment : BaseDoseInputFragment() {
 
     private fun handleDate() {
         endDateInput.setOnClickListener {
+            if(endDateInput.isFocusable)
             openDatePicker(endDateInput, requireContext(), 1)
         }
         endDateInput.setText(viewModel.dose.duration)

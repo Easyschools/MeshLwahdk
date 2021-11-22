@@ -14,10 +14,13 @@ class ReminderViewModel(private val doseRepo: DoseRepo) : BaseViewModel() {
         val reminders = ArrayList<Reminder>()
 
         for (dose in result) {
-            var time=0
+            var time=12
             for(i in 1 .. dose.frequency){
                 reminders.add(Reminder("$time:00",dose.product.name,dose.product.logo))
                 time+=24.div(dose.frequency)
+
+                if(time>23)
+                    time -= 24
             }
         }
         emit(reminders)

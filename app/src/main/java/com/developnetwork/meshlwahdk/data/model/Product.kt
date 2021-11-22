@@ -20,6 +20,8 @@ data class Product(
     val name: String,
     @SerializedName("teamleader_id")
     val teamleaderId: Int,
-    @SerializedName("updated_at")
-    val updatedAt: Any
+    @SerializedName("default_dose")
+    val defaultDose: Int,
+    @SerializedName("default_frequency")
+    val defaultFrequency: Int
 )

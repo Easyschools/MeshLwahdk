@@ -9,6 +9,8 @@ import com.developnetwork.meshlwahdk.data.model.Product
 import com.developnetwork.meshlwahdk.ui.adapters.ProductsSpinnerAdapter
 import es.dmoral.toasty.Toasty
 import kotlinx.android.synthetic.main.fragment_base_dose_input.*
+import java.text.SimpleDateFormat
+import java.util.*
 
 abstract class BaseDoseInputFragment : BaseFragment() {
     abstract val inputViewModel: BaseDoseInputViewModel
@@ -33,7 +35,9 @@ abstract class BaseDoseInputFragment : BaseFragment() {
                 findNavController().navigateUp()
                 Toasty.success(requireContext(), R.string.done, 0).show()
 //                save()
-            })        }
+            })
+        }
+
     }
 
 //    abstract fun save()
@@ -46,6 +50,24 @@ abstract class BaseDoseInputFragment : BaseFragment() {
 
     open fun setProducts(list: List<Product>) {
         productSpinner.setAdapter(ProductsSpinnerAdapter(requireContext(), list))
+        productSpinner.onItemSelected {
+            val product=productSpinner.getSelectedItem() as Product
+
+            if(product.defaultDose!=null){
+                val cal = Calendar.getInstance()
+                cal.add(Calendar.DAY_OF_YEAR,product.defaultDose)
+
+                val sdf = SimpleDateFormat("yyyy-MM-dd", Locale.getDefault())
+                endDateInput.setText(sdf.format(cal.time))
+                endDateInput.isFocusable=false
+            }
+
+            if (product.defaultFrequency!=null) {
+                frequencyInput.setText(product.defaultFrequency.toString())
+                frequencyInput.isFocusable=false
+            }
+        }
+
     }
 
 

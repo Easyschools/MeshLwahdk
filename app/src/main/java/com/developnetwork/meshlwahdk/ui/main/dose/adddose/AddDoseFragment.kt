@@ -13,12 +13,12 @@ import org.koin.androidx.viewmodel.ext.android.viewModel
 import java.text.SimpleDateFormat
 import java.util.*
 
-class AddDoseFragment:BaseDoseInputFragment() {
-    private val viewModel:AddDoseViewModel by viewModel()
+class AddDoseFragment : BaseDoseInputFragment() {
+    private val viewModel: AddDoseViewModel by viewModel()
     override val inputViewModel: BaseDoseInputViewModel
         get() = viewModel
 
-    private val args:AddDoseFragmentArgs by navArgs()
+    private val args: AddDoseFragmentArgs by navArgs()
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -27,10 +27,9 @@ class AddDoseFragment:BaseDoseInputFragment() {
     }
 
 
-
     override fun setProducts(list: List<Product>) {
         super.setProducts(list)
-        if(args.productID!=0){
+        if (args.productID != 0) {
             for (i in list.indices) {
                 if (args.productID == list[i].id)
                     productSpinner.spinner.setSelection(i)
@@ -44,7 +43,8 @@ class AddDoseFragment:BaseDoseInputFragment() {
         c.add(Calendar.DAY_OF_YEAR, 1)
 
         endDateInput.setOnClickListener {
-            openDatePicker(endDateInput, requireContext(),1)
+            if (endDateInput.isFocusable)
+                openDatePicker(endDateInput, requireContext(), 1)
         }
         endDateInput.setText(sdf.format(c.time))
     }
