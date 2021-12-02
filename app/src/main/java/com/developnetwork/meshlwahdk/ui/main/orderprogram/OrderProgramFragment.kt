@@ -9,6 +9,7 @@ import com.developnetwork.meshlwahdk.R
 import com.developnetwork.meshlwahdk.base.BaseFragment
 import com.developnetwork.meshlwahdk.ui.dialogs.UploadImageDialog
 import com.developnetwork.meshlwahdk.ui.main.barcodescanner.BarCodeScannerFragment
+import es.dmoral.toasty.Toasty
 import kotlinx.android.synthetic.main.fragment_order_program.*
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
@@ -53,15 +54,18 @@ class OrderProgramFragment : BaseFragment() {
     }
 
     private fun validate() {
-        if (!viewModel.receiptPath.isNullOrBlank() && !viewModel.rxPath.isNullOrBlank())
+        if (!viewModel.rxPath.isNullOrBlank())
             handleRedeem()
+        else
+            Toasty.warning(requireContext(),R.string.select_rx,0).show()
     }
 
     private fun handleRedeem() {
         viewModel.redeemProgram(args.programID, args.pharmacyID).observe(viewLifecycleOwner, {
             findNavController().navigate(
                 OrderProgramFragmentDirections.actionOrderProgramFragmentToOrderSuccessFragment(
-                    args.pharmacyName
+                    args.pharmacyName,
+                    it.code
                 )
             )
         })

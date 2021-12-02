@@ -9,7 +9,6 @@ import okhttp3.MultipartBody
 import okhttp3.RequestBody
 import retrofit2.http.*
 
-
 interface Service {
     @POST("patients-login")
     @FormUrlEncoded
@@ -135,7 +134,8 @@ interface Service {
     @GET("redemption")
     suspend fun getRedemptionCenters(
         @Query("type") type: String? = null,
-        @Query("program_id") programID: Int? = null
+        @Query("program_id") programID: Int? = null,
+        @Query("region_id") regionID: Int? = null
     ): BaseResponse<List<RedemptionCenter>>
 
 
@@ -179,9 +179,9 @@ interface Service {
         @Part("redmption_id") redmptionID: RequestBody,
         @Part("BarCode") barCode: RequestBody,
         @Part rxPhoto: MultipartBody.Part,
-        @Part receiptPhoto: MultipartBody.Part,
+        @Part receiptPhoto: MultipartBody.Part?,
         @Part("status") status: RequestBody
-    ): BaseResponse<Any>
+    ): BaseResponse<RedeemedProgram>
 
 
     @POST("editProfile")

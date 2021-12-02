@@ -13,5 +13,9 @@ data class RedeemedProgram(
     @SerializedName("redemption_center")
     val redemptionCenter: RedemptionCenter,
     @SerializedName("created_at")
-    val created_at: String
+    val created_at: String,
+    @SerializedName("status")
+    val status: String,
+    @SerializedName("code")
+    val code: String
 )

@@ -4,7 +4,6 @@ import com.developnetwork.meshlwahdk.BuildConfig
 import com.developnetwork.meshlwahdk.data.model.Program
 import com.developnetwork.meshlwahdk.data.model.RedeemedProgram
 import com.developnetwork.meshlwahdk.data.network.Service
-import com.ivestment.doctorna.data.model.BaseResponse
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import okhttp3.MultipartBody
 import okhttp3.RequestBody.Companion.asRequestBody
@@ -20,10 +19,10 @@ interface ProgramsRepo {
         pharmacyID: Int,
         barCode: String,
         rxPhotoPath: String,
-        receiptPhotoPath: String
-    ): BaseResponse<Any>
-
-    suspend fun getRedeemedPrograms():List<RedeemedProgram>
+        receiptPhotoPath: String?
+    ): RedeemedProgram
+//01062915156
+    suspend fun getRedeemedPrograms(): List<RedeemedProgram>
 
 }
 
@@ -41,22 +40,27 @@ class ProgramsRepoImpl(private val service: Service) : ProgramsRepo {
         pharmacyID: Int,
         barCode: String,
         rxPhotoPath: String,
-        receiptPhotoPath: String
-    ): BaseResponse<Any> {
+        receiptPhotoPath: String?
+    ): RedeemedProgram {
 
+        var receiptPhotoFilePart:MultipartBody.Part?=null
 
         val rxFile = File(rxPhotoPath)
         val rxRequestFile = rxFile.asRequestBody("multipart/form-data".toMediaTypeOrNull())
         val rxPhotoFilePart =
             MultipartBody.Part.createFormData("RxPhoto", rxFile.name, rxRequestFile)
 
-
-        val receiptFile = File(receiptPhotoPath)
-        val receiptRequestFile =
-            receiptFile.asRequestBody("multipart/form-data".toMediaTypeOrNull())
-        val receiptPhotoFilePart =
-            MultipartBody.Part.createFormData("ReceiptPhoto", receiptFile.name, receiptRequestFile)
-
+        if (!receiptPhotoPath.isNullOrBlank()) {
+            val receiptFile = File(receiptPhotoPath)
+            val receiptRequestFile =
+                receiptFile.asRequestBody("multipart/form-data".toMediaTypeOrNull())
+             receiptPhotoFilePart =
+                MultipartBody.Part.createFormData(
+                    "ReceiptPhoto",
+                    receiptFile.name,
+                    receiptRequestFile
+                )
+        }
 
         return service.redeemProgram(
             programID.toString().toRequestBody("multipart/form-data".toMediaTypeOrNull()),
@@ -65,7 +69,7 @@ class ProgramsRepoImpl(private val service: Service) : ProgramsRepo {
             rxPhotoFilePart,
             receiptPhotoFilePart,
             "pending".toRequestBody("multipart/form-data".toMediaTypeOrNull())
-        )
+        ).data
     }
 
     override suspend fun getRedeemedPrograms(): List<RedeemedProgram> {

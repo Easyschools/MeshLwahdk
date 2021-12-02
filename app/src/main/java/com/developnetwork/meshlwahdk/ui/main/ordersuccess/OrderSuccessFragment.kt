@@ -24,8 +24,9 @@ class OrderSuccessFragment : BaseFragment() {
 
         userName.text = "${getString(R.string.hi)} ${sharedPreferencesManager.userName}"
 
-        msg1.text = "${getString(R.string.your_order_is_submitted_to)} ${args.pharmacyName}}"
+        msg1.text = "${getString(R.string.your_order_is_submitted_to)} ${args.pharmacyName}"
 
+        orderCode.text = args.orderCode
 
         continueBTN.setOnClickListener {
 

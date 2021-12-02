@@ -242,5 +242,7 @@ I hear by give my informed consent for the use of Msh Lwahdak in my case.</p>]]>
     <string name="this_pharmacy_doesnt_have_programs">This Pharmacy doesn\'t have programs</string>
     <string name="scan_product">Scan Product</string>
     <string name="cancel">Cancel</string>
+    <string name="select_rx">Select Rx image</string>
+    <string name="your_order_number_is">Your Order Number is</string>
 
 </resources>

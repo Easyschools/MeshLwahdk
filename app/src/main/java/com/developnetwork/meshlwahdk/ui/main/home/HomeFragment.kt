@@ -7,7 +7,6 @@ import com.developnetwork.meshlwahdk.R
 import com.developnetwork.meshlwahdk.base.BaseFragment
 import com.developnetwork.meshlwahdk.utils.extensions.setImageURL
 import com.developnetwork.meshlwahdk.utils.managers.SharedPreferencesManager
-import es.dmoral.toasty.Toasty
 import kotlinx.android.synthetic.main.fragment_home.*
 import org.koin.android.ext.android.inject
 

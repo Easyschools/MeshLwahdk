@@ -6,6 +6,7 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import com.developnetwork.meshlwahdk.R
 import com.developnetwork.meshlwahdk.base.BaseFragment
+import com.developnetwork.meshlwahdk.ui.adapters.RegionsAdapter
 import kotlinx.android.synthetic.main.fragment_pharmacies.*
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
@@ -23,6 +24,7 @@ class PharmaciesFragment : BaseFragment() {
         handleError(viewModel)
 
         initList()
+        handleCitiesLiveData()
         handlePharmaciesLiveData()
     }
 
@@ -38,10 +40,19 @@ class PharmaciesFragment : BaseFragment() {
         pharmaciesRV.adapter = adapter
     }
 
-    private fun handlePharmaciesLiveData() {
-        viewModel.getPharmacies().observe(viewLifecycleOwner, {
+    private fun handlePharmaciesLiveData(regionID:Int?=null) {
+        viewModel.getPharmacies(regionID).observe(viewLifecycleOwner, {
             adapter.submitList(it.toMutableList())
         })
     }
 
+    private fun handleCitiesLiveData() {
+        viewModel.getRegions(getString(R.string.city)).observe(viewLifecycleOwner, {
+            citySpinner.setAdapter(RegionsAdapter(requireContext(), it))
+            citySpinner.onItemSelected {
+                if (0 != it)
+                    handlePharmaciesLiveData(it)
+            }
+        })
+    }
 }

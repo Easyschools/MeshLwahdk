@@ -14,7 +14,7 @@ class OrderProgramsViewModel(private val programsRepo: ProgramsRepo) : BaseViewM
             pharmacyID,
             productCode,
             rxPath!!,
-            receiptPath!!
+            receiptPath
         )
     }
 }

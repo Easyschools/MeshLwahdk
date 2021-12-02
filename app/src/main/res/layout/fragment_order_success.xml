@@ -30,12 +30,33 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/_20sdp"
+        android:text="@string/you_will_receive_a_confirmation_within_48_hours"
         android:textColor="@color/colorPrimaryDark"
         android:textSize="@dimen/_14ssp"
-        android:text="@string/you_will_receive_a_confirmation_within_48_hours"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/msg1" />
 
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/orderNumberTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_10sdp"
+        android:text="@string/your_order_number_is"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/msg2" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/orderCode"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/orderNumberTitle"
+        android:layout_margin="@dimen/_20sdp"
+        android:textColor="@color/colorAccent"
+        android:textSize="@dimen/_30ssp"/>
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/continueBTN"
@@ -50,6 +71,6 @@
         android:textSize="@dimen/_15ssp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/msg2" />
+        app:layout_constraintTop_toBottomOf="@+id/orderCode" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
