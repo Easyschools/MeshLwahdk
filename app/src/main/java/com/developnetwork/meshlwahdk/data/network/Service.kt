@@ -197,7 +197,7 @@ interface Service {
     ): BaseResponse<User>
 
     @POST("redimedProduct/getAll")
-    suspend fun getRedeemedPrograms(): BaseResponse<List<RedeemedProgram>>
+    suspend fun getRedeemedPrograms(@Query("user_id") userID:Int?=null): BaseResponse<List<RedeemedProgram>>
 
 
     @POST("api/user/update/phone")

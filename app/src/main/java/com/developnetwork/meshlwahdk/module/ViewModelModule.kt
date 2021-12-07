@@ -41,7 +41,7 @@ val viewModelModule = module {
     viewModel { ProgramsViewModel(get()) }
     viewModel { OrderProgramsViewModel(get()) }
     viewModel { EditProfileViewModel(get(),get()) }
-    viewModel { HistoryViewModel(get()) }
+    viewModel { HistoryViewModel(get(),get()) }
     viewModel { ProfileViewModel(get(),get(),get()) }
     viewModel { SelectOrderPharmacyViewModel(get()) }
     viewModel { ChangePhoneViewModel(get()) }

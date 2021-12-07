@@ -72,6 +72,10 @@
         <action
             android:id="@+id/action_registerPhoneStepFragment_to_loginFragment"
             app:destination="@id/loginFragment" />
+        <argument
+            android:name="phone"
+            app:argType="string"
+            app:nullable="true" />
     </fragment>
     <activity
         android:id="@+id/mainActivity"

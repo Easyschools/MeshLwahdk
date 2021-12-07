@@ -103,7 +103,7 @@ class RegisterViewModel(
             sharedPreferencesManager.notificationToken
         )}
 
-        sharedPreferencesManager.saveUserData(result)
+        sharedPreferencesManager.saveUserData(result,false)
 
         emit(result)
     }

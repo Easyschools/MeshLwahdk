@@ -1,15 +1,14 @@
 package com.developnetwork.meshlwahdk.ui.splash
 
-import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import androidx.navigation.fragment.findNavController
 import com.developnetwork.meshlwahdk.R
 import com.developnetwork.meshlwahdk.base.BaseFragment
 import com.developnetwork.meshlwahdk.utils.managers.LocaleManager
 import com.developnetwork.meshlwahdk.utils.managers.SharedPreferencesManager
 import kotlinx.android.synthetic.main.fragment_choose_language.*
 import org.koin.android.ext.android.inject
-
 
 class ChooseLanguageFragment : BaseFragment() {
     private val localeManager: LocaleManager by inject()
@@ -39,8 +38,7 @@ class ChooseLanguageFragment : BaseFragment() {
 
         sharedPreferencesManager.choseLanguage = true
 
-        val intent = Intent(context, SplashActivity::class.java)
-        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK)
-        startActivity(intent)
+        findNavController().navigate(ChooseLanguageFragmentDirections.actionChooseLanguageFragmentToIntroFragment())
+        requireActivity().recreate()
     }
 }

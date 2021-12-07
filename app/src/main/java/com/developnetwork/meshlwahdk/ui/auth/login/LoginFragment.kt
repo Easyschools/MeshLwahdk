@@ -29,7 +29,7 @@ class LoginFragment : BaseFragment() {
         }
 
         registerBTN.setOnClickListener {
-            findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToRegisterPhoneStepFragment())
+            findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToRegisterPhoneStepFragment(null))
         }
         forgotPasswordBTN.setOnClickListener {
             findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToForgotPasswordFragment())
@@ -50,8 +50,18 @@ class LoginFragment : BaseFragment() {
             )
         ) {
             setPhoneNumber()
-            handleLogin()
+            checkUser()
         }
+    }
+
+    private fun checkUser(){
+        viewModel.getUser(phoneNumber).observe(viewLifecycleOwner,{
+            if(it.name.isNullOrBlank()){
+                findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToRegisterPhoneStepFragment(phoneNumber))
+                showError(R.string.please_complete_your_registration)
+            }else
+                handleLogin()
+        })
     }
 
     private fun handleLogin() {

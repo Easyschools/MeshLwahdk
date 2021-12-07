@@ -10,6 +10,7 @@ import com.developnetwork.meshlwahdk.module.viewModelModule
 import com.developnetwork.meshlwahdk.utils.ExceptionReportingTree
 import com.developnetwork.meshlwahdk.utils.managers.LocaleManager
 import com.developnetwork.meshlwahdk.utils.managers.LocaleManagerImpl
+import com.facebook.stetho.Stetho
 import org.koin.android.ext.koin.androidContext
 import org.koin.core.context.GlobalContext.startKoin
 import timber.log.Timber
@@ -26,7 +27,7 @@ class MeshLwahdkApplication: Application() {
 
         appContext = applicationContext
 //        FirebaseApp.initializeApp(appContext)
-//        Stetho.initializeWithDefaults(this)
+        Stetho.initializeWithDefaults(this)
 
         startKoin {
             androidContext(this@MeshLwahdkApplication)

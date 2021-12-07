@@ -25,23 +25,9 @@ init {
 
            emit(true)
 
-//            sendFireBaseToken()
-//        } else {
-//            if (loginDBResponse.message != null) {
-//                Toast.makeText(this, loginDBResponse.message, Toast.LENGTH_SHORT).show()
-//                loginDBResponse.message = null
-//            }
-
         }
-//
-//    fun getPatientProducts(
-//        user_id: Int
-//    ) = callRequestLiveData { userRepo.getUser(user_id) }
-//
-//    fun sendToken(
-//        deviceToken: String
-//    ) = callRequestLiveData { userRepo.sendToken(deviceToken) }
 
+    fun getUser(phone:String)=callRequestWaitLiveData { authRepo.getPhoneUser(phone) }
 
     private fun getNotificationToken() {
         FirebaseMessaging.getInstance().token.addOnCompleteListener { task ->

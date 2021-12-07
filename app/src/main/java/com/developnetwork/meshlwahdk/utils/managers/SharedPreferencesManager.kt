@@ -31,9 +31,9 @@ interface SharedPreferencesManager {
 
     var selectedProgram: Int
 
-    var companyPhone:String
+    var companyPhone: String
 
-    fun saveUserData(user: User)
+    fun saveUserData(user: User, saveID: Boolean = true)
     fun clearData()
 
 }
@@ -121,7 +121,7 @@ class SharedPreferencesManagerImpl(context: Context) : SharedPreferencesManager 
     override var companyPhone: String
         get() = getString(companyIDKEY)
         set(value) {
-            editor.putString(companyIDKEY,value).apply()
+            editor.putString(companyIDKEY, value).apply()
         }
 
     override var userData: User
@@ -155,7 +155,7 @@ class SharedPreferencesManagerImpl(context: Context) : SharedPreferencesManager 
         }
     }
 
-    override fun saveUserData(user: User) {
+    override fun saveUserData(user: User, saveID: Boolean) {
         if (!user.token.isNullOrBlank())
             userToken = user.token
         if (!user.email.isNullOrBlank())
@@ -169,7 +169,9 @@ class SharedPreferencesManagerImpl(context: Context) : SharedPreferencesManager 
 //        if (!user.slug.isNullOrBlank())
 //            slug = user.slug
 
-        userID = user.id
+
+        if (saveID)
+            userID = user.id
         userData = user
         isLoggedIn = true
     }

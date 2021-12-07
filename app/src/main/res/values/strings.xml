@@ -243,6 +243,7 @@ I hear by give my informed consent for the use of Msh Lwahdak in my case.</p>]]>
     <string name="scan_product">Scan Product</string>
     <string name="cancel">Cancel</string>
     <string name="select_rx">Select Rx image</string>
-    <string name="your_order_number_is">Your Order Number is</string>
+    <string name="your_order_number_is">Your Order Code is</string>
+    <string name="please_complete_your_registration">please complete your registration</string>
 
 </resources>

@@ -233,5 +233,7 @@
     <string name="this_pharmacy_doesnt_have_programs">هذه الصيدلية ليس لديها برامج</string>
     <string name="scan_product">فحص المنتج</string>
     <string name="cancel">إلغاء</string>
+    <string name="select_rx">"  اختر صورة الروشتة"</string>
+    <string name="your_order_number_is">كود الطلب الخاص بك هو</string>
 
 </resources>

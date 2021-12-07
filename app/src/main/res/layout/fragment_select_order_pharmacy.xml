@@ -31,6 +31,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/title" />
 
+    <com.developnetwork.meshlwahdk.utils.view.MeshLwahdkSpinner
+        android:id="@+id/citySpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:layout_marginVertical="@dimen/_10sdp"
+        app:hint="Select your city"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/msg" />
+
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/pharmaciesRV"
         android:layout_width="match_parent"
@@ -38,5 +50,5 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/msg" />
+        app:layout_constraintTop_toBottomOf="@id/citySpinner" />
 </androidx.constraintlayout.widget.ConstraintLayout>

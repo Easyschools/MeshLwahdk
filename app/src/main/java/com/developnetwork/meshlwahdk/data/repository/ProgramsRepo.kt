@@ -21,8 +21,8 @@ interface ProgramsRepo {
         rxPhotoPath: String,
         receiptPhotoPath: String?
     ): RedeemedProgram
-//01062915156
-    suspend fun getRedeemedPrograms(): List<RedeemedProgram>
+
+    suspend fun getRedeemedPrograms(userID:Int?=null): List<RedeemedProgram>
 
 }
 
@@ -72,7 +72,7 @@ class ProgramsRepoImpl(private val service: Service) : ProgramsRepo {
         ).data
     }
 
-    override suspend fun getRedeemedPrograms(): List<RedeemedProgram> {
-        return service.getRedeemedPrograms().data
+    override suspend fun getRedeemedPrograms(userID:Int?): List<RedeemedProgram> {
+        return service.getRedeemedPrograms(userID).data
     }
 }

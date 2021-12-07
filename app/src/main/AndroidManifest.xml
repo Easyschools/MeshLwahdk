@@ -27,6 +27,7 @@
             android:exported="true" />
         <activity
             android:name=".ui.splash.SplashActivity"
+            android:configChanges="locale"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

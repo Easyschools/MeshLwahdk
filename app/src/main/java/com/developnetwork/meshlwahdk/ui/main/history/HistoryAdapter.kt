@@ -23,6 +23,7 @@ class HistoryAdapter :
         val item = getItem(holder.absoluteAdapterPosition)
 
         holder.date.text = item.created_at
+        holder.code.text = item.code
 
         item.program?.let { program ->
 
@@ -30,6 +31,8 @@ class HistoryAdapter :
                 holder.name.text = it.name
             }
         }
+
+        holder.status.text = item.status
 
         item.redemptionCenter?.let {
             holder.pharmacy.text = it.name
@@ -54,7 +57,9 @@ class HistoryAdapter :
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val date: MaterialTextView = view.findViewById(R.id.date)
+        val code: MaterialTextView = view.findViewById(R.id.code)
         val name: MaterialTextView = view.findViewById(R.id.name)
+        val status: MaterialTextView = view.findViewById(R.id.status)
         val pharmacy: MaterialTextView = view.findViewById(R.id.pharmacy)
     }
 }

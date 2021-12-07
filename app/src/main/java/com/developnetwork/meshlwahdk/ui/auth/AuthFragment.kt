@@ -21,7 +21,7 @@ class AuthFragment : BaseFragment() {
         }
 
         registerBTN.setOnClickListener {
-            findNavController().navigate(AuthFragmentDirections.actionAuthFragmentToRegisterPhoneStepFragment())
+            findNavController().navigate(AuthFragmentDirections.actionAuthFragmentToRegisterPhoneStepFragment(null))
         }
 
 

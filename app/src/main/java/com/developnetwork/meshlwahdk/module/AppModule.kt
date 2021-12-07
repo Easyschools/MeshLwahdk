@@ -7,9 +7,9 @@ import com.developnetwork.meshlwahdk.utils.managers.LocaleManager
 import com.developnetwork.meshlwahdk.utils.managers.LocaleManagerImpl
 import com.developnetwork.meshlwahdk.utils.managers.SharedPreferencesManager
 import com.developnetwork.meshlwahdk.utils.managers.SharedPreferencesManagerImpl
+import com.facebook.stetho.okhttp3.StethoInterceptor
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
-import okhttp3.logging.HttpLoggingInterceptor
 import org.koin.dsl.module
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
@@ -47,15 +47,15 @@ inline fun <reified T> createWebService(
 
 /* Returns a custom OkHttpClient instance with interceptor. Used for building Retrofit service */
 fun createHttpClient(): OkHttpClient {
-    val loggingInterceptor = HttpLoggingInterceptor()
-    loggingInterceptor.level = HttpLoggingInterceptor.Level.BODY
+//    val loggingInterceptor = HttpLoggingInterceptor()
+//    loggingInterceptor.level = HttpLoggingInterceptor.Level.BODY
     return OkHttpClient.Builder()
         .addInterceptor(headersInterceptor)
         .readTimeout(50, TimeUnit.SECONDS)
         .writeTimeout(50, TimeUnit.SECONDS)
         .connectTimeout(50, TimeUnit.SECONDS)
-//        .addNetworkInterceptor(StethoInterceptor())
-        .addInterceptor(loggingInterceptor)
+        .addNetworkInterceptor(StethoInterceptor())
+//        .addInterceptor(loggingInterceptor)
         .build()
 }
 

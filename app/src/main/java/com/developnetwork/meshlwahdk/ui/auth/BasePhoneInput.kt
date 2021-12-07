@@ -45,7 +45,7 @@ abstract class BasePhoneInput : BaseFragment() {
 
     }
 
-    private fun validate() {
+     fun validate() {
         if (phoneValidator(phoneInput, requireContext())) {
             setPhoneNumber()
             check()
