@@ -3,6 +3,7 @@ package com.developnetwork.meshlwahdk.ui.splash
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import android.widget.TextView
 import androidx.core.text.HtmlCompat
 import androidx.navigation.fragment.findNavController
 import com.developnetwork.meshlwahdk.R
@@ -23,8 +24,9 @@ class TermsFragment : BaseFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        terms.text =
-            HtmlCompat.fromHtml(getString(R.string.app_terms), HtmlCompat.FROM_HTML_MODE_COMPACT)
+        terms.setText(HtmlCompat.fromHtml(getString(R.string.app_terms), HtmlCompat.FROM_HTML_MODE_COMPACT),
+            TextView.BufferType.SPANNABLE)
+
 
         agreeBTN.setOnClickListener {
             sharedPreferencesManager.termsAgreed = true

@@ -22,6 +22,6 @@ class ProfileViewModel(
             userRepo.getUser()
         }
         emit(result)
-        sharedPreferencesManager.saveUserData(result)
+        sharedPreferencesManager.saveUserData(result,false)
     }
 }

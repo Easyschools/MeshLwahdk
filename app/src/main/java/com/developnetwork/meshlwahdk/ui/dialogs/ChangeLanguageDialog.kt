@@ -7,7 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.DialogFragment
 import com.developnetwork.meshlwahdk.R
-import com.developnetwork.meshlwahdk.ui.main.MainActivity
+import com.developnetwork.meshlwahdk.ui.main.mainActivty.MainActivity
 import com.developnetwork.meshlwahdk.utils.managers.LocaleManager
 import kotlinx.android.synthetic.main.dialog_fragment_change_lang.*
 import org.koin.android.ext.android.inject

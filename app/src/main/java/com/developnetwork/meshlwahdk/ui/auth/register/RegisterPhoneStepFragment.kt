@@ -14,7 +14,9 @@ class RegisterPhoneStepFragment : BasePhoneInput() {
     private val args: RegisterPhoneStepFragmentArgs by navArgs()
 
     override val titleID: Int
-        get() = R.string.register
+        get() = R.string.sign_up
+
+
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)

@@ -18,7 +18,7 @@ interface OtherRepo {
 
     suspend fun getAllDistricts(region_id: Int): List<Region>
 
-    suspend fun getAllSubRegion(district_id: Int): List<Region>
+    suspend fun getAllSubRegion(region_id: Int): List<Region>
 
     suspend fun addInsuranceCard(insuranceCardImagePath: String): Any
 
@@ -43,8 +43,8 @@ class OthersRepoImpl(private val service: Service) : OtherRepo {
         return service.getAllDistricts(region_id).data
     }
 
-    override suspend fun getAllSubRegion(district_id: Int): List<Region> {
-        return service.getAllSubRegion(district_id).data
+    override suspend fun getAllSubRegion(region_id: Int): List<Region> {
+        return service.getAllSubRegion(region_id).data
     }
 
     override suspend fun addInsuranceCard(insuranceCardImagePath: String): Any {
@@ -70,7 +70,7 @@ class OthersRepoImpl(private val service: Service) : OtherRepo {
     }
 
     override suspend fun getRedemptionCenters(programID:Int?,regionID:Int?): List<RedemptionCenter> {
-        return service.getRedemptionCenters("pharmacy",programID,regionID).data
+        return service.getRedemptionCenters("pharmacy",9,regionID).data
     }
 
     override suspend fun getCompany(): Company {

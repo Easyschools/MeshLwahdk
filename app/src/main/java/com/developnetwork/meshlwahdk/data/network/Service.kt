@@ -76,10 +76,8 @@ interface Service {
         @Part("national_id") nationalId: RequestBody,
         @Part("gender") gender: RequestBody,
         @Part("region_id") region_id: RequestBody,
-        @Part("districts_id") subRegion_id: RequestBody,
-        @Part("subRegion_id") subSubRegion_id: RequestBody,
+        @Part("subRegion_id") subSubRegion_id: RequestBody?,
         @Part("company_id") company_id: RequestBody,
-        @Part("product_id") product_id: RequestBody,
         @Part("Age") age: RequestBody,
         @Part("health_insurance") health_insurance: RequestBody,
         @Part("category_id") Category_id: RequestBody,
@@ -90,6 +88,10 @@ interface Service {
         @Part("fcm_token") notificationToken: RequestBody?
     ): BaseResponse<User>
 
+
+    @POST("AddProgramToPatient")
+    @FormUrlEncoded
+    suspend fun addProductID(@Field("product_id") product_id: Int): BaseResponse<Any>
 
     @POST("forgetPassword")
     @FormUrlEncoded
@@ -129,7 +131,7 @@ interface Service {
 
     @POST("getAllSubReg")
     @FormUrlEncoded
-    suspend fun getAllSubRegion(@Field("district_id") district_id: Int): BaseResponse<List<Region>>
+    suspend fun getAllSubRegion(@Field("region_id") region_id: Int): BaseResponse<List<Region>>
 
     @GET("redemption")
     suspend fun getRedemptionCenters(
@@ -197,7 +199,7 @@ interface Service {
     ): BaseResponse<User>
 
     @POST("redimedProduct/getAll")
-    suspend fun getRedeemedPrograms(@Query("user_id") userID:Int?=null): BaseResponse<List<RedeemedProgram>>
+    suspend fun getRedeemedPrograms(@Query("user_id") userID: Int? = null): BaseResponse<List<RedeemedProgram>>
 
 
     @POST("api/user/update/phone")
@@ -206,4 +208,8 @@ interface Service {
 
     @POST("company/getById")
     suspend fun getCompany(@Query("id") id: Int): BaseResponse<Company>
+
+    @POST("updateUser")
+    @FormUrlEncoded
+    suspend fun updateUserLang(@Field("lang") lang: String): BaseResponse<Any>
 }

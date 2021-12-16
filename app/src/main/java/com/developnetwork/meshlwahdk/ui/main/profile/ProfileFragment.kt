@@ -50,7 +50,7 @@ class ProfileFragment : BaseFragment() {
     private fun getUser() {
         viewModel.getUser().observe(viewLifecycleOwner, { user ->
             if (!user.img.isNullOrBlank())
-                profileImage.setImageURL(user.img)
+                profileImage.setImageURL(user.img,R.drawable.ic_person)
 
             name.text = user.name
         })

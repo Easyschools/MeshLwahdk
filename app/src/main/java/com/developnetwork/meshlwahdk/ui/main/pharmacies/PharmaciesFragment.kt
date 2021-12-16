@@ -3,7 +3,7 @@ package com.developnetwork.meshlwahdk.ui.main.pharmacies
 import android.os.Bundle
 import android.view.View
 import androidx.navigation.fragment.findNavController
-import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.developnetwork.meshlwahdk.R
 import com.developnetwork.meshlwahdk.base.BaseFragment
 import com.developnetwork.meshlwahdk.ui.adapters.RegionsAdapter
@@ -36,7 +36,7 @@ class PharmaciesFragment : BaseFragment() {
                 showError(R.string.this_pharmacy_doesnt_have_programs)
           }
         }
-        pharmaciesRV.layoutManager = GridLayoutManager(requireContext(), 2)
+        pharmaciesRV.layoutManager = LinearLayoutManager(requireContext())
         pharmaciesRV.adapter = adapter
     }
 

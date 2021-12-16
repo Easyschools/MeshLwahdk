@@ -64,13 +64,22 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="@dimen/_20sdp"
-        android:text="Lorem ipsum dolor amet, consectetur adipiscing inet deli"
+        android:id="@+id/msg"
+        android:text="@string/now_you_can_upload_a_picture_of_the_prescription_and_choose_the_nearest_pharmacy_to_you_where_your_medicine_is_available_and_we_will_send_you_dose_reminder_and_when_to_provide_your_next_pack"
         android:textSize="@dimen/_13ssp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/title2" />
 
-
+<com.google.android.material.textview.MaterialTextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/thanks"
+    android:text="@string/thank_you_for_using_msh_lwa7dk_app"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/msg"
+    app:layout_constraintBottom_toTopOf="@id/skipBTN"/>
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/skipBTN"

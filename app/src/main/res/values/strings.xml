@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">مش لوحدك</string>
+    <string name="app_name">Msh lwa7dk</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="decline">decline</string>
@@ -182,7 +182,7 @@ I hear by give my informed consent for the use of Msh Lwahdak in my case.</p>]]>
     <string name="you_can_join_us_login_or_create_a_new_account_to_get_benifits_of_our_app">you can join us, log in, or create a new account to get the benefits of our app.</string>
     <string name="get_started_by">Get Started by</string>
     <string name="creating_your_account">Creating Your Account</string>
-    <string name="enter_your_mobile_number_to_recieve_a_verification_code">Enter Your mobile number to receive a verification code</string>
+    <string name="enter_your_mobile_number_to_recieve_a_verification_code">Enter your phone number to get the verification code</string>
     <string name="get_code">Get Code</string>
     <string name="sms_has_been_sent_to">sms has been sent to</string>
     <string name="welcome">Welcome</string>
@@ -190,7 +190,7 @@ I hear by give my informed consent for the use of Msh Lwahdak in my case.</p>]]>
     <string name="please_chooce_the_prescribed_product">Please chooce the prescribed product.</string>
     <string name="profile_info">Profile info</string>
     <string name="please_enter_your_profile_information_name_password"><![CDATA[Please enter your profile information name & password]]></string>
-    <string name="upload_your_id">Upload Your ID</string>
+    <string name="upload_your_id">Upload your ID picture  </string>
     <string name="gender">Gender</string>
     <string name="your_new_password_must_be_different_from_the_previous_used_password">Your new password must be different from the previously used password.</string>
     <string name="create_a_new_password">Create a new Password</string>
@@ -202,7 +202,7 @@ I hear by give my informed consent for the use of Msh Lwahdak in my case.</p>]]>
     <string name="profile_for">Profile for</string>
     <string name="every_patient">every Patient</string>
     <string name="got_lost_we_can_help_you">Got lost we can Help You !</string>
-    <string name="call_us_now">Call us Now</string>
+    <string name="call_us_now">Call us now</string>
     <string name="programs">Programs</string>
     <string name="reminders">Reminders</string>
     <string name="pharmacies">Pharmacies</string>
@@ -245,5 +245,19 @@ I hear by give my informed consent for the use of Msh Lwahdak in my case.</p>]]>
     <string name="select_rx">Select Rx image</string>
     <string name="your_order_number_is">Your Order Code is</string>
     <string name="please_complete_your_registration">please complete your registration</string>
+    <string name="application_for_patient_care">Application for patient care</string>
+    <string name="sponsored_by_janssen">Sponsored by Janssen</string>
+    <string name="now_you_can_upload_a_picture_of_the_prescription_and_choose_the_nearest_pharmacy_to_you_where_your_medicine_is_available_and_we_will_send_you_dose_reminder_and_when_to_provide_your_next_pack">Now you can Upload a picture of the prescription and choose the nearest pharmacy to you where your medicine is available, and we will send you dose reminder and when to provide your next pack</string>
+    <string name="thank_you_for_using_msh_lwa7dk_app">Thank you for using (Msh lwa7dk) App</string>
+    <string name="verification_code">Verification code</string>
+    <string name="verification_code_has_been_sent_to">Verification code has been sent to</string>
+    <string name="please_enter_the_required_data">Please enter the required data</string>
+    <string name="please_add_your_prescription_and_purchase_invoice">Please add your prescription and purchase invoice</string>
+    <string name="your_request_has_been_submitted_to">Your request has been submitted to</string>
+    <string name="pharmacy">Pharmacy</string>
+    <string name="orders_history">Orders History</string>
+    <string name="powered_by">Powered by</string>
+    <string name="new_purchase">New purchase</string>
+    <string name="your_next_dose">your next dose</string>
 
 </resources>

@@ -38,6 +38,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="@dimen/_20sdp"
+        android:gravity="end"
         android:text="@string/app_name"
         android:textColor="@color/colorPrimary"
         android:textSize="@dimen/_28ssp"
@@ -46,15 +47,40 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/title1" />
 
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/application"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:text="@string/application_for_patient_care"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/_18ssp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title2" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/janssen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/sponsored_by_janssen"
+        android:textSize="@dimen/_16ssp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/application" />
+
     <com.google.android.material.textview.MaterialTextView
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="@dimen/_20sdp"
         android:text="@string/before_we_start_please_choose_your_prefered_language"
         android:textSize="@dimen/_13ssp"
+        app:layout_constraintBottom_toTopOf="@id/arabicBTN"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/title2" />
+        app:layout_constraintTop_toBottomOf="@id/janssen" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/arabicBTN"

@@ -7,7 +7,6 @@
     android:layout_height="match_parent"
     tools:context=".ui.main.home.HomeFragment">
 
-
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/profileImage"
         android:layout_width="0dp"
@@ -71,7 +70,7 @@
             android:textStyle="bold"
             android:layout_margin="@dimen/_10sdp"
             android:textSize="@dimen/_13ssp"
-            android:text="@string/programs"
+            android:text="@string/new_purchase"
             android:textColor="@color/colorPrimaryDark" />
     </androidx.appcompat.widget.LinearLayoutCompat>
 

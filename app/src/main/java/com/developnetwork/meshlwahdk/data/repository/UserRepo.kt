@@ -2,6 +2,7 @@ package com.developnetwork.meshlwahdk.data.repository
 
 import com.developnetwork.meshlwahdk.data.model.User
 import com.developnetwork.meshlwahdk.data.network.Service
+import com.developnetwork.meshlwahdk.utils.managers.LocaleManager
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import okhttp3.MultipartBody
 import okhttp3.RequestBody.Companion.asRequestBody
@@ -22,10 +23,12 @@ interface UserRepo {
 
     suspend fun updatePhoneNumber(phone: String): Any
 
+    suspend fun updateUserLang():Any
 }
 
 class UserRepoImpl(
-    private val service: Service
+    private val service: Service,
+    private val localeManager: LocaleManager
 ) : UserRepo {
     override suspend fun getUser(): User {
         return service.getPatient().data
@@ -64,4 +67,8 @@ class UserRepoImpl(
         return service.updatePhoneNumber(phone).data
     }
 
+
+    override suspend fun updateUserLang(): Any {
+        return service.updateUserLang(localeManager.language).data
+    }
 }

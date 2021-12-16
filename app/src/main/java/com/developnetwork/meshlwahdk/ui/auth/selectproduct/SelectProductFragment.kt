@@ -46,11 +46,10 @@ class SelectProductFragment : BaseFragment() {
     private fun initList() {
         productsListRV.layoutManager = LinearLayoutManager(requireContext())
         adapter = ProgramsAdapter(){programID, productID ->
-                viewModel.completeRegister(productID = productID).observe(viewLifecycleOwner, {
-                  viewModel.sharedPreferencesManager.firstTime=true
-                    viewModel.sharedPreferencesManager.selectedProgram=programID
-                    findNavController().navigate(SelectProductFragmentDirections.actionSelectProductFragmentToMainActivity())
-                })
+            viewModel.addProductId(productID).observe(viewLifecycleOwner,{
+                viewModel.sharedPreferencesManager.selectedProgram=programID
+                findNavController().navigate(SelectProductFragmentDirections.actionSelectProductFragmentToMainActivity())
+            })
         }
         productsListRV.adapter = adapter
     }

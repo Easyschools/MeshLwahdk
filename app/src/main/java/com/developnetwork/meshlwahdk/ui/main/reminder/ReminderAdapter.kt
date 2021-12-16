@@ -12,6 +12,7 @@ import com.google.android.material.textview.MaterialTextView
 
 class ReminderAdapter(private val list: List<Reminder>) :
     RecyclerView.Adapter<ReminderAdapter.ViewHolder>() {
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         return ViewHolder(
             LayoutInflater.from(parent.context).inflate(R.layout.reminder_item, parent, false)
@@ -21,7 +22,7 @@ class ReminderAdapter(private val list: List<Reminder>) :
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item = list[holder.absoluteAdapterPosition]
 
-        holder.time.text = item.time
+        holder.time.text = "${holder.itemView.context.getString(R.string.your_next_dose)} ${item.time}"
         holder.name.text = item.productName
         if (!item.productLogo.isNullOrBlank())
             holder.logo.setImageURL(item.productLogo)

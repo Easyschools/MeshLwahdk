@@ -20,7 +20,7 @@
 
         android:theme="@style/Theme.MeshLwahdk">
         <activity
-            android:name=".ui.main.MainActivity"
+            android:name=".ui.main.mainActivty.MainActivity"
             android:exported="true" />
         <activity
             android:name=".ui.auth.AuthActivity"
@@ -35,6 +35,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+
+        <service
+            android:name=".utils.FirebaseInstanceIDService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
     </application>
 
 </manifest>

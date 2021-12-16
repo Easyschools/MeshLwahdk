@@ -8,11 +8,12 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.developnetwork.meshlwahdk.R
 import com.developnetwork.meshlwahdk.base.BaseFragment
 import com.developnetwork.meshlwahdk.ui.adapters.RegionsAdapter
+import com.developnetwork.meshlwahdk.ui.main.pharmacies.PharmaciesAdapter
 import kotlinx.android.synthetic.main.fragment_pharmacies.*
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class SelectOrderPharmacyFragment : BaseFragment() {
-    private lateinit var adapter: SelectOrdersAdapter
+    private lateinit var adapter: PharmaciesAdapter
     private val viewModel: SelectOrderPharmacyViewModel by viewModel()
     private val args: SelectOrderPharmacyFragmentArgs by navArgs()
 
@@ -31,7 +32,7 @@ class SelectOrderPharmacyFragment : BaseFragment() {
     }
 
     private fun initList() {
-        adapter = SelectOrdersAdapter() { pharmacyId, name ->
+        adapter = PharmaciesAdapter() { _,pharmacyId,name->
             findNavController().navigate(
                 SelectOrderPharmacyFragmentDirections.actionSelectOrderPharmacyFragmentToOrderProgramFragment(
                     args.programID,

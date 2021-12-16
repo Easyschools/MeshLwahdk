@@ -35,7 +35,6 @@ fun openDatePicker(textview: MaterialTextView, context: Context) {
 }
 fun openDatePicker(input: EditText, context: Context,future:Int=-1) {
     val c = Calendar.getInstance()
-    c.add(Calendar.DAY_OF_YEAR, 1)
     val cyear = c.get(Calendar.YEAR)
     val month = c.get(Calendar.MONTH)
     val day = c.get(Calendar.DAY_OF_MONTH)

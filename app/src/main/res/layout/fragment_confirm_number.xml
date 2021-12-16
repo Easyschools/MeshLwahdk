@@ -19,7 +19,6 @@
         app:layout_constraintTop_toTopOf="parent" />
 
 
-
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/callBTN"
         android:layout_width="0dp"
@@ -37,7 +36,7 @@
         android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/verification"
+        android:text="@string/verification_code"
         android:textColor="@color/colorPrimary"
         android:textSize="@dimen/_22ssp"
         android:textStyle="bold"

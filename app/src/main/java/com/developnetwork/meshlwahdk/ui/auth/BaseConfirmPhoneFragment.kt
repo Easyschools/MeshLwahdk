@@ -32,7 +32,7 @@ abstract class BaseConfirmPhoneFragment : BaseFragment() {
         handleError(viewModel)
         handleProgress(viewModel)
 
-        phone_text.text = "${getString(R.string.sms_has_been_sent_to)} ${phone}"
+        phone_text.text = "${getString(R.string.verification_code_has_been_sent_to)} ${phone}"
 
         confirmBtn.setOnClickListener {
             handleConfirmPhone()

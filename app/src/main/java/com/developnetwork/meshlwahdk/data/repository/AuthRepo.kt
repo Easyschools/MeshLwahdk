@@ -17,8 +17,6 @@ interface AuthRepo {
         notificationToken: String?
     ): User
 
-//    suspend fun createControllerPatient(): CreateControllerPatientDBResponse
-
     suspend fun checkPhone(phone: String): BaseResponse<Boolean>
     suspend fun getPhoneUser(phone: String): User
     suspend fun registerPhone(phone: String): User
@@ -33,9 +31,8 @@ interface AuthRepo {
         nationalId: String,
         gender: String,
         region_id: Int,
-        subRegion_id: Int,
+        subRegion_id: Int?,
         company_id: Int,
-        product_id: Int,
         age: String,
         health_insurance: String,
         categoryID: Int,
@@ -46,28 +43,10 @@ interface AuthRepo {
         notificationToken: String?
     ): User
 
-//    suspend fun userRegister(
-//        name: String,
-//        phone: String,
-//        email: String,
-//        password: String,
-//        nationalId: String,
-//        gender: String,
-//        region_id: Int,
-//        subRegion_id: Int,
-//        subSubRegion_id: Int,
-//        company_id: String?,
-//        product_id: String?,
-//        address: String,
-//        health_insurance: String,
-//        identityCardImagePath: String?,
-//        insuranceCardImagePath: String?,
-//        raysCardImagePath: String?,
-//        analyseCardImagePath: String?,
-//        lang: String
-//    ): RegisterDBResponse
+    suspend fun addProductID( product_id: Int): Any
 
     suspend fun forgetPassword(phone: String): Any
+
     suspend fun confirmForgotPasswordPhone(code: String, phone: String): String
 
     suspend fun resetPassword(
@@ -85,10 +64,6 @@ class AuthRepoImpl(private val service: Service) : AuthRepo {
     ): User {
         return service.userLogin(email, password, BuildConfig.company_id, notificationToken).data
     }
-
-//    override suspend fun createControllerPatient(): CreateControllerPatientDBResponse {
-//        return service.createControllerPatient()
-//    }
 
     override suspend fun checkPhone(phone: String): BaseResponse<Boolean> {
         return service.checkPhone(phone, BuildConfig.company_id)
@@ -118,9 +93,8 @@ class AuthRepoImpl(private val service: Service) : AuthRepo {
         nationalId: String,
         gender: String,
         region_id: Int,
-        subRegion_id: Int,
+        subRegion_id: Int?,
         company_id: Int,
-        product_id: Int,
         age: String,
         health_insurance: String,
         categoryID: Int,
@@ -163,6 +137,11 @@ class AuthRepoImpl(private val service: Service) : AuthRepo {
                 MultipartBody.Part.createFormData("insurance_card", file.name, requestFile)
         }
 
+        val subregionID=if(subRegion_id!! >0)
+            subRegion_id.toString().toRequestBody("multipart/form-data".toMediaTypeOrNull())
+        else
+            null
+
         return service.completeRegister(
             name.toRequestBody("multipart/form-data".toMediaTypeOrNull()),
             phone.toRequestBody("multipart/form-data".toMediaTypeOrNull()),
@@ -171,10 +150,8 @@ class AuthRepoImpl(private val service: Service) : AuthRepo {
             nationalId.toRequestBody("multipart/form-data".toMediaTypeOrNull()),
             gender.toRequestBody("multipart/form-data".toMediaTypeOrNull()),
             region_id.toString().toRequestBody("multipart/form-data".toMediaTypeOrNull()),
-            subRegion_id.toString().toRequestBody("multipart/form-data".toMediaTypeOrNull()),
-            "1".toRequestBody("multipart/form-data".toMediaTypeOrNull()),
+            subregionID,
             company_id.toString().toRequestBody("multipart/form-data".toMediaTypeOrNull()),
-            product_id.toString().toRequestBody("multipart/form-data".toMediaTypeOrNull()),
             age.toRequestBody("multipart/form-data".toMediaTypeOrNull()),
             health_insurance.toRequestBody("multipart/form-data".toMediaTypeOrNull()),
             categoryID.toString().toRequestBody("multipart/form-data".toMediaTypeOrNull()),
@@ -186,79 +163,9 @@ class AuthRepoImpl(private val service: Service) : AuthRepo {
         ).data
     }
 
-//    override suspend fun userRegister(
-//        name: String,
-//        phone: String,
-//        email: String,
-//        password: String,
-//        nationalId: String,
-//        gender: String,
-//        region_id: Int,
-//        subRegion_id: Int,
-//        subSubRegion_id: Int,
-//        company_id: String?,
-//        product_id: String?,
-//        address: String,
-//        health_insurance: String,
-//        identityCardImagePath: String?,
-//        insuranceCardImagePath: String?,
-//        raysCardImagePath: String?,
-//        analyseCardImagePath: String?,
-//        lang: String
-//    ): RegisterDBResponse {
-//        var identityFilePart: MultipartBody.Part? = null
-//        var insuranceFilePart: MultipartBody.Part? = null
-//        var raysFilePart: MultipartBody.Part? = null
-//        var analyseFilePart: MultipartBody.Part? = null
-//
-//        if (!identityCardImagePath.isNullOrBlank()) {
-//            val file = File(identityCardImagePath)
-//            val requestFile = file.asRequestBody("multipart/form-data".toMediaTypeOrNull())
-//            identityFilePart =
-//                MultipartBody.Part.createFormData("identityCard", file.name, requestFile)
-//        }
-//
-//        if (!insuranceCardImagePath.isNullOrBlank()) {
-//            val file = File(insuranceCardImagePath)
-//            val requestFile = file.asRequestBody("multipart/form-data".toMediaTypeOrNull())
-//            insuranceFilePart =
-//                MultipartBody.Part.createFormData("insuranceCard", file.name, requestFile)
-//        }
-//
-//        if (!raysCardImagePath.isNullOrBlank()) {
-//            val file = File(raysCardImagePath)
-//            val requestFile = file.asRequestBody("multipart/form-data".toMediaTypeOrNull())
-//            raysFilePart =
-//                MultipartBody.Part.createFormData("rays", file.name, requestFile)
-//        }
-//
-//        if (!analyseCardImagePath.isNullOrBlank()) {
-//            val file = File(analyseCardImagePath)
-//            val requestFile = file.asRequestBody("multipart/form-data".toMediaTypeOrNull())
-//            analyseFilePart =
-//                MultipartBody.Part.createFormData("analyses", file.name, requestFile)
-//        }
-//        return service.userRegister(
-//            name.toRequestBody("multipart/form-data".toMediaTypeOrNull()),
-//            phone.toRequestBody("multipart/form-data".toMediaTypeOrNull()),
-//            email.toRequestBody("multipart/form-data".toMediaTypeOrNull()),
-//            password.toRequestBody("multipart/form-data".toMediaTypeOrNull()),
-//            nationalId.toRequestBody("multipart/form-data".toMediaTypeOrNull()),
-//            gender.toRequestBody("multipart/form-data".toMediaTypeOrNull()),
-//            region_id.toString().toRequestBody("multipart/form-data".toMediaTypeOrNull()),
-//            subRegion_id.toString().toRequestBody("multipart/form-data".toMediaTypeOrNull()),
-//            subSubRegion_id.toString().toRequestBody("multipart/form-data".toMediaTypeOrNull()),
-//            company_id?.toRequestBody("multipart/form-data".toMediaTypeOrNull()),
-//            product_id?.toRequestBody("multipart/form-data".toMediaTypeOrNull()),
-//            address.toRequestBody("multipart/form-data".toMediaTypeOrNull()),
-//            health_insurance.toRequestBody("multipart/form-data".toMediaTypeOrNull()),
-//            identityFilePart,
-//            insuranceFilePart,
-//            raysFilePart,
-//            analyseFilePart,
-//            lang.toRequestBody("multipart/form-data".toMediaTypeOrNull())
-//        )
-//    }
+    override suspend fun addProductID(product_id: Int): Any {
+        return service.addProductID(product_id).data
+    }
 
     override suspend fun forgetPassword(phone: String): Any {
         return service.forgetPassword(phone, BuildConfig.company_id).data
@@ -275,6 +182,5 @@ class AuthRepoImpl(private val service: Service) : AuthRepo {
     ): Any {
         return service.resetPassword(phone, newPassword, confirmPassword).data
     }
-
 
 }

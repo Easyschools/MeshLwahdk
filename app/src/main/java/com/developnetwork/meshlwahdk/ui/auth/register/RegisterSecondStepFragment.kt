@@ -13,6 +13,8 @@ import androidx.navigation.fragment.findNavController
 import com.developnetwork.meshlwahdk.R
 import com.developnetwork.meshlwahdk.base.BaseFragment
 import com.developnetwork.meshlwahdk.ui.adapters.RegionsAdapter
+import com.developnetwork.meshlwahdk.ui.dialogs.UploadImageDialog
+import com.developnetwork.meshlwahdk.utils.ImageCompressor
 import com.developnetwork.meshlwahdk.utils.extensions.callUS
 import com.developnetwork.meshlwahdk.utils.lengthValidator
 import com.developnetwork.meshlwahdk.utils.openDatePicker
@@ -21,6 +23,7 @@ import com.ivestment.doctorna.utils.PathUtil
 import kotlinx.android.synthetic.main.fragment_register_second_step.*
 import org.koin.androidx.viewmodel.ext.android.sharedViewModel
 import timber.log.Timber
+import java.io.File
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -56,18 +59,45 @@ class RegisterSecondStepFragment : BaseFragment() {
                 val data: Intent? = result.data
 
                 data?.let { data ->
-                    val selectedImage: Uri? = data.data
+                    val selectedImageUri: Uri? = data.data
                     try {
                         when (selectedPath) {
                             0 -> {
-                                viewModel.profilePicPath =
-                                    selectedImage?.let { PathUtil.getPath(requireContext(), it) }
-                                uploadPhotoBTN.text = getString(R.string.image_selected)
+                                selectedImageUri?.let {
+                                    val originalFile = File(PathUtil.getPath(requireContext(), it))
+
+                                    uploadPhotoBTN.text = getString(R.string.image_selected)
+
+
+                                    ImageCompressor.compressBitmap(
+                                        requireContext(),
+                                        originalFile
+                                    ) { file ->
+                                        viewModel.profilePicPath = file.path
+                                    }
+                                }
+//                                viewModel.profilePicPath =
+//                                    selectedImageUri?.let { PathUtil.getPath(requireContext(), it) }
+//                                uploadPhotoBTN.text = getString(R.string.image_selected)
                             }
                             1 -> {
-                                viewModel.identityCardImagePath =
-                                    selectedImage?.let { PathUtil.getPath(requireContext(), it) }
-                                uploadIDBTN.text = getString(R.string.image_selected)
+                                selectedImageUri?.let {
+                                    val originalFile = File(PathUtil.getPath(requireContext(), it))
+
+                                    uploadIDBTN.text = getString(R.string.image_selected)
+
+
+                                    ImageCompressor.compressBitmap(
+                                        requireContext(),
+                                        originalFile
+                                    ) { file ->
+                                        viewModel.identityCardImagePath = file.path
+                                    }
+                                }
+
+//                                viewModel.identityCardImagePath =
+//                                    selectedImageUri?.let { PathUtil.getPath(requireContext(), it) }
+//                                uploadIDBTN.text = getString(R.string.image_selected)
                             }
                         }
 
@@ -105,11 +135,16 @@ class RegisterSecondStepFragment : BaseFragment() {
         }
 
         uploadIDBTN.setOnClickListener {
-            selectedPath = 1
-            requestPermissionLauncher.launch(Manifest.permission.READ_EXTERNAL_STORAGE)
+            UploadImageDialog(getString(R.string.upload_image)) {
+                viewModel.identityCardImagePath = it
+                uploadIDBTN.text = getString(R.string.image_selected)
+            }.show(childFragmentManager, "p-id")
         }
         uploadPhotoBTN.setOnClickListener {
-            selectProfilePic()
+            UploadImageDialog(getString(R.string.upload_profile_photo)) {
+                viewModel.profilePicPath = it
+                uploadPhotoBTN.text = getString(R.string.image_selected)
+            }.show(childFragmentManager, "p-p")
         }
     }
 
@@ -126,19 +161,22 @@ class RegisterSecondStepFragment : BaseFragment() {
         if (isValidateDateOfBirth()
             && lengthValidator(nationalIDInput, 14, requireContext())
             && spinnerValidator(citySpinner.getSpinner(), requireContext())
-            && spinnerValidator(areaSpinner.getSpinner(), requireContext())
         )
-            next()
+            register()
     }
 
-    private fun next() {
-        viewModel.nationalId = nationalIDInput.text.toString()
-        viewModel.age = viewModel.getAge(birthdateInput.text.toString())
-        viewModel.gender = genderSpinner.getSelectedItemId()
-        viewModel.region_id = citySpinner.getSelectedItemId()
-        viewModel.subRegion_id = areaSpinner.getSelectedItemId()
+    private fun register() {
+        viewModel.completeRegister(
+            nationalIDInput.text.toString(),
+            genderSpinner.getSelectedItemId().toString(),
+            citySpinner.getSelectedItemId(),
+            areaSpinner.getSelectedItemId(),
+            viewModel.getAge(birthdateInput.text.toString())
+        ).observe(viewLifecycleOwner, {
+            viewModel.sharedPreferencesManager.firstTime = true
+            findNavController().navigate(RegisterSecondStepFragmentDirections.actionRegisterSecondStepFragmentToSelectProductFragment())
 
-        findNavController().navigate(RegisterSecondStepFragmentDirections.actionRegisterSecondStepFragmentToSelectProductFragment())
+        })
     }
 
     private fun handleDate() {
@@ -147,7 +185,7 @@ class RegisterSecondStepFragment : BaseFragment() {
         c.add(Calendar.DAY_OF_YEAR, 1)
 
         birthdateInput.setOnClickListener {
-            openDatePicker(birthdateInput, requireContext(),0)
+            openDatePicker(birthdateInput, requireContext(), 0)
         }
         birthdateInput.setText(sdf.format(c.time))
     }
@@ -176,19 +214,23 @@ class RegisterSecondStepFragment : BaseFragment() {
     }
 
     private fun handleAreasLiveData(districtID: Int) {
-        viewModel.getDistricts(districtID, getString(R.string.area)).observe(viewLifecycleOwner, {
+        viewModel.getSubRegions(districtID, getString(R.string.area)).observe(viewLifecycleOwner, {
             areaSpinner.setAdapter(RegionsAdapter(requireContext(), it))
         })
     }
+
     private fun selectProfilePic() {
         selectedPath = 0
         requestPermissionLauncher.launch(Manifest.permission.READ_EXTERNAL_STORAGE)
     }
+
     private fun openPhotoGallery() {
         val galleryIntent =
             Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI)
         galleryIntent.setType("image/*")
 
         resultLauncher.launch(galleryIntent)
+
+
     }
 }

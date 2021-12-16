@@ -16,6 +16,7 @@ import android.view.WindowManager
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.fragment.app.DialogFragment
 import com.developnetwork.meshlwahdk.R
+import com.developnetwork.meshlwahdk.utils.ImageCompressor
 import com.ivestment.doctorna.utils.PathUtil
 import kotlinx.android.synthetic.main.dialog_upload_image.*
 import timber.log.Timber
@@ -113,9 +114,18 @@ class UploadImageDialog(
                     }
 
                     try {
+
                         selectedImage?.let {
-                            returnPath?.invoke(PathUtil.getPath(requireContext(), it)!!)
-                            dismiss()
+                            val originalFile = File(PathUtil.getPath(requireContext(), it))
+
+                            ImageCompressor.compressBitmap(
+                                requireContext(),
+                                originalFile
+                            ) { file ->
+                                returnPath?.invoke(file.path)
+                                dismiss()
+                            }
+
                         }
                     } catch (e: Exception) {
                         Timber.tag("image_path").e(e)

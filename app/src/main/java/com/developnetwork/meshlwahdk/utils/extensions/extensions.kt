@@ -7,6 +7,7 @@ import androidx.core.content.ContextCompat.startActivity
 import com.developnetwork.meshlwahdk.utils.managers.SharedPreferencesManager
 import org.koin.core.component.KoinComponent
 import org.koin.core.component.inject
+import java.io.File
 
 inline fun <reified T> koinInject(): T {
     return object : KoinComponent {
@@ -23,4 +24,8 @@ fun callUS(context: Context) {
         dialIntent.data = Uri.parse("tel:" + sharedPreferencesManager.companyPhone)
         startActivity(context, dialIntent, null)
     }
+}
+
+fun Context.getPicturesFile(fileName: String, subDirectory: String = ""): File {
+    return File(this.cacheDir.absolutePath.plus("/$subDirectory"), fileName)
 }

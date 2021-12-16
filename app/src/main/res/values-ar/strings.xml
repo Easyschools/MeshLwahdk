@@ -72,7 +72,7 @@
     <string name="image_selected">تم تحديد الصورة</string>
     <string name="area">المنطقة</string>
     <string name="lab_results">نتائج التحاليل</string>
-    <string name="sign_up">سجل</string>
+    <string name="sign_up">انشاء حساب </string>
     <string name="the_latest_scans">أحدث الفحوصات</string>
     <string name="you_can_upload_photo_until_4_images">يمكنك تحميل الصور حتى 4 صور</string>
     <string name="upload_image">تحميل الصور</string>
@@ -82,7 +82,7 @@
     <string name="resend">إعادة إرسال</string>
     <string name="arabic">عربي</string>
     <string name="english">إنجليزي</string>
-    <string name="welcome_to">مرحبا بك في</string>
+    <string name="welcome_to">مرحبا بك في برنامج</string>
     <string name="before_we_start_please_choose_your_prefered_language">قبل أن نبدأ من فضلك ، اختر لغتك المفضلة</string>
     <string name="error">خطأ</string>
     <string name="server_error">خطأ في الخادم</string>
@@ -116,14 +116,14 @@
     <string name="you_can_join_us_login_or_create_a_new_account_to_get_benifits_of_our_app">يمكنك الانضمام إلينا أو تسجيل الدخول أو إنشاء حساب جديد للاستفادة من تطبيقنا.</string>
     <string name="get_started_by">ابدأ بـ</string>
     <string name="creating_your_account">إنشاء حسابك</string>
-    <string name="enter_your_mobile_number_to_recieve_a_verification_code">أدخل رقم هاتفك المحمول لتلقي رمز التحقق</string>
+    <string name="enter_your_mobile_number_to_recieve_a_verification_code">ادخل رقم هاتفك المحمول لتلقي رمز التحقق</string>
     <string name="get_code">الحصول على رمز</string>
     <string name="sms_has_been_sent_to">تم إرسال الرسائل القصيرة إلى</string>
     <string name="welcome">أهلا بك</string>
     <string name="medication_info">معلومات الدواء</string>
     <string name="please_chooce_the_prescribed_product">الرجاء اختيار المنتج الموصوف.</string>
     <string name="profile_info">معلومات الشخصي</string>
-    <string name="upload_your_id">قم بتحميل المعرف الخاص بك</string>
+    <string name="upload_your_id">قم بتحميل صورة بطاقتك الشخصية</string>
     <string name="gender">نوع</string>
     <string name="your_new_password_must_be_different_from_the_previous_used_password">يجب أن تكون كلمة مرورك الجديدة مختلفة عن كلمة المرور المستخدمة سابقًا.</string>
     <string name="create_a_new_password">أنشئ كلمة مرور جديدة</string>
@@ -135,7 +135,7 @@
     <string name="profile_for">الملف الشخصي لـ</string>
     <string name="every_patient">كل مريض</string>
     <string name="got_lost_we_can_help_you">ضاعت يمكننا مساعدتك!</string>
-    <string name="call_us_now">اتصل بنا الآن</string>
+    <string name="call_us_now">إتصل بنا الان</string>
     <string name="programs">البرامج</string>
     <string name="reminders">تنبيهات</string>
     <string name="pharmacies">صيدليات</string>
@@ -146,65 +146,195 @@
     <string name="language">لغة</string>
     <string name="sign_out">تسجيل الخروج</string>
     <string name="please_enter_your_profile_information_name_password"><![CDATA[الرجاء إدخال اسم معلومات ملف التعريف وكلمة المرور]]></string>
-    <string name="app_terms"><![CDATA[<h2 style="text-align: center;"><strong>‫لوحدك‬ ‫مش‬ ‫لبرنامج‬ ‫موافقة‬ ‫إذن‬</strong></h2>
+    <string name="app_terms"><![CDATA[<p style="text-align:center"><br />
+<span style="font-family:Arial"><span style="color:#000000"><span style="font-family:Arial"><span style="font-size:large"><strong>إذن موافقة لبرنامج مش لوحدك</strong></span></span></span></span></p>
 
-<h3 style="text-align: right;"><strong>‫لوحدك‬ ‫مش‬ ‫برنامج‬ ‫تسجيل</strong></h3>
+<p style="text-align:right"><span style="font-family:Arial"><span style="color:#000000"><span style="font-size:medium"><strong>تسجيل برنامج</strong></span></span><span style="color:#000000"><span style="font-size:medium"><strong> مش لوحدك</strong></span></span></span><br />
+<br />
+&nbsp;</p>
 
-<p style="text-align: right;"><strong>‬</strong>‫ألكسايت‬ ‫وأسمح‬ ‫لوحدك&quot;‪،‬‬ ‫مش‬ ‫&quot;برنامج‬ ‫إسم‬ ‫ب‬ ‫إليه‬ ‫يشار‬ ‫فصاعدا‬ ‫اآلن‬ ‫من‬ ‫حدك&quot;‪،‬‬ ‫لو‬ ‫&quot;مش‬ ‫المرضى‬ ‫دعم‬ ‫برنامج‬ ‫في‬ ‫أسجل‬ ‫أن‬ ‫أوافق‬<br />
-‫المستقبل‪.‬‬ ‫في‬ ‫إضافته‬ ‫يمكن‬ ‫وما‬ ‫الموضح‬ ‫النحو‬ ‫على‬ ‫البرنامج‬ ‫إطار‬ ‫في‬ ‫الخدمات‬ ‫لي‬ ‫يقدموا‬ ‫بأن‬ ‫ووكالئهم‬<br />
-‫يلي‪:‬‬ ‫ما‬ ‫الخدمات‬ ‫هذه‬ ‫وتشمل‬<br />
-‫‪.‬‬ ‫الدواء‬ ‫صرف‬ ‫تسهيل‬<br />
-‫‪.‬‬ ‫للعالج‬ ‫اإلمتثال‬ ‫من‬ ‫للتأكد‬ ‫اإلتصال‬<br />
-‫‪.‬‬ ‫مؤهال)‬ ‫كان‬ ‫(إذا‬ ‫مجانية‬ ‫علب‬ ‫أو‬ ‫الدواء‬ ‫عروض‬<br />
-‫لوحدك‪،‬‬ ‫مش‬ ‫برنامج‬ ‫داخل‬ ‫اآلخرين‬ ‫الصحية‬ ‫الرعاية‬ ‫خدمات‬ ‫مزودي‬ ‫إلى‬ ‫ترسل‬ ‫قد‬ ‫معلوماتي‬ ‫أن‬ ‫أتفهم‬ ‫إستحقاقى‪،‬‬ ‫من‬ ‫التأكد‬ ‫تم‬ ‫إذا‬<br />
-‫البرنامج‪.‬‬ ‫وشروط‬ ‫ألحكام‬ ‫وفقا‬ ‫وجدت)‬ ‫(إن‬ ‫المختبر‬ ‫ونتائج‬ ‫الطبية‬ ‫لوصفاتي‬ ‫باإلضافة‬<br />
-‫والدراسات‬ ‫السوق‬ ‫أبحاث‬ ‫إجراء‬ ‫في‬ ‫واستخدامها‬ ‫الصحية‬ ‫معلوماتي‬ ‫على‬ ‫بالتعرف‬ ‫&quot;‬ ‫&quot;أكسايت‬ ‫لشركة‬ ‫ً‬ ‫أيضا‬ ‫أسمح‬ ‫المعلومات‪:‬‬ ‫مشاركة‬<br />
-‫باألمراض‪.‬‬ ‫المتعلقة‬<br />
-‫أطبائي‪،‬‬ ‫مع‬ ‫الصحية‬ ‫معلوماتي‬ ‫تشارك‬ ‫وقد‬ ‫األغراض‪،‬‬ ‫لهذه‬ ‫الصحية‬ ‫معلوماتي‬ ‫تستخدم‬ ‫قد‬ ‫&quot;‬ ‫&quot;أكسايت‬ ‫أن‬ ‫على‬ ‫وأوافق‬ ‫أفهم‬ ‫وأنا‬<br />
-‫المتخصصة‪.‬‬ ‫والصيدليات‬<br />
-‫حالة‬ ‫في‬ ‫جانسن‬ ‫شركة‬ ‫أدوية‬ ‫على‬ ‫الحصول‬ ‫بإمكاني‬ ‫اليزال‬ ‫وأنه‬ ‫االتصاالت‬ ‫أتلقى‬ ‫أو‬ ‫بالبرنامج‬ ‫ألتحق‬ ‫أن‬ ‫الضروري‬ ‫من‬ ‫ليس‬ ‫أنه‬ ‫وأتفهم‬<br />
-‫‪.‬‬ ‫‪15148‬‬ ‫الساخن‬ ‫بالخط‬ ‫اإلتصال‬ ‫طريق‬ ‫عن‬ ‫وقت‬ ‫أي‬ ‫في‬ ‫بالكامل‬ ‫البرنامج‬ ‫من‬ ‫االنسحاب‬ ‫ويمكنني‬ ‫المختص‪.‬‬ ‫طبيبي‬ ‫قبل‬ ‫من‬ ‫وصفه‬ ‫تم‬<br />
-‫مسبق‪.‬‬ ‫إخطار‬ ‫دون‬ ‫وقت‬ ‫أي‬ ‫في‬ ‫ها‬ ‫إنهائ‬ ‫أو‬ ‫الخدمات‬ ‫تغيير‬ ‫يجوز‬ ‫أنه‬ ‫أيضا‬ ‫‪.‬وأتفهم‬<br />
-‫مع‬ ‫أدناه‪،‬‬ ‫موافقتي‬ ‫أوضحت‬ ‫إذا‬ ‫اإللكتروني‪،‬‬ ‫البريد‬ ‫أو‬ ‫الهاتف‬ ‫أو‬ ‫البريد‬ ‫طريق‬ ‫عن‬ ‫بي‬ ‫باإلتصال‬ ‫لوحدك‬ ‫مش‬ ‫لبرنامج‬ ‫أأذن‬ ‫االتصاالت‪:‬‬<br />
-‫أبحاث‬ ‫ذلك‬ ‫في‬ ‫بما‬ ‫والمواضيع‪،‬‬ ‫المعلومات‬ ‫هذه‬ ‫عن‬ ‫رأيي‬ ‫عن‬ ‫أسأل‬ ‫وأن‬ ‫البحثية؛‬ ‫والدراسات‬ ‫والخدمات‬ ‫واألدوية؛‬ ‫البرنامج‬ ‫عن‬ ‫معلومات‬<br />
-‫باألمراض‪.‬‬ ‫المتعلقة‬ ‫والدراسات‬ ‫السوق‬<br />
-‫إخطار‬ ‫على‬ ‫وأوافق‬ ‫قدمته‬ ‫الذي‬ ‫المحمول‬ ‫الهاتف‬ ‫رقم‬ ‫على‬ ‫عنهم‬ ‫ينوب‬ ‫من‬ ‫أو‬ ‫البرنامج‬ ‫من‬ ‫هاتفية‬ ‫مكالمات‬ ‫تلقي‬ ‫على‬ ‫صراحة‬ ‫وأوافق‬<br />
-‫المستقبل‪.‬‬ ‫في‬ ‫هاتفي‬ ‫رقم‬ ‫غيرت‬ ‫حالة‬ ‫في‬ ‫أكسايت‬</p>
+<p style="text-align:right"><span style="font-family:Arial"><span style="color:#000000">أوافق أن أسجل في برنامج دعم المرضى </span><span style="font-family:Arial,serif">&quot;</span><span style="font-family:Arial">مش لوحدك</span><span style="font-family:Arial,serif">&quot;</span><span style="font-family:Arial">، من الآن فصاعدا يشار إليه بإسم </span><span style="font-family:Arial,serif">&quot;</span><span style="font-family:Arial">برنامج مش لوحدك</span><span style="font-family:Arial,serif">&quot;</span><span style="font-family:Arial">، وأسمح لأكسايت ووكلائهم بأن يقدموا لي الخدمات في إطار البرنامج على النحو الموضح وما يمكن إضافته في المستقبل</span><span style="font-family:Arial,serif">.</span></span><br />
+<span style="font-family:Arial"><span style="color:#000000">وتشمل هذه الخدمات ما يلي</span><span style="font-family:Arial,serif">:</span></span><br />
+<span style="font-family:Arial"><span style="color:#000000">تسهيل صرف الدواء</span><span style="font-family:Arial,serif">.</span></span><br />
+<span style="font-family:Arial"><span style="color:#000000">الإتصال للتأكد من الإمتثال للعلاج</span><span style="font-family:Arial,serif">.</span></span><br />
+<span style="font-family:Arial"><span style="color:#000000">عروض الدواء أو علب مجانية </span><span style="font-family:Arial,serif">(</span><span style="font-family:Arial">إذا كان مؤهلا</span><span style="font-family:Arial,serif">).</span></span></p>
 
-<h3 style="text-align: right;"><strong>‫عنها‪:‬‬ ‫والكشف‬ ‫الصحية‬ ‫المعلومات‬ ‫باستخدام‬ ‫المريض‬ ‫ذن‬ ‫إ</strong></h3>
+<p style="text-align:right"><span style="font-family:Arial"><span style="color:#000000">إذا تم التأكد من إستحقاقى، أتفهم أن معلوماتي قد ترسل إلى مزودي خدمات الرعاية الصحية الآخرين داخل برنامج مش لوحدك، بالإضافة لوصفاتي الطبية ونتائج المختبر </span><span style="font-family:Arial,serif">(</span><span style="font-family:Arial">إن وجدت</span><span style="font-family:Arial,serif">) </span><span style="font-family:Arial">وفقا لأحكام وشروط البرنامج</span><span style="font-family:Arial,serif">.</span></span></p>
 
-<p style="text-align: right;">‫أدويتي‬ ‫صرف‬ ‫ت‬ ‫متخصصة‬ ‫صيدليات‬ ‫وأي‬ ‫الصحية‪،‬‬ ‫الرعاية‬ ‫خدمات‬ ‫لي‬ ‫تقدم‬ ‫التي‬ ‫البرامج‬ ‫أو‬ ‫الصحية‬ ‫الرعاية‬ ‫خدمة‬ ‫لمقدمي‬ ‫أسمح‬<br />
-‫(بما‬ ‫الطبية‬ ‫ووصفتي‬ ‫وعالجي‬ ‫الطبية‬ ‫بحالتي‬ ‫تتعلق‬ ‫معلومات‬ ‫ذلك‬ ‫ويشمل‬ ‫الصحية‬ ‫معلوماتي‬ ‫عن‬ ‫تكشف‬ ‫أن‬ ‫لوحدك‪،‬‬ ‫مش‬ ‫ببرنامج‬ ‫المتعلقة‬<br />
-‫معينة‪،‬‬ ‫خدمات‬ ‫وتقديم‬ ‫تسجيلي‬ ‫ألغراض‬ ‫&quot;معلوماتي&quot;‬ ‫مسمى‬ ‫تحت‬ ‫بى‬ ‫خاصه‬ ‫بيانات‬ ‫إلى‬ ‫واإلحالة‬ ‫المعلومات)‪،‬‬ ‫ملء‬ ‫ملء‪/‬إعادة‬ ‫ذلك‬ ‫في‬<br />
-‫‪:‬‬ ‫ذلك‬ ‫في‬ ‫بما‬</p>
+<p style="text-align:right"><br />
+<span style="font-family:Arial"><span style="color:#000000">مشاركة المعلومات</span><span style="font-family:Arial,serif">: </span><span style="font-family:Arial">أسمح أيضاً لشركة </span><span style="font-family:Arial,serif">&quot;</span><span style="font-family:Arial">أكسايت</span><span style="font-family:Arial,serif">&quot; </span><span style="font-family:Arial">بالتعرف على معلوماتي الصحية واستخدامها في إجراء </span><span style="color:#000000">أبحاث السوق والدراسات المتعلقة بالأمراض</span></span><span style="color:#000000"><span style="font-family:Arial,serif">.</span></span></p>
 
-<p style="text-align: right;">‫‪.‬‬ ‫األخرى‬ ‫المرضى‬ ‫دعم‬ ‫برامج‬ ‫أو‬ ‫المرضى‬ ‫لدعم‬ ‫لوحدك‬ ‫مش‬ ‫برنامج‬ ‫في‬ ‫للمشاركة‬ ‫مؤهال‬ ‫كنت‬ ‫إذا‬ ‫ما‬ ‫تحديد‬<br />
-‫البرنامج‪.‬‬ ‫وإدارة‬ ‫تشغيل‬<br />
-‫أو‬ ‫اإلذن‪،‬‬ ‫هذا‬ ‫في‬ ‫بها‬ ‫أسمح‬ ‫التي‬ ‫لألغراض‬ ‫فقط‬ ‫عنها‬ ‫والكشف‬ ‫المعلومات‬ ‫هذه‬ ‫باستخدام‬ ‫معلوماتي‬ ‫حماية‬ ‫على‬ ‫توافق‬ ‫&quot;أكسايت&quot;‬ ‫أن‬ ‫فهم‬ ‫وأت‬<br />
-‫القانون‪.‬‬ ‫يسمح‬ ‫كما‬<br />
-‫المرضى‪.‬‬ ‫لدعم‬ ‫لوحدك‬ ‫مش‬ ‫برنامج‬ ‫في‬ ‫المشاركة‬ ‫من‬ ‫أتمكن‬ ‫فلن‬ ‫أوافق‬ ‫لم‬ ‫إذا‬ ‫ولكن‬ ‫اإلذن‬ ‫هذا‬ ‫على‬ ‫للموافقة‬ ‫مجبرا‬ ‫لسن‬ ‫أنى‬ ‫فهم‬ ‫أت‬ ‫أنا‬<br />
-‫الساخن‬ ‫بالرقم‬ ‫الـصال‬ ‫ق‬ ‫طري‬ ‫عن‬ ‫وذلك‬ ‫أخرى‬ ‫مره‬ ‫موافقتي‬ ‫بسحب‬ ‫طلبي‬ ‫أو‬ ‫البرنامج‬ ‫من‬ ‫خروجي‬ ‫حتى‬ ‫سارية‬ ‫موافقتي‬ ‫أن‬ ‫أتفهم‬ ‫أنا‬<br />
-‫‪.15148‬‬<br />
-‫وتمكن‬ ‫معلوماتي‬ ‫عن‬ ‫باإلفصاح‬ ‫موافقتي‬ ‫على‬ ‫يؤثر‬ ‫لن‬ ‫ولكن‬ ‫المرضى‬ ‫لدعم‬ ‫لوحدك‬ ‫مش‬ ‫برنامج‬ ‫في‬ ‫مشاركتي‬ ‫سينهى‬ ‫الموافقة‬ ‫سحب‬ ‫طلب‬<br />
-‫البرنامج‪.‬‬ ‫بداخل‬ ‫التي‬ ‫معلوماتي‬ ‫إستخدام‬ ‫من‬ ‫أكسايت‬<br />
-‫يلي‪:‬‬ ‫بما‬ ‫يقوموا‬ ‫أن‬ ‫وعمالئهم‬ ‫أكسايت‬ ‫وشركة‬ ‫المرضى‬ ‫لدعم‬ ‫لوحدك‬ ‫مش‬ ‫لبرنامج‬ ‫أسمح‬ ‫أنا‬<br />
-‫في‬ ‫مشاركتى‬ ‫إستمرار‬ ‫في‬ ‫والمساعدة‬ ‫لوحدك‪،‬‬ ‫مش‬ ‫برنامج‬ ‫لدخول‬ ‫أهليتي‬ ‫لتحديد‬ ‫اإلستمارة‬ ‫هذه‬ ‫في‬ ‫قدمتها‬ ‫التي‬ ‫المعلومات‬ ‫استخدام‬ ‫‪-1‬‬<br />
-‫البرنامج‪.‬‬<br />
-‫‪.‬‬ ‫فقط‬ ‫هويتي‬ ‫من‬ ‫التحقق‬ ‫ألغراض‬ ‫هويتي‬ ‫استخدام‬ ‫‪-2‬‬<br />
-‫لوحدك‪.‬‬ ‫مش‬ ‫برنامج‬ ‫خدمات‬ ‫مستوى‬ ‫عن‬ ‫رضائي‬ ‫مدى‬ ‫في‬ ‫رأيى‬ ‫ألخذ‬ ‫بى‬ ‫اإلتصال‬ ‫‪-3‬‬<br />
-‫يرضيني‬ ‫بما‬ ‫أسئلتي‬ ‫جميع‬ ‫على‬ ‫الرد‬ ‫وتم‬ ‫طبيبي‪،‬‬ ‫مع‬ ‫وناقشتها‬ ‫لوحدك‪،‬‬ ‫مش‬ ‫برنامج‬ ‫ب‬ ‫يتعلق‬ ‫فيما‬ ‫أعاله‬ ‫المقدمة‬ ‫المعلومات‬ ‫وفهمت‬ ‫قرأت‬ ‫لقد‬<br />
-‫مش‬ ‫ببرنامج‬ ‫متصل‬ ‫ثالث‬ ‫طرف‬ ‫أي‬ ‫مع‬ ‫الطبية‬ ‫حالتي‬ ‫لمتابعة‬ ‫والالسلكية‬ ‫السلكية‬ ‫االتصاالت‬ ‫منصة‬ ‫باستخدام‬ ‫لوحدك‬ ‫مش‬ ‫لبرنامج‬ ‫وأسمح‬<br />
-‫لوحدك‪.‬‬</p>
+<p style="text-align:right"><br />
+&nbsp;</p>
 
-<ul>
-	<li>
-	<h3 style="text-align: right;"><strong>‬</strong>‫واألحكام‬ ‫الشروط‬ ‫على‬ ‫أوافق‬</h3>
-	</li>
-	<li style="text-align: right;">‫واألحكام‬ ‫الشروط‬ ‫على‬ ‫أوافق‬ ‫ال‬</li>
-</ul>]]>
+<p style="text-align:right"><span style="color:#000000">&nbsp;</span><span style="font-family:Arial"><span style="color:#000000">وأنا أفهم وأوافق على أن </span><span style="font-family:Arial,serif">&quot;</span><span style="font-family:Arial">أكسايت</span><span style="font-family:Arial,serif">&quot; </span><span style="font-family:Arial">قد تستخدم معلوماتي الصحية لهذه الأغراض، وقد تشارك معلوماتي الصحية مع أطبائي، والصيدليات المتخصصة</span><span style="font-family:Arial,serif">.</span></span></p>
+
+<p style="text-align:right"><br />
+&nbsp;</p>
+
+<p style="text-align:right"><span style="font-family:Arial">وأتفهم أنه ليس من الضروري أن ألتحق بالبرنامج أو أتلقى الاتصالات وأنه لايزال بإمكاني الحصول على أدوية شركة جانسن في حالة تم وصفه من قبل طبيبي المختص</span><span style="font-family:Arial,serif">. </span><span style="font-family:Arial">ويمكنني الانسحاب من البرنامج بالكامل في أي وقت عن طريق الإتصال بالخط الساخن </span><span style="font-family:Arial,serif">15148.</span></p>
+
+<p style="text-align:right"><span style="font-family:Arial">وأتفهم أيضا أنه يجوز تغيير الخدمات أو إنهائها في أي وقت دون إخطار مسبق</span><span style="font-family:Arial,serif">.</span><span style="color:#000000"><span style="font-family:Arial,serif">.</span></span></p>
+
+<p style="text-align:right"><br />
+&nbsp;</p>
+
+<p style="text-align:right"><span style="font-family:Arial"><span style="color:#000000">الاتصالات</span><span style="font-family:Arial,serif">: </span><span style="font-family:Arial">أأذن لبرنامج مش لوحدك بالإتصال بي عن طريق البريد أو الهاتف أو البريد الإلكتروني، إذا أوضحت موافقتي أدناه، مع معلومات عن البرنامج والأدوية؛</span><span style="color:#000000"> والخدمات</span><span style="color:#000000"> والدراسات البحثية؛</span><span style="color:#000000">&nbsp;</span><span style="color:#000000">وأن أسأل عن رأيي عن هذه المعلومات والمواضيع، بما في ذلك</span><span style="color:#000000"> أبحاث السوق والدراسات المتعلقة بالأمراض مع الإحتفاظ بسرية البيانات الخاصة بالمرضى وبدون نشر أسماء المرضى</span></span><span style="color:#000000"><span style="font-family:Arial,serif">.</span></span></p>
+
+<p style="text-align:right"><br />
+<span style="font-family:Arial"><span style="color:#000000">وأوافق صراحة على تلقي </span><span style="color:#000000">مكالمات هاتفية</span><span style="color:#000000"> من البرنامج أو من ينوب عنهم على رقم الهاتف المحمول الذي قدمته وأوافق على إخطار أكسايت في حالة غيرت رقم هاتفي في المستقبل</span></span><span style="color:#000000"><span style="font-family:Arial,serif">.</span></span></p>
+
+<p style="text-align:right"><br />
+&nbsp;</p>
+
+<p style="text-align:right"><span style="font-family:Arial"><span style="color:#000000"><strong>إ</strong></span><span style="color:#000000"><span style="font-size:medium"><strong>ذن المريض باستخدام المعلومات الصحية والكشف عنها</strong></span></span></span><span style="color:#000000"><span style="font-family:Arial,serif"><span style="font-size:medium"><strong>:</strong></span></span></span></p>
+
+<p style="text-align:right"><br />
+<span style="font-family:Arial"><span style="color:#000000">أسمح لمقدمي خدمة الرعاية الصحية أو البرامج التي تقدم لي خدمات الرعاية الصحية، وأي صيدليات متخصصة تصرف أدويتي المتعلقة ببرنامج مش لوحدك، أن تكشف عن معلوماتي الصحية ويشمل ذلك معلومات تتعلق بحالتي الطبية وعلاجي ووصفتي الطبية </span><span style="font-family:Arial,serif">(</span><span style="font-family:Arial">بما في ذلك ملء</span><span style="font-family:Arial,serif">/</span><span style="font-family:Arial">إعادة ملء المعلومات</span><span style="font-family:Arial,serif">)</span><span style="font-family:Arial">، والإحالة إلى بيانات خاصه بى تحت مسمى </span><span style="font-family:Arial,serif">&quot;</span><span style="font-family:Arial">معلوماتي</span><span style="font-family:Arial,serif">&quot; </span><span style="font-family:Arial">لأغراض تسجيلي وتقديم خدمات معينة، بما في ذلك</span><span style="font-family:Arial,serif">:</span></span></p>
+
+<p style="text-align:right"><br />
+&nbsp;</p>
+
+<p style="text-align:right"><span style="font-family:Arial"><span style="color:#000000">تحديد ما إذا كنت مؤهلا للمشاركة في برنامج مش لوحدك لدعم المرضى أو برامج دعم المرضى الأخرى</span><span style="font-family:Arial,serif">.</span></span><br />
+<span style="font-family:Arial"><span style="color:#000000">تشغيل وإدارة البرنامج</span><span style="font-family:Arial,serif">.</span></span></p>
+
+<p style="text-align:right"><br />
+<span style="font-family:Arial"><span style="color:#000000">وأتفهم أن </span><span style="font-family:Arial,serif">&quot;</span><span style="font-family:Arial">أكسايت</span><span style="font-family:Arial,serif">&quot; </span><span style="font-family:Arial">توافق على حماية معلوماتي باستخدام هذه المعلومات والكشف عنها فقط للأغراض التي أسمح بها في هذا الإذن، أو كما يسمح القانون</span><span style="font-family:Arial,serif">.</span></span></p>
+
+<p style="text-align:right"><span style="font-family:Arial"><span style="color:#000000">أنا أ</span><span style="color:#000000">ت</span><span style="color:#000000">فهم أنى لسن مجبرا للموافقة على هذا الإذن ولكن إذا لم أوافق فلن أتمكن من المشاركة في برنامج مش لوحدك لدعم المرضى</span></span><span style="color:#000000"><span style="font-family:Arial,serif">.</span></span></p>
+
+<p style="text-align:right"><span style="font-family:Arial"><span style="color:#000000">أنا أتفهم أن موافقتي سارية حتى خروجي من البرنامج أو طلبي بسحب موافقتي مره أخرى وذلك عن طريق الـصال بالرقم الساخن </span><span style="font-family:Arial,serif">15148.</span></span></p>
+
+<p style="text-align:right"><br />
+&nbsp;</p>
+
+<p style="text-align:right"><span style="font-family:Arial"><span style="color:#000000">طلب سحب الموافقة سينهى مشاركتي في برنامج مش لوحدك لدعم المرضى ولكن لن يؤثر على موافقتي بالإ</span><span style="color:#000000">فصاح عن معلوماتي</span><span style="color:#000000"> وتمكن أكسايت من إستخدام معلوماتي التي بداخل البرنامج</span></span><span style="color:#000000"><span style="font-family:Arial,serif">. </span></span></p>
+
+<p style="text-align:right"><br />
+&nbsp;</p>
+
+<p style="text-align:right"><span style="font-family:Arial"><span style="color:#000000">أنا أسمح لبرنامج مش لوحدك لدعم المرضى وشركة أكسايت وعملائهم</span><span style="color:#000000"> أن يقوموا بما يلي</span></span><span style="color:#000000"><span style="font-family:Arial,serif">:</span></span></p>
+
+<p style="text-align:right"><br />
+<span style="color:#000000"><span style="font-family:Arial,serif">1- </span><span style="font-family:Arial">استخدام المعلومات التي قدمتها في هذه الإستمارة لتحديد أهليتي لدخول برنامج مش لوحدك، والمساعدة في إستمرار مشاركتى في البرنامج</span><span style="font-family:Arial,serif">.</span></span></p>
+
+<p style="text-align:right"><span style="color:#000000"><span style="font-family:Arial,serif">2- </span><span style="font-family:Arial">استخدام هويتي لأغراض التحقق من هويتي فقط</span><span style="font-family:Arial,serif">.</span></span></p>
+
+<p style="text-align:right"><span style="color:#000000"><span style="font-family:Arial,serif">3- </span><span style="font-family:Arial">الإتصال بى لأخذ رأيى في مدى رضائي عن مستوى خدمات برنامج مش لوحدك</span><span style="font-family:Arial,serif">.</span></span></p>
+
+<p style="text-align:right"><br />
+&nbsp;</p>
+
+<p style="text-align:right"><br />
+<span style="font-family:Arial"><span style="color:#000000">لقد قرأت وفهمت المعلومات المقدمة أعلاه فيما يتعلق ببرنامج مش لوحدك، وناقشتها مع طبيبي، وتم الرد على جميع أسئلتي بما يرضيني</span></span></p>
+
+<p style="text-align:right"><span style="font-family:Arial"><span style="color:#000000">وأسمح لبرنامج مش لوحدك باستخدام منصة الاتصالات السلكية واللاسلكية لمتابعة حالتي الطبية مع أي طرف ثالث متصل ببرنامج مش لوحدك</span><span style="font-family:Arial,serif">.</span></span></p>
+
+<p style="text-align:right"><br />
+&nbsp;</p>
+
+<p style="text-align:right"><span style="color:#ffffff">󠄀</span><span style="color:#44546a"> <span style="font-family:Arial"><strong>أوافق على الشروط والأحكام 󠄀</strong></span></span></p>
+
+<p style="text-align:right"><span style="color:#ffffff">󠄀</span><span style="color:#44546a"> <span style="font-family:Arial"><strong>لا أوافق على الشروط والأحكام 󠄀</strong></span></span></p>
+
+<p style="text-align:right"><span style="color:#000000"><span style="font-family:Arial,serif">.</span></span></p>
+
+<p style="text-align:right"><br />
+<span style="font-family:Arial"><span style="color:#000000"><span style="font-family:Arial"><span style="font-size:large"><strong>إذن موافقة لبرنامج مش لوحدك</strong></span></span></span></span></p>
+
+<p style="text-align:right"><span style="font-family:Arial"><span style="color:#000000"><span style="font-size:medium"><strong>تسجيل برنامج</strong></span></span><span style="color:#000000"><span style="font-size:medium"><strong> مش لوحدك</strong></span></span></span><br />
+<br />
+&nbsp;</p>
+
+<p style="text-align:right"><span style="font-family:Arial"><span style="color:#000000">أوافق أن أسجل في برنامج دعم المرضى </span><span style="font-family:Arial,serif">&quot;</span><span style="font-family:Arial">مش لوحدك</span><span style="font-family:Arial,serif">&quot;</span><span style="font-family:Arial">، من الآن فصاعدا يشار إليه بإسم </span><span style="font-family:Arial,serif">&quot;</span><span style="font-family:Arial">برنامج مش لوحدك</span><span style="font-family:Arial,serif">&quot;</span><span style="font-family:Arial">، وأسمح لأكسايت ووكلائهم بأن يقدموا لي الخدمات في إطار البرنامج على النحو الموضح وما يمكن إضافته في المستقبل</span><span style="font-family:Arial,serif">.</span></span><br />
+<span style="font-family:Arial"><span style="color:#000000">وتشمل هذه الخدمات ما يلي</span><span style="font-family:Arial,serif">:</span></span><br />
+<span style="font-family:Arial"><span style="color:#000000">تسهيل صرف الدواء</span><span style="font-family:Arial,serif">.</span></span><br />
+<span style="font-family:Arial"><span style="color:#000000">الإتصال للتأكد من الإمتثال للعلاج</span><span style="font-family:Arial,serif">.</span></span><br />
+<span style="font-family:Arial"><span style="color:#000000">عروض الدواء أو علب مجانية </span><span style="font-family:Arial,serif">(</span><span style="font-family:Arial">إذا كان مؤهلا</span><span style="font-family:Arial,serif">).</span></span></p>
+
+<p style="text-align:right"><span style="font-family:Arial"><span style="color:#000000">إذا تم التأكد من إستحقاقى، أتفهم أن معلوماتي قد ترسل إلى مزودي خدمات الرعاية الصحية الآخرين داخل برنامج مش لوحدك، بالإضافة لوصفاتي الطبية ونتائج المختبر </span><span style="font-family:Arial,serif">(</span><span style="font-family:Arial">إن وجدت</span><span style="font-family:Arial,serif">) </span><span style="font-family:Arial">وفقا لأحكام وشروط البرنامج</span><span style="font-family:Arial,serif">.</span></span></p>
+
+<p style="text-align:right"><br />
+<span style="font-family:Arial"><span style="color:#000000">مشاركة المعلومات</span><span style="font-family:Arial,serif">: </span><span style="font-family:Arial">أسمح أيضاً لشركة </span><span style="font-family:Arial,serif">&quot;</span><span style="font-family:Arial">أكسايت</span><span style="font-family:Arial,serif">&quot; </span><span style="font-family:Arial">بالتعرف على معلوماتي الصحية واستخدامها في إجراء </span><span style="color:#000000">أبحاث السوق والدراسات المتعلقة بالأمراض</span></span><span style="color:#000000"><span style="font-family:Arial,serif">.</span></span></p>
+
+<p style="text-align:right"><br />
+&nbsp;</p>
+
+<p style="text-align:right"><span style="color:#000000">&nbsp;</span><span style="font-family:Arial"><span style="color:#000000">وأنا أفهم وأوافق على أن </span><span style="font-family:Arial,serif">&quot;</span><span style="font-family:Arial">أكسايت</span><span style="font-family:Arial,serif">&quot; </span><span style="font-family:Arial">قد تستخدم معلوماتي الصحية لهذه الأغراض، وقد تشارك معلوماتي الصحية مع أطبائي، والصيدليات المتخصصة</span><span style="font-family:Arial,serif">.</span></span></p>
+
+<p style="text-align:right"><br />
+&nbsp;</p>
+
+<p style="text-align:right"><span style="font-family:Arial">وأتفهم أنه ليس من الضروري أن ألتحق بالبرنامج أو أتلقى الاتصالات وأنه لايزال بإمكاني الحصول على أدوية شركة جانسن في حالة تم وصفه من قبل طبيبي المختص</span><span style="font-family:Arial,serif">. </span><span style="font-family:Arial">ويمكنني الانسحاب من البرنامج بالكامل في أي وقت عن طريق الإتصال بالخط الساخن </span><span style="font-family:Arial,serif">15148.</span></p>
+
+<p style="text-align:right"><span style="font-family:Arial">وأتفهم أيضا أنه يجوز تغيير الخدمات أو إنهائها في أي وقت دون إخطار مسبق</span><span style="font-family:Arial,serif">.</span><span style="color:#000000"><span style="font-family:Arial,serif">.</span></span></p>
+
+<p style="text-align:right"><br />
+&nbsp;</p>
+
+<p style="text-align:right"><span style="font-family:Arial"><span style="color:#000000">الاتصالات</span><span style="font-family:Arial,serif">: </span><span style="font-family:Arial">أأذن لبرنامج مش لوحدك بالإتصال بي عن طريق البريد أو الهاتف أو البريد الإلكتروني، إذا أوضحت موافقتي أدناه، مع معلومات عن البرنامج والأدوية؛</span><span style="color:#000000"> والخدمات</span><span style="color:#000000"> والدراسات البحثية؛</span><span style="color:#000000">&nbsp;</span><span style="color:#000000">وأن أسأل عن رأيي عن هذه المعلومات والمواضيع، بما في ذلك</span><span style="color:#000000"> أبحاث السوق والدراسات المتعلقة بالأمراض مع الإحتفاظ بسرية البيانات الخاصة بالمرضى وبدون نشر أسماء المرضى</span></span><span style="color:#000000"><span style="font-family:Arial,serif">.</span></span></p>
+
+<p style="text-align:right"><br />
+<span style="font-family:Arial"><span style="color:#000000">وأوافق صراحة على تلقي </span><span style="color:#000000">مكالمات هاتفية</span><span style="color:#000000"> من البرنامج أو من ينوب عنهم على رقم الهاتف المحمول الذي قدمته وأوافق على إخطار أكسايت في حالة غيرت رقم هاتفي في المستقبل</span></span><span style="color:#000000"><span style="font-family:Arial,serif">.</span></span></p>
+
+<p style="text-align:right"><br />
+&nbsp;</p>
+
+<p style="text-align:right"><span style="font-family:Arial"><span style="color:#000000"><strong>إ</strong></span><span style="color:#000000"><span style="font-size:medium"><strong>ذن المريض باستخدام المعلومات الصحية والكشف عنها</strong></span></span></span><span style="color:#000000"><span style="font-family:Arial,serif"><span style="font-size:medium"><strong>:</strong></span></span></span></p>
+
+<p style="text-align:right"><br />
+<span style="font-family:Arial"><span style="color:#000000">أسمح لمقدمي خدمة الرعاية الصحية أو البرامج التي تقدم لي خدمات الرعاية الصحية، وأي صيدليات متخصصة تصرف أدويتي المتعلقة ببرنامج مش لوحدك، أن تكشف عن معلوماتي الصحية ويشمل ذلك معلومات تتعلق بحالتي الطبية وعلاجي ووصفتي الطبية </span><span style="font-family:Arial,serif">(</span><span style="font-family:Arial">بما في ذلك ملء</span><span style="font-family:Arial,serif">/</span><span style="font-family:Arial">إعادة ملء المعلومات</span><span style="font-family:Arial,serif">)</span><span style="font-family:Arial">، والإحالة إلى بيانات خاصه بى تحت مسمى </span><span style="font-family:Arial,serif">&quot;</span><span style="font-family:Arial">معلوماتي</span><span style="font-family:Arial,serif">&quot; </span><span style="font-family:Arial">لأغراض تسجيلي وتقديم خدمات معينة، بما في ذلك</span><span style="font-family:Arial,serif">:</span></span></p>
+
+<p style="text-align:right"><br />
+&nbsp;</p>
+
+<p style="text-align:right"><span style="font-family:Arial"><span style="color:#000000">تحديد ما إذا كنت مؤهلا للمشاركة في برنامج مش لوحدك لدعم المرضى أو برامج دعم المرضى الأخرى</span><span style="font-family:Arial,serif">.</span></span><br />
+<span style="font-family:Arial"><span style="color:#000000">تشغيل وإدارة البرنامج</span><span style="font-family:Arial,serif">.</span></span></p>
+
+<p style="text-align:right"><br />
+<span style="font-family:Arial"><span style="color:#000000">وأتفهم أن </span><span style="font-family:Arial,serif">&quot;</span><span style="font-family:Arial">أكسايت</span><span style="font-family:Arial,serif">&quot; </span><span style="font-family:Arial">توافق على حماية معلوماتي باستخدام هذه المعلومات والكشف عنها فقط للأغراض التي أسمح بها في هذا الإذن، أو كما يسمح القانون</span><span style="font-family:Arial,serif">.</span></span></p>
+
+<p style="text-align:right"><span style="font-family:Arial"><span style="color:#000000">أنا أ</span><span style="color:#000000">ت</span><span style="color:#000000">فهم أنى لسن مجبرا للموافقة على هذا الإذن ولكن إذا لم أوافق فلن أتمكن من المشاركة في برنامج مش لوحدك لدعم المرضى</span></span><span style="color:#000000"><span style="font-family:Arial,serif">.</span></span></p>
+
+<p style="text-align:right"><span style="font-family:Arial"><span style="color:#000000">أنا أتفهم أن موافقتي سارية حتى خروجي من البرنامج أو طلبي بسحب موافقتي مره أخرى وذلك عن طريق الـصال بالرقم الساخن </span><span style="font-family:Arial,serif">15148.</span></span></p>
+
+<p style="text-align:right"><br />
+&nbsp;</p>
+
+<p style="text-align:right"><span style="font-family:Arial"><span style="color:#000000">طلب سحب الموافقة سينهى مشاركتي في برنامج مش لوحدك لدعم المرضى ولكن لن يؤثر على موافقتي بالإ</span><span style="color:#000000">فصاح عن معلوماتي</span><span style="color:#000000"> وتمكن أكسايت من إستخدام معلوماتي التي بداخل البرنامج</span></span><span style="color:#000000"><span style="font-family:Arial,serif">. </span></span></p>
+
+<p style="text-align:right"><br />
+&nbsp;</p>
+
+<p style="text-align:right"><span style="font-family:Arial"><span style="color:#000000">أنا أسمح لبرنامج مش لوحدك لدعم المرضى وشركة أكسايت وعملائهم</span><span style="color:#000000"> أن يقوموا بما يلي</span></span><span style="color:#000000"><span style="font-family:Arial,serif">:</span></span></p>
+
+<p style="text-align:right"><br />
+<span style="color:#000000"><span style="font-family:Arial,serif">1- </span><span style="font-family:Arial">استخدام المعلومات التي قدمتها في هذه الإستمارة لتحديد أهليتي لدخول برنامج مش لوحدك، والمساعدة في إستمرار مشاركتى في البرنامج</span><span style="font-family:Arial,serif">.</span></span></p>
+
+<p style="text-align:right"><span style="color:#000000"><span style="font-family:Arial,serif">2- </span><span style="font-family:Arial">استخدام هويتي لأغراض التحقق من هويتي فقط</span><span style="font-family:Arial,serif">.</span></span></p>
+
+<p style="text-align:right"><span style="color:#000000"><span style="font-family:Arial,serif">3- </span><span style="font-family:Arial">الإتصال بى لأخذ رأيى في مدى رضائي عن مستوى خدمات برنامج مش لوحدك</span><span style="font-family:Arial,serif">.</span></span></p>
+
+<p style="text-align:right"><br />
+&nbsp;</p>
+
+<p style="text-align:right"><br />
+<span style="font-family:Arial"><span style="color:#000000">لقد قرأت وفهمت المعلومات المقدمة أعلاه فيما يتعلق ببرنامج مش لوحدك، وناقشتها مع طبيبي، وتم الرد على جميع أسئلتي بما يرضيني</span></span></p>
+
+<p style="text-align:right"><span style="font-family:Arial"><span style="color:#000000">وأسمح لبرنامج مش لوحدك باستخدام منصة الاتصالات السلكية واللاسلكية لمتابعة حالتي الطبية مع أي طرف ثالث متصل ببرنامج مش لوحدك</span><span style="font-family:Arial,serif">.</span></span></p>
+
+<p style="text-align:right"><br />
+&nbsp;</p>
+
+<p style="text-align:right"><span style="color:#ffffff">󠄀</span><span style="color:#44546a"> <span style="font-family:Arial"><strong>أوافق على الشروط والأحكام 󠄀</strong></span></span></p>
+
+<p style="text-align:right"><span style="color:#ffffff">󠄀</span><span style="color:#44546a"> <span style="font-family:Arial"><strong>لا أوافق على الشروط والأحكام 󠄀</strong></span></span></p>
+
+<p style="text-align:right"><span style="color:#000000"><span style="font-family:Arial,serif">.</span></span></p>
+]]>
 </string>
     <string name="change_language">تغيير اللغة</string>
-    <string name="upload_profile_photo">تحميل صورة الملف الشخصي</string>
+    <string name="upload_profile_photo">اختر صورتك الشخصية</string>
     <string name="doses">جرعات</string>
     <string name="select_your_country">اختر بلدك</string>
     <string name="your_drugs">الأدوية الخاصة بك</string>
@@ -235,5 +365,20 @@
     <string name="cancel">إلغاء</string>
     <string name="select_rx">"  اختر صورة الروشتة"</string>
     <string name="your_order_number_is">كود الطلب الخاص بك هو</string>
+    <string name="please_complete_your_registration">الرجاء إكمال التسجيل الخاص بك</string>
+    <string name="application_for_patient_care">"لرعاية المرضى "</string>
+    <string name="sponsored_by_janssen">المقدم من شركة جانسين</string>
+    <string name="now_you_can_upload_a_picture_of_the_prescription_and_choose_the_nearest_pharmacy_to_you_where_your_medicine_is_available_and_we_will_send_you_dose_reminder_and_when_to_provide_your_next_pack">" لأن راحتك تهمنا الآن من خلال برنامج (مش لوحدك) تستطيع إرسال صورة الوصفة الطبية وتختار أقرب صيدلية لك متاح بها الدواء الخاص بك وسنذكرك بميعاد جرعة الدواء وميعاد شرائه  "</string>
+    <string name="thank_you_for_using_msh_lwa7dk_app">شكرا لإستخدامك برنامج (مش لوحدك)</string>
+    <string name="verification_code">"رمز التحقق "</string>
+    <string name="verification_code_has_been_sent_to">تم ارسال رمز التحقق الي</string>
+    <string name="please_enter_the_required_data">الرجاء ادخل البيانات المطلوبة</string>
+    <string name="please_add_your_prescription_and_purchase_invoice">"الرجاء اضافة الوصفة الطبية الخاصة بك  و اضافة فاتورة الشراء "</string>
+    <string name="your_request_has_been_submitted_to">"تم توجيه طلبك الي صيدلية "</string>
+    <string name="pharmacy">صيدلية</string>
+    <string name="orders_history">"الطالبات السابقة "</string>
+    <string name="new_purchase">شراء جديدة</string>
+    <string name="powered_by">مشغل بواسطة</string>
+    <string name="your_next_dose">جرعتك القادمة</string>
 
 </resources>

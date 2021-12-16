@@ -27,15 +27,16 @@ class RegisterViewModel(
     init {
         getNotificationToken()
     }
+
     var name: String = ""
     var phone: String = ""
     var email: String? = null
-    var age: String = ""
-    var nationalId: String = ""
+//    var age: String = ""
+//    var nationalId: String = ""
     var password: String = ""
-    var gender: Int = 0
-    var region_id: Int = 1
-    var subRegion_id: Int = 1
+//    var gender: Int = 0
+//    var region_id: Int = 1
+//    var subRegion_id: Int = 1
 
     var profilePicPath: String? = null
     var categoryDocumentPath: String? = null
@@ -66,9 +67,9 @@ class RegisterViewModel(
         emit(list)
     }
 
-    fun getDistricts(regionID: Int, name: String) = handleRequestLiveData<List<Region>> {
+    fun getSubRegions(regionID: Int, name: String) = handleRequestLiveData<List<Region>> {
         val result = withContext(Dispatchers.IO) {
-            otherRepo.getAllDistricts(regionID)
+            otherRepo.getAllSubRegion(regionID)
         }
 
         val list = ArrayList<Region>()
@@ -79,31 +80,37 @@ class RegisterViewModel(
     }
 
 
-    fun completeRegister(
-        productID: Int
-    ) = handleRequestLiveData<User> {
-        val result= withContext(Dispatchers.IO){authRepo.completeRegister(
-            name,
-            phone,
-            email,
-            password,
-            nationalId,
-            gender.toString(),
-            region_id,
-            subRegion_id,
-            BuildConfig.company_id,
-            productID,
-            age,
-            "xxxx",
-            1,
-            profilePicPath,
-            categoryDocumentPath,
-            identityCardImagePath,
-            insuranceCardImagePath,
-            sharedPreferencesManager.notificationToken
-        )}
+    fun completeRegister( nationalId: String,
+                          gender: String,
+                          region_id: Int,
+                          subRegion_id: Int?,
+                          age: String,) = handleRequestLiveData<User> {
+        if (phone.isNullOrBlank())
+            phone = sharedPreferencesManager.userPhone
 
-        sharedPreferencesManager.saveUserData(result,false)
+        val result = withContext(Dispatchers.IO) {
+            authRepo.completeRegister(
+                name,
+                phone,
+                email,
+                password,
+                nationalId,
+                gender,
+                region_id,
+                subRegion_id,
+                BuildConfig.company_id,
+                age,
+                "xxxx",
+                1,
+                profilePicPath,
+                categoryDocumentPath,
+                identityCardImagePath,
+                insuranceCardImagePath,
+                sharedPreferencesManager.notificationToken
+            )
+        }
+
+        sharedPreferencesManager.saveUserData(result, false)
 
         emit(result)
     }
@@ -141,4 +148,7 @@ class RegisterViewModel(
         }
     }
 
+
+     fun addProductId(productID: Int) =
+        callRequestLiveData { authRepo.addProductID(productID) }
 }

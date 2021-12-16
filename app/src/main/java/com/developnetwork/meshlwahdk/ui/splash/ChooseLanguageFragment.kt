@@ -31,6 +31,8 @@ class ChooseLanguageFragment : BaseFragment() {
     }
 
     private fun changeLanguage(lang: String) {
+
+        if(localeManager.language!=lang)
         localeManager.setNewLocale(
             requireContext(),
             lang

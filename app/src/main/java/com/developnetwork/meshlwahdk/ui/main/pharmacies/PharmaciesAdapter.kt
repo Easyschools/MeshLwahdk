@@ -10,6 +10,7 @@ import com.developnetwork.meshlwahdk.R
 import com.developnetwork.meshlwahdk.data.model.RedemptionCenter
 import com.developnetwork.meshlwahdk.utils.extensions.setImageURL
 import com.google.android.material.imageview.ShapeableImageView
+import com.google.android.material.textview.MaterialTextView
 
 class PharmaciesAdapter(private val click:(programID:Int,pharmacyId:Int,pharmacyname:String) ->Unit) :
     ListAdapter<RedemptionCenter, PharmaciesAdapter.ViewHolder>(RedemptionCenterItemDiffCallback()) {
@@ -24,6 +25,10 @@ class PharmaciesAdapter(private val click:(programID:Int,pharmacyId:Int,pharmacy
         val item = getItem(holder.absoluteAdapterPosition)
         if (!item.logo.isNullOrBlank())
             holder.logo.setImageURL(item.logo)
+        else
+            holder.logo.setImageDrawable(null)
+
+        holder.name.text = item.name
 
         holder.itemView.setOnClickListener {
             click(item.programID,item.id,item.name)
@@ -48,5 +53,6 @@ class PharmaciesAdapter(private val click:(programID:Int,pharmacyId:Int,pharmacy
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val logo: ShapeableImageView = view.findViewById(R.id.logo)
+        val name: MaterialTextView = view.findViewById(R.id.title)
     }
 }
