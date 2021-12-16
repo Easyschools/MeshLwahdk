@@ -9,4 +9,5 @@ val repoModule = module {
     factory<DoseRepo> { DoseRepoImpl(get()) }
     factory<ProgramsRepo> { ProgramsRepoImpl(get()) }
     factory<UserRepo> { UserRepoImpl(get(),get()) }
+    factory<NotificationsRepo> { NotificationsRepoImpl(get()) }
 }

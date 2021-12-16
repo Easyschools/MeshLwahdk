@@ -27,7 +27,7 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="@dimen/_20sdp"
         android:background="@android:color/transparent"
-        android:src="@drawable/ic_notifications"
+        android:src="@drawable/ic_notification_count"
         android:tint="@color/colorAccent"
         android:padding="@dimen/_5sdp"
         app:layout_constraintBottom_toBottomOf="@id/backBTN"

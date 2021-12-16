@@ -1,11 +1,14 @@
 package com.developnetwork.meshlwahdk.ui.main.mainActivty
 
+import android.graphics.drawable.LayerDrawable
 import android.os.Bundle
+import android.view.Menu
 import android.view.View
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
 import com.developnetwork.meshlwahdk.R
 import com.developnetwork.meshlwahdk.base.BaseActivity
+import com.developnetwork.meshlwahdk.utils.CountDrawable
 import com.developnetwork.meshlwahdk.utils.extensions.callUS
 import com.developnetwork.meshlwahdk.utils.managers.SharedPreferencesManager
 import kotlinx.android.synthetic.main.activity_main.*
@@ -26,8 +29,14 @@ class MainActivity : BaseActivity() {
         handleUpdateLang()
         handleIntent()
 
+        getNotificationCount()
+
         callBTN.setOnClickListener {
             callUS(this)
+        }
+
+        notificationBTN.setOnClickListener {
+            navController.navigate(R.id.notificationFragment)
         }
         handleToolbar()
 
@@ -88,6 +97,33 @@ class MainActivity : BaseActivity() {
         viewModel.updateLanguage().observe(this,{})
     }
 
+    private fun getNotificationCount(){
+        viewModel.getNotificationCount().observe(this,{
+            it?.let { count->
+                setCount(count.toString())
+            }
+
+        })
+    }
+
+    private fun setCount(count: String) {
+
+        val icon = getDrawable(R.drawable.ic_notification_count) as LayerDrawable
+        val badge: CountDrawable
+
+        // Reuse drawable if possible
+        val reuse = icon.findDrawableByLayerId(R.id.ic_group_count)
+        badge = if (reuse != null && reuse is CountDrawable) {
+            reuse
+        } else {
+            CountDrawable(this)
+        }
+        badge.setCount(count)
+        icon.mutate()
+        icon.setDrawableByLayerId(R.id.ic_group_count, badge)
+
+        notificationBTN.setImageDrawable(icon)
+    }
     override fun onBackPressed() {
         if (navController.currentDestination?.id == R.id.homeFragment)
             super.onBackPressed()

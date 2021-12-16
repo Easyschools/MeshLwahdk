@@ -212,4 +212,15 @@ interface Service {
     @POST("updateUser")
     @FormUrlEncoded
     suspend fun updateUserLang(@Field("lang") lang: String): BaseResponse<Any>
+
+    @POST("getAll_notification")
+    @FormUrlEncoded
+    suspend fun getNotifications(@Field("page") page:Int):BaseResponse<BasePagination<Notification>>
+
+    @POST("mark_as_read")
+    suspend fun readNotifications():BaseResponse<Any>
+
+
+    @POST("totalUnreadNotifications")
+    suspend fun getNotificationsCount():BaseResponse<Int>
 }
