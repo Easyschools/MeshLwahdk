@@ -34,7 +34,7 @@ android {
     }
     buildTypes {
         release {
-            def proguard = false
+            def proguard = true
             minifyEnabled proguard
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
 

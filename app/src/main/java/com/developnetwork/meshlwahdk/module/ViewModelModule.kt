@@ -42,7 +42,7 @@ val viewModelModule = module {
     viewModel { EditDoseViewModel(get(),get()) }
     viewModel { ProgramViewModel(get()) }
     viewModel { ProgramsViewModel(get()) }
-    viewModel { OrderProgramsViewModel(get()) }
+    viewModel { OrderProgramsViewModel(get(),get()) }
     viewModel { EditProfileViewModel(get(),get()) }
     viewModel { HistoryViewModel(get(),get()) }
     viewModel { ProfileViewModel(get(),get(),get()) }

@@ -1,27 +1,21 @@
 package com.developnetwork.meshlwahdk.ui.main.editprofile
 
-import android.Manifest
-import android.app.Activity
-import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
-import android.provider.MediaStore
 import android.view.View
 import android.widget.ArrayAdapter
-import androidx.activity.result.contract.ActivityResultContracts
 import androidx.navigation.fragment.findNavController
 import com.developnetwork.meshlwahdk.R
 import com.developnetwork.meshlwahdk.base.BaseFragment
 import com.developnetwork.meshlwahdk.ui.adapters.RegionsAdapter
+import com.developnetwork.meshlwahdk.ui.dialogs.UploadImageDialog
 import com.developnetwork.meshlwahdk.utils.extensions.setImageURL
 import com.developnetwork.meshlwahdk.utils.nameValidator
 import com.developnetwork.meshlwahdk.utils.openDatePicker
 import com.developnetwork.meshlwahdk.utils.spinnerValidator
-import com.ivestment.doctorna.utils.PathUtil
 import es.dmoral.toasty.Toasty
 import kotlinx.android.synthetic.main.fragment_edit_profile.*
 import org.koin.androidx.viewmodel.ext.android.viewModel
-import timber.log.Timber
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -31,42 +25,6 @@ class EditProfileFragment : BaseFragment() {
     override fun getLayout(): Int {
         return R.layout.fragment_edit_profile
     }
-
-    private val requestPermissionLauncher =
-        registerForActivityResult(
-            ActivityResultContracts.RequestPermission()
-        ) { isGranted: Boolean ->
-            if (isGranted) {
-                // Permission is granted. Continue the action or workflow in your
-                // app.
-                openPhotoGallery()
-            } else {
-                // Explain to the user that the feature is unavailable because the
-                // features requires a permission that the user has denied. At the
-                // same time, respect the user's decision. Don't link to system
-                // settings in an effort to convince the user to change their
-                // decision.
-            }
-        }
-
-    private var resultLauncher =
-        registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
-            if (result.resultCode == Activity.RESULT_OK) {
-                // There are no request codes
-                val data: Intent? = result.data
-
-                data?.let { data ->
-                    val selectedImage: Uri? = data.data
-                    try {
-                        viewModel.profilePicPath =
-                            selectedImage?.let { PathUtil.getPath(requireContext(), it) }
-                        profileImage.setImageURI(selectedImage)
-                    } catch (e: Exception) {
-                        Timber.tag("image_path").e(e)
-                    }
-                }
-            }
-        }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -162,15 +120,11 @@ class EditProfileFragment : BaseFragment() {
     }
 
     private fun selectProfilePic() {
-        requestPermissionLauncher.launch(Manifest.permission.READ_EXTERNAL_STORAGE)
-    }
 
-    private fun openPhotoGallery() {
-        val galleryIntent =
-            Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI)
-        galleryIntent.setType("image/*")
-
-        resultLauncher.launch(galleryIntent)
+        UploadImageDialog(getString(R.string.upload_profile_photo)) {
+            viewModel.profilePicPath = it
+            profileImage.setImageURI(Uri.parse(it))
+        }.show(childFragmentManager, "p-p")
     }
 
 }

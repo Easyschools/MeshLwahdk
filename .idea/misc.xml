@@ -3,76 +3,37 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/MeshLwahdk/app/src/main/res/drawable/ic_logo.xml" value="0.26666666666666666" />
         <entry key="..\:/MeshLwahdk/app/src/main/res/layout/activity_main.xml" value="0.3265625" />
+        <entry key="..\:/MeshLwahdk/app/src/main/res/layout/dose_item.xml" value="0.33125" />
         <entry key="..\:/MeshLwahdk/app/src/main/res/layout/fragment_auth.xml" value="0.340625" />
+        <entry key="..\:/MeshLwahdk/app/src/main/res/layout/fragment_history.xml" value="0.33125" />
+        <entry key="..\:/MeshLwahdk/app/src/main/res/layout/fragment_home.xml" value="0.33125" />
+        <entry key="..\:/MeshLwahdk/app/src/main/res/layout/fragment_intro.xml" value="0.33" />
+        <entry key="..\:/MeshLwahdk/app/src/main/res/layout/fragment_profile.xml" value="0.33125" />
         <entry key="..\:/MeshLwahdk/app/src/main/res/layout/fragment_register.xml" value="0.340625" />
         <entry key="..\:/MeshLwahdk/app/src/main/res/layout/fragment_register_first_step.xml" value="0.22407407407407406" />
-        <entry key="app/src/main/res/drawable/et_rounded_corner_bg_with_stork.xml" value="0.17533783783783785" />
-        <entry key="app/src/main/res/drawable/ic_call.xml" value="0.17533783783783785" />
-        <entry key="app/src/main/res/drawable/ic_call_button.xml" value="0.17533783783783785" />
-        <entry key="app/src/main/res/drawable/ic_device.xml" value="0.17533783783783785" />
-        <entry key="app/src/main/res/drawable/ic_image_placeholder.xml" value="0.1" />
+        <entry key="..\:/MeshLwahdk/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.67" />
         <entry key="app/src/main/res/drawable/ic_janssen_logo.xml" value="0.26711271230056616" />
-        <entry key="app/src/main/res/drawable/ic_language.xml" value="0.17533783783783785" />
-        <entry key="app/src/main/res/drawable/ic_language_x.xml" value="0.17533783783783785" />
-        <entry key="app/src/main/res/drawable/ic_lock_24px.xml" value="0.17533783783783785" />
-        <entry key="app/src/main/res/drawable/ic_notification_count.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/pin_background.xml" value="0.24259259259259258" />
         <entry key="app/src/main/res/drawable/top_right_cornet.xml" value="0.2351851851851852" />
         <entry key="app/src/main/res/layout/activity_Splash.xml" value="0.24479166666666666" />
         <entry key="app/src/main/res/layout/activity_auth.xml" value="0.25677083333333334" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.16526986255447537" />
         <entry key="app/src/main/res/layout/activity_splash.xml" value="0.16655405405405405" />
-        <entry key="app/src/main/res/layout/dialog_fragment_change_lang.xml" value="0.16655405405405405" />
-        <entry key="app/src/main/res/layout/dialog_upload_image.xml" value="0.16655405405405405" />
-        <entry key="app/src/main/res/layout/dose_item.xml" value="0.16655405405405405" />
-        <entry key="app/src/main/res/layout/fragment_add_dose.xml" value="0.16655405405405405" />
         <entry key="app/src/main/res/layout/fragment_auth.xml" value="0.16655405405405405" />
-        <entry key="app/src/main/res/layout/fragment_bar_code_scanner.xml" value="0.16655405405405405" />
-        <entry key="app/src/main/res/layout/fragment_base_dose_input.xml" value="0.16655405405405405" />
         <entry key="app/src/main/res/layout/fragment_choose_language.xml" value="0.16" />
-        <entry key="app/src/main/res/layout/fragment_confirm_number.xml" value="0.16" />
-        <entry key="app/src/main/res/layout/fragment_dose_list.xml" value="0.16655405405405405" />
-        <entry key="app/src/main/res/layout/fragment_edit_profile.xml" value="0.15878378378378377" />
-        <entry key="app/src/main/res/layout/fragment_history.xml" value="0.12837837837837837" />
-        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.16" />
-        <entry key="app/src/main/res/layout/fragment_intro.xml" value="0.16655405405405405" />
-        <entry key="app/src/main/res/layout/fragment_login.xml" value="0.13333333333333333" />
-        <entry key="app/src/main/res/layout/fragment_notification.xml" value="0.16655405405405405" />
-        <entry key="app/src/main/res/layout/fragment_order_program.xml" value="0.16655405405405405" />
-        <entry key="app/src/main/res/layout/fragment_order_success.xml" value="0.16655405405405405" />
-        <entry key="app/src/main/res/layout/fragment_pharmacies.xml" value="0.16655405405405405" />
-        <entry key="app/src/main/res/layout/fragment_phone_input.xml" value="0.16655405405405405" />
-        <entry key="app/src/main/res/layout/fragment_profile.xml" value="0.21333333333333335" />
-        <entry key="app/src/main/res/layout/fragment_program.xml" value="0.15878378378378377" />
-        <entry key="app/src/main/res/layout/fragment_programs.xml" value="0.16655405405405405" />
-        <entry key="app/src/main/res/layout/fragment_register.xml" value="0.19999999999999998" />
-        <entry key="app/src/main/res/layout/fragment_register_first_step.xml" value="0.18666666666666668" />
-        <entry key="app/src/main/res/layout/fragment_register_second_step.xml" value="0.24" />
-        <entry key="app/src/main/res/layout/fragment_reminder.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/fragment_reset_password.xml" value="0.16655405405405405" />
-        <entry key="app/src/main/res/layout/fragment_select_order_pharmacy.xml" value="0.16655405405405405" />
-        <entry key="app/src/main/res/layout/fragment_select_product.xml" value="0.16655405405405405" />
-        <entry key="app/src/main/res/layout/fragment_splash.xml" value="0.19999999999999998" />
+        <entry key="app/src/main/res/layout/fragment_confirm_number.xml" value="0.14666666666666667" />
+        <entry key="app/src/main/res/layout/fragment_login.xml" value="0.24479166666666666" />
+        <entry key="app/src/main/res/layout/fragment_register.xml" value="0.13333333333333333" />
+        <entry key="app/src/main/res/layout/fragment_register_first_step.xml" value="0.16" />
+        <entry key="app/src/main/res/layout/fragment_splash.xml" value="0.10666666666666667" />
         <entry key="app/src/main/res/layout/fragment_terms.xml" value="0.16" />
-        <entry key="app/src/main/res/layout/hidtory_item.xml" value="0.2669447340980188" />
-        <entry key="app/src/main/res/layout/history_item.xml" value="0.16655405405405405" />
-        <entry key="app/src/main/res/layout/ic_notification_count.xml" value="0.16655405405405405" />
         <entry key="app/src/main/res/layout/meshlwahdk_spinner.xml" value="0.16655405405405405" />
-        <entry key="app/src/main/res/layout/notification_item.xml" value="0.16655405405405405" />
-        <entry key="app/src/main/res/layout/pharmacies_item.xml" value="0.16655405405405405" />
-        <entry key="app/src/main/res/layout/product_item.xml" value="0.16655405405405405" />
-        <entry key="app/src/main/res/layout/profile_button.xml" value="0.16655405405405405" />
-        <entry key="app/src/main/res/layout/program_item.xml" value="0.16655405405405405" />
-        <entry key="app/src/main/res/layout/progressbar.xml" value="0.16655405405405405" />
-        <entry key="app/src/main/res/layout/reminder_item.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/selectable_item.xml" value="0.16655405405405405" />
-        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.17533783783783785" />
         <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.14739583333333334" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

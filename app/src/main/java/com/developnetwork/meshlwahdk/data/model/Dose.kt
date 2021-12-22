@@ -12,6 +12,8 @@ data class Dose(
     val createdAt: String,
     @SerializedName("duration")
     val duration: String,
+    @SerializedName("description")
+    val description: String,
     @SerializedName("frequency")
     val frequency: Int,
     @SerializedName("id")

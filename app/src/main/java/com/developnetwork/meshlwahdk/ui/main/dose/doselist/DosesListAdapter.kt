@@ -28,8 +28,10 @@ class DosesListAdapter(private val click: (dose: Dose) -> Unit) :
             holder.logo.setImageURL(item.product.logo)
 
         holder.name.text = item.product.name
-        holder.frequency.text = item.frequency.toString()
-        holder.duration.text = item.duration
+//        holder.frequency.text = item.frequency.toString()
+//        holder.duration.text = item.duration
+
+        holder.description.text=item.product.description
 
         holder.itemView.setOnClickListener {
             click(item)
@@ -56,7 +58,8 @@ class DosesListAdapter(private val click: (dose: Dose) -> Unit) :
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val logo: ShapeableImageView = view.findViewById(R.id.productLogo)
         val name: MaterialTextView = view.findViewById(R.id.productName)
-        val frequency: MaterialTextView = view.findViewById(R.id.frequency)
-        val duration: MaterialTextView = view.findViewById(R.id.duration)
+        val description: MaterialTextView = view.findViewById(R.id.description)
+//        val frequency: MaterialTextView = view.findViewById(R.id.frequency)
+//        val duration: MaterialTextView = view.findViewById(R.id.duration)
     }
 }

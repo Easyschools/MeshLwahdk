@@ -180,7 +180,7 @@ interface Service {
         @Part("program_id") programID: RequestBody,
         @Part("redmption_id") redmptionID: RequestBody,
         @Part("BarCode") barCode: RequestBody,
-        @Part rxPhoto: MultipartBody.Part,
+        @Part rxPhoto: MultipartBody.Part?,
         @Part receiptPhoto: MultipartBody.Part?,
         @Part("status") status: RequestBody
     ): BaseResponse<RedeemedProgram>
@@ -223,4 +223,8 @@ interface Service {
 
     @POST("totalUnreadNotifications")
     suspend fun getNotificationsCount():BaseResponse<Int>
+
+    @POST("redimedProduct/exist_user")
+    @FormUrlEncoded
+    suspend fun checkRedeemedProduct(@Field("user_id")user_id:Int,@Field("program_id")program_id:Int):BaseResponse<String>
 }

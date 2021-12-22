@@ -127,7 +127,7 @@
     <string name="gender">نوع</string>
     <string name="your_new_password_must_be_different_from_the_previous_used_password">يجب أن تكون كلمة مرورك الجديدة مختلفة عن كلمة المرور المستخدمة سابقًا.</string>
     <string name="create_a_new_password">أنشئ كلمة مرور جديدة</string>
-    <string name="reset_password">إعادة تعيين كلمة المرور</string>
+    <string name="reset_password">اعادة ضبط كلمة المرور</string>
     <string name="verification">تحقق</string>
     <string name="resend_code_in">إعادة إرسال الرمز بتنسيق</string>
     <string name="welcome_back">مرحبا بعودتك،</string>
@@ -142,8 +142,8 @@
     <string name="history">تاريخ</string>
     <string name="profile">الملف الشخصي</string>
     <string name="edit_profile">تعديل الملف الشخصي</string>
-    <string name="edit_mobile_number">تحرير رقم الهاتف المحمول</string>
-    <string name="language">لغة</string>
+    <string name="edit_mobile_number">تغير رقم الهاتف</string>
+    <string name="language">اللغة</string>
     <string name="sign_out">تسجيل الخروج</string>
     <string name="please_enter_your_profile_information_name_password"><![CDATA[الرجاء إدخال اسم معلومات ملف التعريف وكلمة المرور]]></string>
     <string name="app_terms"><![CDATA[<p style="text-align:center"><br />
@@ -335,7 +335,7 @@
 </string>
     <string name="change_language">تغيير اللغة</string>
     <string name="upload_profile_photo">اختر صورتك الشخصية</string>
-    <string name="doses">جرعات</string>
+    <string name="doses">الجرعات</string>
     <string name="select_your_country">اختر بلدك</string>
     <string name="your_drugs">الأدوية الخاصة بك</string>
     <string name="please_enter_your_account_information_date_of_birth_region">الرجاء إدخال معلومات حسابك تاريخ الميلاد والجنس والمنطقة</string>
@@ -376,9 +376,9 @@
     <string name="please_add_your_prescription_and_purchase_invoice">"الرجاء اضافة الوصفة الطبية الخاصة بك  و اضافة فاتورة الشراء "</string>
     <string name="your_request_has_been_submitted_to">"تم توجيه طلبك الي صيدلية "</string>
     <string name="pharmacy">صيدلية</string>
-    <string name="orders_history">"الطالبات السابقة "</string>
+    <string name="orders_history">"الطلبات السابقة"</string>
     <string name="new_purchase">شراء جديدة</string>
-    <string name="powered_by">مشغل بواسطة</string>
     <string name="your_next_dose">جرعتك القادمة</string>
+    <string name="dispensed">"تم الصرف   "</string>
 
 </resources>

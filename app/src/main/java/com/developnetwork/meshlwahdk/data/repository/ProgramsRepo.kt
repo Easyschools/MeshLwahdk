@@ -4,10 +4,12 @@ import com.developnetwork.meshlwahdk.BuildConfig
 import com.developnetwork.meshlwahdk.data.model.Program
 import com.developnetwork.meshlwahdk.data.model.RedeemedProgram
 import com.developnetwork.meshlwahdk.data.network.Service
+import com.ivestment.doctorna.data.model.BaseResponse
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import okhttp3.MultipartBody
 import okhttp3.RequestBody.Companion.asRequestBody
 import okhttp3.RequestBody.Companion.toRequestBody
+import retrofit2.http.Field
 import java.io.File
 
 interface ProgramsRepo {
@@ -18,11 +20,12 @@ interface ProgramsRepo {
         programID: Int,
         pharmacyID: Int,
         barCode: String,
-        rxPhotoPath: String,
+        rxPhotoPath: String?=null,
         receiptPhotoPath: String?
     ): RedeemedProgram
 
     suspend fun getRedeemedPrograms(userID:Int?=null): List<RedeemedProgram>
+    suspend fun isProductRedeemed(userID:Int,programID:Int):Boolean
 
 }
 
@@ -39,17 +42,18 @@ class ProgramsRepoImpl(private val service: Service) : ProgramsRepo {
         programID: Int,
         pharmacyID: Int,
         barCode: String,
-        rxPhotoPath: String,
+        rxPhotoPath: String?,
         receiptPhotoPath: String?
     ): RedeemedProgram {
 
         var receiptPhotoFilePart:MultipartBody.Part?=null
-
-        val rxFile = File(rxPhotoPath)
-        val rxRequestFile = rxFile.asRequestBody("multipart/form-data".toMediaTypeOrNull())
-        val rxPhotoFilePart =
-            MultipartBody.Part.createFormData("RxPhoto", rxFile.name, rxRequestFile)
-
+        var rxPhotoFilePart:MultipartBody.Part?=null
+        if (!receiptPhotoPath.isNullOrBlank()) {
+            val rxFile = File(rxPhotoPath)
+            val rxRequestFile = rxFile.asRequestBody("multipart/form-data".toMediaTypeOrNull())
+             rxPhotoFilePart =
+                MultipartBody.Part.createFormData("RxPhoto", rxFile.name, rxRequestFile)
+        }
         if (!receiptPhotoPath.isNullOrBlank()) {
             val receiptFile = File(receiptPhotoPath)
             val receiptRequestFile =
@@ -74,5 +78,9 @@ class ProgramsRepoImpl(private val service: Service) : ProgramsRepo {
 
     override suspend fun getRedeemedPrograms(userID:Int?): List<RedeemedProgram> {
         return service.getRedeemedPrograms(userID).data
+    }
+
+    override suspend fun isProductRedeemed(userID: Int, programID: Int): Boolean {
+        return service.checkRedeemedProduct(userID,programID).data.contains("one")
     }
 }

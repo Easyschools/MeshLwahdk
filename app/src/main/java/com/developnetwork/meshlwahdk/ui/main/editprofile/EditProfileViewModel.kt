@@ -45,7 +45,7 @@ class EditProfileViewModel(private val userRepo: UserRepo ,   private val otherR
 
     fun getDistricts(regionID: Int, name: String) = handleRequestLiveData<List<Region>> {
         val result = withContext(Dispatchers.IO) {
-            otherRepo.getAllDistricts(regionID)
+            otherRepo.getAllSubRegion(regionID)
         }
 
         val list = ArrayList<Region>()

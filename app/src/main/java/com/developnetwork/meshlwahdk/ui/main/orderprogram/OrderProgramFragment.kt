@@ -2,13 +2,11 @@ package com.developnetwork.meshlwahdk.ui.main.orderprogram
 
 import android.os.Bundle
 import android.view.View
-import androidx.activity.result.contract.ActivityResultContracts
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.developnetwork.meshlwahdk.R
 import com.developnetwork.meshlwahdk.base.BaseFragment
 import com.developnetwork.meshlwahdk.ui.dialogs.UploadImageDialog
-import com.developnetwork.meshlwahdk.ui.main.barcodescanner.BarCodeScannerFragment
 import es.dmoral.toasty.Toasty
 import kotlinx.android.synthetic.main.fragment_order_program.*
 import org.koin.androidx.viewmodel.ext.android.viewModel
@@ -28,6 +26,7 @@ class OrderProgramFragment : BaseFragment() {
         handleProgress(viewModel)
         handleError(viewModel)
 
+handleCheckUseOfProgram()
         handleButtons()
     }
 
@@ -54,10 +53,13 @@ class OrderProgramFragment : BaseFragment() {
     }
 
     private fun validate() {
-        if (!viewModel.rxPath.isNullOrBlank())
+        if (viewModel.isProductRedeemed)
             handleRedeem()
         else
-            Toasty.warning(requireContext(),R.string.select_rx,0).show()
+            if (!viewModel.rxPath.isNullOrBlank())
+                handleRedeem()
+            else
+                Toasty.warning(requireContext(), R.string.select_rx, 0).show()
     }
 
     private fun handleRedeem() {
@@ -71,21 +73,12 @@ class OrderProgramFragment : BaseFragment() {
         })
     }
 
-    private val requestPermissionLauncher =
-        registerForActivityResult(
-            ActivityResultContracts.RequestPermission()
-        ) { isGranted: Boolean ->
-            if (isGranted) {
-                // Permission is granted. Continue the action or workflow in your
-                // app.
-                BarCodeScannerFragment().show(childFragmentManager, "")
-            } else {
-                // Explain to the user that the feature is unavailable because the
-                // features requires a permission that the user has denied. At the
-                // same time, respect the user's decision. Don't link to system
-                // settings in an effort to convince the user to change their
-                // decision.
-            }
-        }
+    private fun handleCheckUseOfProgram() {
+        viewModel.checkProductRedeemed(args.programID).observe(viewLifecycleOwner, {
+            if (it)
+                uploadRXBTN.visibility = View.GONE
+        })
+
+    }
 
 }

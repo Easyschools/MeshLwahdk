@@ -28,37 +28,47 @@
             app:layout_constraintTop_toBottomOf="@id/productLogo" />
 
         <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/frequencyTitle"
-            android:layout_width="wrap_content"
+            android:id="@+id/description"
             android:layout_height="wrap_content"
-            android:text="@string/frequency"
-            app:layout_constraintEnd_toStartOf="@id/durationTitle"
+            android:layout_width="match_parent"
+            android:layout_margin="@dimen/_5sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/productName" />
 
-        <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/durationTitle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/duration"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/frequencyTitle"
-            app:layout_constraintTop_toBottomOf="@id/productName" />
+        <!--        <com.google.android.material.textview.MaterialTextView-->
+        <!--            android:id="@+id/frequencyTitle"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:text="@string/frequency"-->
+        <!--            app:layout_constraintEnd_toStartOf="@id/durationTitle"-->
+        <!--            app:layout_constraintStart_toStartOf="parent"-->
+        <!--            app:layout_constraintTop_toBottomOf="@id/productName" />-->
 
-        <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/frequency"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintEnd_toEndOf="@id/frequencyTitle"
-            app:layout_constraintStart_toStartOf="@id/frequencyTitle"
-            app:layout_constraintTop_toBottomOf="@id/frequencyTitle" />
+        <!--        <com.google.android.material.textview.MaterialTextView-->
+        <!--            android:id="@+id/durationTitle"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:text="@string/duration"-->
+        <!--            app:layout_constraintEnd_toEndOf="parent"-->
+        <!--            app:layout_constraintStart_toEndOf="@id/frequencyTitle"-->
+        <!--            app:layout_constraintTop_toBottomOf="@id/productName" />-->
 
-        <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/duration"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintEnd_toEndOf="@id/durationTitle"
-            app:layout_constraintStart_toStartOf="@id/durationTitle"
-            app:layout_constraintTop_toBottomOf="@id/durationTitle" />
+        <!--        <com.google.android.material.textview.MaterialTextView-->
+        <!--            android:id="@+id/frequency"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            app:layout_constraintEnd_toEndOf="@id/frequencyTitle"-->
+        <!--            app:layout_constraintStart_toStartOf="@id/frequencyTitle"-->
+        <!--            app:layout_constraintTop_toBottomOf="@id/frequencyTitle" />-->
+
+        <!--        <com.google.android.material.textview.MaterialTextView-->
+        <!--            android:id="@+id/duration"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            app:layout_constraintEnd_toEndOf="@id/durationTitle"-->
+        <!--            app:layout_constraintStart_toStartOf="@id/durationTitle"-->
+        <!--            app:layout_constraintTop_toBottomOf="@id/durationTitle" />-->
     </androidx.constraintlayout.widget.ConstraintLayout>
 </com.google.android.material.card.MaterialCardView>

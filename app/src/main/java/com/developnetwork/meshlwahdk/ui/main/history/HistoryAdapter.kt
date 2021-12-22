@@ -32,11 +32,18 @@ class HistoryAdapter :
             }
         }
 
+        when(item.status){
+            "pending" ->         holder.status.setText(R.string.pending)
+            "redeemed" ->         holder.status.setText(R.string.dispensed)
+        }
+
         holder.status.text = item.status
 
         item.redemptionCenter?.let {
             holder.pharmacy.text = it.name
         }
+
+
     }
 
     class RedeemedProgramItemDiffCallback : DiffUtil.ItemCallback<RedeemedProgram>() {
